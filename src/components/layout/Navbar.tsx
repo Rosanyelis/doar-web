@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Download, User, Menu, X } from 'lucide-react';
+import { Download, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
     const location = useLocation();
