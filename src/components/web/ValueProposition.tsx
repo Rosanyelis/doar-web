@@ -69,7 +69,7 @@ export default function ValueProposition() {
                         </h3>
                         <p className="leading-relaxed font-medium text-[#7B7B7B]">
                             Todas las transacciones estan protegidas con
-                            estándares de seguridad internaciones como PCI-DSS y
+                            estándares de seguridad internacionales como PCI-DSS y
                             P2PE.
                         </p>
                     </div>

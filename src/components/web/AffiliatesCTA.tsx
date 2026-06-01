@@ -1,5 +1,9 @@
 import { UserPlus } from 'lucide-react';
 
+const handleDownloadClick = () => {
+    window.dispatchEvent(new CustomEvent('open-download-modal'));
+};
+
 export default function AffiliatesCTA() {
     return (
         <section className="flex justify-center bg-white px-6 py-[100px] md:px-[72px]">
@@ -20,7 +24,9 @@ export default function AffiliatesCTA() {
                 </h2>
 
                 <div className="relative z-10 flex justify-center">
-                    <button className="flex h-[56px] items-center justify-center gap-3 rounded-full bg-white px-12 text-[18px] font-bold text-[#31374F] shadow-xl transition-all hover:scale-105 active:scale-95">
+                    <button
+                        onClick={handleDownloadClick}
+                        className="flex h-[56px] items-center justify-center gap-3 rounded-full bg-white px-12 text-[18px] font-bold text-[#31374F] shadow-xl transition-all hover:scale-105 active:scale-95">
                         Quiero ser Afiliado
                         <UserPlus className="h-6 w-6 text-[#F29501]" />
                     </button>

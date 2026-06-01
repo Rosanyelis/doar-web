@@ -2,8 +2,8 @@ export default function AffiliatesSteps() {
     const steps = [
         {
             num: '01',
-            title: 'REGÍSTRATE COMO AFILIADO',
-            desc: 'Crea tu cuenta de afiliado en menos de dos minutos y accede a tu panel.',
+            title: 'ACCEDE A TU PANEL DE AFILIADOS',
+            desc: 'Ingresa a tu panel, explora funciones y añade tu métodos de pago.',
             active: true,
         },
         {

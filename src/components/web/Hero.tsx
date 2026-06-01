@@ -74,7 +74,7 @@ export default function Hero() {
                     {/* Floating Badges */}
 
                     {/* 1. Retiro directo — arriba izquierda */}
-                    <div className="pointer-events-auto absolute top-[80px] z-30 flex h-[48px] w-[196px] origin-top-left scale-75 animate-[bounce_5s_ease-in-out_infinite] items-center gap-3 rounded-full bg-white px-4 py-3 shadow-lg md:top-32 md:top-[2%] md:-left-62 md:left-[4%] md:scale-100">
+                    <div className="pointer-events-auto absolute top-[80px] z-30 flex h-[48px] w-[196px] origin-top-left scale-75 items-center gap-3 rounded-full bg-white px-4 py-3 shadow-lg md:top-[20%] md:-left-50  md:scale-100">
                         <div className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#F5F5FF]">
                             <img
                                 src="/assets/icons/university.svg"
@@ -93,7 +93,7 @@ export default function Hero() {
                     </div>
 
                     {/* 2. Transfronterizo — mitad izquierda */}
-                    <div className="pointer-events-auto absolute top-[120px] z-30 flex h-[48px] w-[196px] origin-bottom-left scale-75 animate-[bounce_6s_ease-in-out_infinite] items-center gap-3 rounded-full bg-[#31374F] px-4 py-3 shadow-lg md:top-[45%] md:top-[75%] md:-left-35 md:left-[2%] md:scale-100">
+                    <div className="pointer-events-auto absolute top-[120px] z-30 flex h-[48px] w-[196px] origin-bottom-left scale-75 items-center gap-3 rounded-full bg-[#31374F] px-4 py-3 shadow-lg md:top-[45%] md:top-[75%]  md:-left-40  md:scale-100">
                         <div className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#F5F5FF]">
                             <img
                                 src="/assets/icons/map-marker-alt.svg"
@@ -106,13 +106,13 @@ export default function Hero() {
                                 Transfronterizo
                             </span>
                             <span className="text-[12px] text-white">
-                                Desde 5% comisiones
+                                Donde te encuentres
                             </span>
                         </div>
                     </div>
 
                     {/* 3. PCI-DSS — arriba derecha */}
-                    <div className="pointer-events-auto absolute top-[80px] right-[2%] z-30 flex h-[48px] w-[196px] origin-top-right scale-75 animate-[bounce_5.5s_ease-in-out_infinite] items-center gap-3 rounded-full bg-[#31374F] px-4 py-3 shadow-lg md:top-34 md:top-[20%] md:-right-62 md:scale-100">
+                    <div className="pointer-events-auto absolute top-[80px] right-[2%] z-30 flex h-[48px] w-[196px] origin-top-right scale-75 items-center gap-3 rounded-full bg-[#31374F] px-4 py-3 shadow-lg md:top-34 md:top-[20%] md:-right-62 md:scale-100">
                         <div className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#F5F5FF]">
                             <img
                                 src="/assets/icons/shield-alt.svg"
@@ -131,7 +131,7 @@ export default function Hero() {
                     </div>
 
                     {/* 4. AES-256 — mitad derecha */}
-                    <div className="pointer-events-auto absolute top-[120px] right-[2%] z-30 flex h-[48px] w-[196px] origin-bottom-right scale-75 animate-[bounce_7s_ease-in-out_infinite] items-center gap-3 rounded-full bg-white px-4 py-3 shadow-lg md:top-[60%] md:top-[75%] md:-right-40 md:scale-100">
+                    <div className="pointer-events-auto absolute top-[120px] right-[2%] z-30 flex h-[48px] w-[196px] origin-bottom-right scale-75  items-center gap-3 rounded-full bg-white px-4 py-3 shadow-lg md:top-[60%] md:top-[75%] md:-right-40 md:scale-100">
                         <div className="flex h-[28px] w-[28px] items-center justify-center rounded-full bg-[#F5F5FF]">
                             <img
                                 src="/assets/icons/key.svg"

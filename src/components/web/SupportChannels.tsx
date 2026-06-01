@@ -61,7 +61,7 @@ export default function SupportChannels() {
                                 7:00 am a 11:00 pm
                             </span>
                             <p className="mt-2 max-w-[280px] text-[12px] leading-snug text-[#A4A4A4]">
-                                * Hora local de Perú (GMT-5). Festivos sujetos a
+                                * Hora local de República Dominicana (GMT-4). Festivos sujetos a
                                 disponibilidad reducida.
                             </p>
                         </div>

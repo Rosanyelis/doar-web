@@ -8,11 +8,11 @@ const faqs = [
     },
     {
         q: '¿Qué monedas soportan?',
-        a: 'Soportamos las principales monedas de la región, incluyendo Dólares (USD), Euros (EUR) y monedas locales de los países donde operamos.',
+        a: 'Nuestro sistema trabaja con un modelo de monedas virtuales estables (USDC); sin embargo gracias a nuestros aliados tu puedes retirar a tu cuenta de banco el equivalente a tu moneda.',
     },
     {
         q: '¿Es seguro usar DOAR?',
-        a: 'Sí, utilizamos tecnología de cifrado de grado bancario y estamos regulados para operar como procesador de pagos en los mercados correspondientes.',
+        a: 'Si, utilizamos tecnología de cifrado como SHA-256 para proteger tus datos e informacion personal y nuestros aliados a nivel de operaciones financieras utilizan cifrados de grado bancario como AES-256; los cifrados mas seguros actualmente.',
     },
     {
         q: '¿Cómo contacto a soporte?',

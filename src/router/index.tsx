@@ -4,7 +4,7 @@ import SecurityPage from '../pages/SecurityPage';
 import AffiliatePage from '../pages/AffiliatePage';
 import SupportPage from '../pages/SupportPage';
 import TermsPage from '../pages/TermsPage';
-import PrivacyPolicyPage from '../pages/PrivacyPolicyPage';
+import PrivacyPolicyPage from '../pages/PrivacyPage';
 
 export const router = createBrowserRouter([
   {

@@ -98,14 +98,6 @@ export default function Navbar() {
                             aria-hidden
                         />
                     </button>
-
-                    <a
-                        href="https://app.doarr.com/login"
-                        aria-label="Iniciar sesión"
-                        className="inline-flex size-10 items-center justify-center rounded-full border border-transparent text-[#31374F] transition-colors hover:border-gray-200 hover:bg-gray-50"
-                    >
-                        <User className="h-5 w-5 shrink-0" aria-hidden />
-                    </a>
                 </div>
             </div>
 

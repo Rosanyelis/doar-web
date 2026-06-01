@@ -11,7 +11,7 @@ export default function AffiliatesLogic() {
         {
             icon: <Smartphone className="h-10 w-10 text-[#F29501]" />,
             title: 'Ellos usan la app',
-            desc: 'Incentiva a tus conocidos a realizar sus operaciones diarias.',
+            desc: 'Incentiva a tus conocidos a realizar sus operaciones digitales en la app.',
             bg: 'bg-[#F3F3FF]',
         },
         {
