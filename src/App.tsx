@@ -6,6 +6,7 @@ import AffiliatePage from './pages/AffiliatePage';
 import SupportPage from './pages/SupportPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
+import DoarPage from './pages/fintech/DoarPage';
 import DownloadModal from './components/web/DownloadModal';
 import { WebSvgDefs } from './components/web/Icons';
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/soporte" element={<SupportPage />} />
           <Route path="/terminos" element={<TermsPage />} />
           <Route path="/privacidad" element={<PrivacyPage />} />
+          <Route path="/doar" element={<DoarPage />} />
         </Routes>
       </Router>
     </HelmetProvider>

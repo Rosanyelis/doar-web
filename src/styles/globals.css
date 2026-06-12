@@ -1,7 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-institutional: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-doar-gold: #f5c400;
+  --color-doar-blue: #2f6bff;
+  --color-midnight-navy: #081120;
+  --color-deep-space: #050b16;
+  --color-soft-gray: #b8c1d1;
+  --color-text-primary: #ffffff;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes pulse-node {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.15);
+  }
+}
+
+.institutional-dash {
+  stroke-dasharray: 5 4;
+  animation: dash-flow 1.4s linear infinite;
+}
+
+.institutional-pulse {
+  animation: pulse-node 2s ease-in-out infinite;
 }
 
 @layer base {

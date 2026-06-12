@@ -27,6 +27,7 @@ export default function Navbar() {
 
     const navLinks = [
         { href: '/', label: 'Inicio' },
+        { href: '/doar', label: 'DOAR' },
         { href: '/seguridad', label: 'Seguridad' },
         { href: '/afiliados', label: 'Afiliados' },
         { href: '/soporte', label: 'Soporte' },
