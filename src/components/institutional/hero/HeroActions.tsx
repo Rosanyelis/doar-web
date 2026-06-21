@@ -3,13 +3,13 @@ import { cn } from '../../../lib/utils';
 
 export default function HeroActions() {
     return (
-        <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center ">
+        <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center ">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <button
                     type="button"
                     className={cn(
-                        'inline-flex h-16 items-center justify-center gap-2 rounded-2xl px-8',
-                        'bg-doar-gold text-base font-semibold text-deep-space',
+                        'inline-flex h-12 items-center justify-center gap-2 rounded-[6px] px-4 py-3',
+                        'bg-doar-gold text-base font-medium text-[13.5px] text-black',
                         'shadow-[0_0_60px_rgba(245,196,0,0.15)]',
                         'transition-all duration-200 hover:-translate-y-0.5',
                         'hover:shadow-[0_0_80px_rgba(245,196,0,0.22)]'
@@ -22,8 +22,8 @@ export default function HeroActions() {
                 <button
                     type="button"
                     className={cn(
-                        'inline-flex h-16 items-center justify-center rounded-2xl px-8',
-                        'border border-doar-gold/30 bg-transparent text-base font-semibold text-text-primary',
+                        'inline-flex h-12 items-center justify-center rounded-[6px] px-4 py-3',
+                        'border border-doar-gold/30 bg-transparent text-[13.5px] font-medium text-white',
                         'transition-all duration-200 hover:-translate-y-0.5 hover:bg-doar-gold/8'
                     )}
                 >
