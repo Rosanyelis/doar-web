@@ -20,7 +20,7 @@ export default function WhatIsDoarSection() {
                         <WhatIsDoarNarrative />
                     </div>
 
-                    <div className="flex w-full items-center justify-center lg:col-span-7 lg:w-[90%] lg:justify-end xl:w-[90%]">
+                    <div className="flex w-full items-center justify-center lg:col-span-7 lg:w-[100%] lg:justify-end xl:w-[100%]">
                         <img
                             src="/assets/institucional/diagram_02.svg"
                             alt="Diagrama de arquitectura de orquestación financiera DOAR"
