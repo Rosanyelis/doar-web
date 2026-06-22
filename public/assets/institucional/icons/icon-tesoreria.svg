@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <path
+    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+    stroke="#F5C400"
+    stroke-width="1.75"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <g transform="translate(12 12.5) scale(0.48) translate(-12 -12)">
+    <line
+      x1="12"
+      y1="2"
+      x2="12"
+      y2="22"
+      stroke="#F5C400"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+    <path
+      d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+      stroke="#F5C400"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

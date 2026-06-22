@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import InstitutionalHero from '../../components/institutional/hero/InstitutionalHero';
 import InstitutionalNavbar from '../../components/institutional/navigation/InstitutionalNavbar';
 import PartnerStrip from '../../components/institutional/sections/PartnerStrip';
+import WhatIsDoarSection from '../../components/institutional/sections/WhatIsDoarSection';
 import { cn } from '../../lib/utils';
 
 export default function DoarPage() {
@@ -22,6 +23,7 @@ export default function DoarPage() {
             <main>
                 <InstitutionalHero />
                 <PartnerStrip />
+                <WhatIsDoarSection />
             </main>
         </div>
     );

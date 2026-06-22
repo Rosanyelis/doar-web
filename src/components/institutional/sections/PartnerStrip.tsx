@@ -70,7 +70,7 @@ export default function PartnerStrip() {
     return (
         <section
             className={cn(
-                'border-t border-white/6 bg-midnight-navy py-6',
+                'border-t border-b border-white/6 bg-midnight-navy py-6',
                 'font-institutional'
             )}
         >
