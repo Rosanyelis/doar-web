@@ -4,6 +4,7 @@ import InstitutionalNavbar from '../../components/institutional/navigation/Insti
 import IntegratedInfrastructureSection from '../../components/institutional/sections/IntegratedInfrastructureSection';
 import LedgerFirstArchitectureSection from '../../components/institutional/sections/LedgerFirstArchitectureSection';
 import PartnerStrip from '../../components/institutional/sections/PartnerStrip';
+import UnifiedFinancialOperationsSection from '../../components/institutional/sections/UnifiedFinancialOperationsSection';
 import WhatIsDoarSection from '../../components/institutional/sections/WhatIsDoarSection';
 import { cn } from '../../lib/utils';
 
@@ -28,6 +29,7 @@ export default function DoarPage() {
                 <WhatIsDoarSection />
                 <LedgerFirstArchitectureSection />
                 <IntegratedInfrastructureSection />
+                <UnifiedFinancialOperationsSection />
             </main>
         </div>
     );
