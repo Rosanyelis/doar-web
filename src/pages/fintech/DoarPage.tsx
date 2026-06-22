@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import InstitutionalHero from '../../components/institutional/hero/InstitutionalHero';
 import InstitutionalNavbar from '../../components/institutional/navigation/InstitutionalNavbar';
+import IntegratedInfrastructureSection from '../../components/institutional/sections/IntegratedInfrastructureSection';
+import LedgerFirstArchitectureSection from '../../components/institutional/sections/LedgerFirstArchitectureSection';
 import PartnerStrip from '../../components/institutional/sections/PartnerStrip';
 import WhatIsDoarSection from '../../components/institutional/sections/WhatIsDoarSection';
 import { cn } from '../../lib/utils';
@@ -24,6 +26,8 @@ export default function DoarPage() {
                 <InstitutionalHero />
                 <PartnerStrip />
                 <WhatIsDoarSection />
+                <LedgerFirstArchitectureSection />
+                <IntegratedInfrastructureSection />
             </main>
         </div>
     );

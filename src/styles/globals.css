@@ -40,6 +40,20 @@
   animation: pulse-node 2s ease-in-out infinite;
 }
 
+@keyframes ledger-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(245, 196, 0, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 56px rgba(245, 196, 0, 0.24);
+  }
+}
+
+.ledger-glow-pulse {
+  animation: ledger-glow 2s ease-in-out infinite;
+}
+
 @layer base {
   body {
     @apply font-sans;
