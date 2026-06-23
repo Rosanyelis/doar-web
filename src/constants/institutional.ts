@@ -2,8 +2,8 @@ export const INSTITUTIONAL_NAV_LINKS = [
     { label: '¿Qué es DOAR?', href: '/doar#que-es' },
     { label: 'Modelo Operativo', href: '/doar/modelo-operativo' },
     { label: 'Infraestructura', href: '/doar#infraestructura' },
-    { label: 'Cumplimiento', href: '/doar#cumplimiento' },
-    { label: 'Tesorería', href: '/doar#tesoreria' },
+    { label: 'Cumplimiento', href: '/doar/cumplimiento' },
+    { label: 'Tesorería', href: '/doar/modelo-operativo#tesoreria' },
     { label: 'Posición Regulatoria', href: '/doar#posicion' },
     { label: 'Transparencia', href: '/doar#transparencia' },
 ] as const;
@@ -390,5 +390,143 @@ export const SEGREGATED_LAYER_CARDS = [
         title: 'Infrastructure Partners',
         description:
             'Partners especializados en pagos, cumplimiento, tesorería y custodia que proveen la infraestructura financiera segregada.',
+    },
+] as const;
+
+export const COMPLIANCE_FRAMEWORK_CARDS = [
+    {
+        id: 'kyc',
+        title: 'KYC Verification',
+        items: ['Documental', 'Biométrica', 'Vida', 'Identidad'],
+    },
+    {
+        id: 'kyb',
+        title: 'KYB Verification',
+        items: ['Empresarial', 'UBO', 'Corporativa', 'Screening'],
+    },
+    {
+        id: 'screening',
+        title: 'Transaction Screening',
+        items: ['PEP', 'Sanctions', 'Watchlists', 'Adverse Media'],
+    },
+    {
+        id: 'aml',
+        title: 'AML Monitoring',
+        items: ['AML Rules', 'Transaction Rules', 'Reviews', 'Thresholds'],
+    },
+    {
+        id: 'behavior',
+        title: 'Behavior Monitoring',
+        items: ['Risk Engine', 'Runtime Alerts', 'Signals', 'Velocity'],
+    },
+    {
+        id: 'ongoing',
+        title: 'Ongoing Monitoring',
+        items: ['Re-screening', 'Reviews', 'Profile Updates', 'Assessment'],
+    },
+] as const;
+
+export const COMPLIANCE_METHODOLOGY = [
+    { id: 'prevencion', label: 'Prevención' },
+    { id: 'deteccion', label: 'Detección' },
+    { id: 'respuesta', label: 'Respuesta' },
+] as const;
+
+export const RISK_ENGINE_NODES = [
+    {
+        id: 'velocity',
+        title: 'Velocity Controls',
+        description: 'Limita frecuencia y volumen de operaciones según perfiles de riesgo.',
+    },
+    {
+        id: 'exposure',
+        title: 'Exposure Controls',
+        description: 'Monitorea exposición acumulada y límites operacionales por entidad.',
+    },
+    {
+        id: 'scoring',
+        title: 'Risk Scoring',
+        description: 'Asigna puntuaciones dinámicas basadas en señales y comportamiento.',
+    },
+    {
+        id: 'alerts',
+        title: 'Runtime Alerts',
+        description: 'Genera alertas en tiempo real ante patrones anómalos o umbrales.',
+    },
+    {
+        id: 'behavioral',
+        title: 'Behavioral Monitoring',
+        description: 'Analiza patrones de uso y actividad para detectar riesgos emergentes.',
+    },
+] as const;
+
+export const MONITORING_CENTER_NODES = [
+    { id: 'operations', title: 'Operations Monitored' },
+    { id: 'compliance', title: 'Compliance Events' },
+    { id: 'risk', title: 'Risk Alerts' },
+    { id: 'cases', title: 'Cases Under Review' },
+    { id: 'provider', title: 'Provider Events' },
+    { id: 'status', title: 'Operational Status' },
+] as const;
+
+export const MONITORING_CAPABILITY_CARDS = [
+    {
+        id: 'events',
+        title: 'Event Monitoring',
+        description: 'Supervisión continua de eventos operacionales en tiempo real.',
+    },
+    {
+        id: 'compliance',
+        title: 'Compliance Events',
+        description: 'Registro y seguimiento de eventos de cumplimiento regulatorio.',
+    },
+    {
+        id: 'alerts',
+        title: 'Risk Alerts',
+        description: 'Alertas de riesgo generadas por el motor de evaluación.',
+    },
+    {
+        id: 'provider',
+        title: 'Provider Events',
+        description: 'Eventos recibidos de proveedores de infraestructura integrada.',
+    },
+    {
+        id: 'cases',
+        title: 'Case Review',
+        description: 'Gestión y revisión de casos bajo investigación o escalamiento.',
+    },
+] as const;
+
+export const AUDIT_TIMELINE_STEPS = [
+    {
+        id: 'user',
+        step: '01',
+        title: 'User Action',
+        description: 'Acción iniciada por usuario o empresa en la plataforma.',
+    },
+    {
+        id: 'system',
+        step: '02',
+        title: 'System Event',
+        description: 'Evento registrado por el sistema operacional de DOAR.',
+    },
+    {
+        id: 'provider',
+        step: '03',
+        title: 'Provider Event',
+        description: 'Evento recibido de infraestructura financiera integrada.',
+    },
+    {
+        id: 'compliance',
+        step: '04',
+        title: 'Compliance Event',
+        description: 'Evaluación y registro de controles de cumplimiento aplicados.',
+    },
+    {
+        id: 'audit',
+        step: '05',
+        title: 'Audit Record',
+        description: 'Registro de auditoría consolidado y verificable.',
+        highlight: true,
     },
 ] as const;

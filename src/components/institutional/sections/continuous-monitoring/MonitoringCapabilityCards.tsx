@@ -1,0 +1,44 @@
+import { AlertTriangle, ClipboardList, Eye, Network, ShieldCheck } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { MONITORING_CAPABILITY_CARDS } from '../../../../constants/institutional';
+import { cn } from '../../../../lib/utils';
+
+const CARD_ICONS: Record<(typeof MONITORING_CAPABILITY_CARDS)[number]['id'], LucideIcon> = {
+    events: Eye,
+    compliance: ShieldCheck,
+    alerts: AlertTriangle,
+    provider: Network,
+    cases: ClipboardList,
+};
+
+export default function MonitoringCapabilityCards() {
+    return (
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {MONITORING_CAPABILITY_CARDS.map(({ id, title, description }) => {
+                const Icon = CARD_ICONS[id];
+
+                return (
+                    <article
+                        key={id}
+                        className={cn(
+                            'rounded-xl border border-white/8 bg-deep-space/80 p-5',
+                            'transition-all duration-200 hover:border-white/12'
+                        )}
+                    >
+                        <Icon
+                            className="mb-3 h-6 w-6 text-doar-blue"
+                            strokeWidth={1.75}
+                            aria-hidden="true"
+                        />
+                        <h3 className="mb-2 text-xs font-semibold leading-tight text-text-primary">
+                            {title}
+                        </h3>
+                        <p className="text-[11px] font-light leading-relaxed text-soft-gray">
+                            {description}
+                        </p>
+                    </article>
+                );
+            })}
+        </div>
+    );
+}
