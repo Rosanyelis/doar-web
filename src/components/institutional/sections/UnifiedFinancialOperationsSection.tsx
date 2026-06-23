@@ -7,9 +7,8 @@ import { cn } from '../../../lib/utils';
 export default function UnifiedFinancialOperationsSection() {
     return (
         <section
-            id="modelo-operativo"
             className={cn(
-                'relative overflow-hidden bg-midnight-navy font-institutional',
+                'relative min-h-screen overflow-hidden bg-midnight-navy font-institutional',
                 'py-15 md:py-25'
             )}
         >

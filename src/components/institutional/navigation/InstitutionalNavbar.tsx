@@ -1,30 +1,38 @@
+import { Link } from 'react-router-dom';
 import { INSTITUTIONAL_NAV_LINKS } from '../../../constants/institutional';
 import { cn } from '../../../lib/utils';
 
 function DoarLogo() {
     return (
-        <a href="/" className="flex items-center gap-3 shrink-0 transition-opacity duration-200 hover:opacity-90">
+        <Link to="/doar" className="flex shrink-0 items-center gap-3 transition-opacity duration-200 hover:opacity-90">
             <img
                 src="/assets/hero/imagotipo-doar.png"
                 alt="DOAR"
                 className="h-10 w-auto object-contain"
             />
-        </a>
+        </Link>
     );
 }
 
+const navLinkClassName = cn(
+    'relative whitespace-nowrap text-sm font-medium text-white/88',
+    'transition-colors duration-200 hover:text-white',
+    'after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0',
+    'after:bg-doar-gold after:transition-all after:duration-200',
+    'hover:after:w-full'
+);
+
 function NavLink({ href, label }: { href: string; label: string }) {
+    if (href.startsWith('/')) {
+        return (
+            <Link to={href} className={navLinkClassName}>
+                {label}
+            </Link>
+        );
+    }
+
     return (
-        <a
-            href={href}
-            className={cn(
-                'relative whitespace-nowrap text-sm font-medium text-white/88',
-                'transition-colors duration-200 hover:text-white',
-                'after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0',
-                'after:bg-doar-gold after:transition-all after:duration-200',
-                'hover:after:w-full'
-            )}
-        >
+        <a href={href} className={navLinkClassName}>
             {label}
         </a>
     );

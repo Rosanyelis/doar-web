@@ -7,6 +7,7 @@ import SupportPage from './pages/SupportPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import DoarPage from './pages/fintech/DoarPage';
+import ModeloOperativoPage from './pages/fintech/ModeloOperativoPage';
 import DownloadModal from './components/web/DownloadModal';
 import { WebSvgDefs } from './components/web/Icons';
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/terminos" element={<TermsPage />} />
           <Route path="/privacidad" element={<PrivacyPage />} />
           <Route path="/doar" element={<DoarPage />} />
+          <Route path="/doar/modelo-operativo" element={<ModeloOperativoPage />} />
         </Routes>
       </Router>
     </HelmetProvider>
