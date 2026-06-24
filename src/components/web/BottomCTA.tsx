@@ -19,9 +19,9 @@ export default function BottomCTA() {
                     >
                         {/* ── Fila 1: Heading ── */}
                         <h2 className="z-[1] text-center text-[44px] leading-[1.2] font-bold text-white md:text-[49px] md:leading-[56px]">
-                            Empieza a mover tu{' '}
+                            Empieza a operar de manera{' '}
                             <span className="text-[#F29501]">
-                                dinero rápido
+                                digital, rapido
                             </span>{' '}
                             y{' '}
                             <span className="text-[#F29501]">

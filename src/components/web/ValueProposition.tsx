@@ -4,12 +4,10 @@ export default function ValueProposition() {
             <div className="container mx-auto px-0">
                 <div className="mx-auto mb-16 max-w-6xl text-center">
                     <h2 className="mb-6 text-[40px] leading-tight font-extrabold text-[#31374F] md:text-[40px]">
-                        Una sola{' '}
-                        <span className="bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent">
-                            plataforma
-                        </span>{' '}
-                        para enviar dinero a tus familiares entre paises, con
-                        retiro en moneda local
+                        Movimientos financieros {' '}
+                        <span className="bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent">digitales </span>{' '}
+                            más ágiles mediante infraestructura moderna de pagos y {' '}
+                            <span className="bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent">pagos y stablecoins.</span>
                     </h2>
                     <p className="mx-auto max-w-3xl text-2xl font-bold text-[#7B7B7B] md:text-lg">
                         DOAR conecta pasarelas de pago, billeteras electrónicas
@@ -50,8 +48,9 @@ export default function ValueProposition() {
                             Eficiencia
                         </h3>
                         <p className="leading-relaxed font-medium text-[#7B7B7B]">
-                            Infraestructura tecnológica que permite movimientos
-                            financieros automatizados (sin terceros).
+                            Infraestructura interoperable conectada con proveedores 
+                            especializados de pagos, stablecoins
+                            y liquidación financiera.
                         </p>
                     </div>
 
@@ -69,7 +68,7 @@ export default function ValueProposition() {
                         </h3>
                         <p className="leading-relaxed font-medium text-[#7B7B7B]">
                             Todas las transacciones estan protegidas con
-                            estándares de seguridad internacionales como PCI-DSS y
+                            estándares de seguridad como PCI-DSS y
                             P2PE.
                         </p>
                     </div>

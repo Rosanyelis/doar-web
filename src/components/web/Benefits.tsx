@@ -8,8 +8,8 @@ export default function Benefits() {
                     className="h-[40px] w-auto object-contain"
                 />
             ),
-            title: 'Envía dinero sin complicarte',
-            description: 'Envia dinero a otros países de manera rápida',
+            title: 'Opera sin complicarte',
+            description: 'Transfiere digitalmente a otros paises de manera rápida.',
         },
         {
             icon: (
@@ -21,7 +21,7 @@ export default function Benefits() {
             ),
             title: 'Retira a tu banco en minutos',
             description:
-                'Lleva tu saldo a tu cuenta bancaria en moneda local, cuando lo necesites.',
+                'Convierte tu saldo de moneda digital a moneda fiat cuando lo necesites.',
         },
         {
             icon: (
@@ -45,7 +45,7 @@ export default function Benefits() {
             ),
             title: 'Usa las apps que ya conoces',
             description:
-                'Conecta PayPal, ApplePay, Mercado Pago y otras billeteras sin cambiar tu forma de operar.',
+                'Conecta ApplePay, Mercado Pago y otras billeteras sin cambiar tu forma de operar.',
         },
         {
             icon: (

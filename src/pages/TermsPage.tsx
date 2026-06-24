@@ -8,10 +8,6 @@ export default function TermsPage() {
         <div className="min-h-screen bg-white font-sans selection:bg-[#F29501] selection:text-white">
             <Helmet>
                 <title>Términos y Condiciones | DOAR</title>
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-                />
             </Helmet>
 
             <Navbar />

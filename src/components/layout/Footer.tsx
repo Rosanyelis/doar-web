@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="bg-[#2A3045] py-16 md:py-20">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 gap-12 text-center md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
-                    {/* Columna 1: Logo */}
+                    {/* Columna 1: Logo + Disclaimer */}
                     <div className="flex flex-col items-center lg:col-span-1 lg:items-start">
                         <Link to="/" className="inline-block">
                             <img
@@ -22,6 +22,15 @@ export default function Footer() {
                                 }}
                             />
                         </Link>
+
+                        <div className="mt-6 text-center lg:text-left">
+                            <h4 className="mb-2 text-[11px] font-bold tracking-wider text-white">
+                                DESCARGO DE RESPONSABILIDAD
+                            </h4>
+                            <p className="text-[11px] leading-relaxed text-white">
+                                DOAR no es un banco, exchange ni custodio de activos digitales. Los servicios de conversión fiat/stablecoin, pagos, verificación y liquidación son procesados mediante proveedores externos regulados según disponibilidad jurisdiccional.
+                            </p>
+                        </div>
                     </div>
 
                     {/* Columna 2: Producto */}
@@ -96,6 +105,14 @@ export default function Footer() {
                         <ul className="flex flex-col gap-4">
                             <li>
                                 <Link
+                                    to="/privacidad"
+                                    className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
+                                >
+                                    Política de privacidad
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     to="/terminos"
                                     className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
                                 >
@@ -104,10 +121,26 @@ export default function Footer() {
                             </li>
                             <li>
                                 <Link
-                                    to="/privacidad"
+                                    to="/declaracion-riesgo"
                                     className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
                                 >
-                                    Política de privacidad
+                                    Declaración de riesgo
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/politica-cumplimiento"
+                                    className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
+                                >
+                                    Política de cumplimiento
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/consentimiento-biometrico"
+                                    className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
+                                >
+                                    Consentimiento biométrico
                                 </Link>
                             </li>
                         </ul>
@@ -119,17 +152,17 @@ export default function Footer() {
                             Empresa
                         </h4>
                         <Link
-                            to="/sobre-nosotros"
+                            to="/doar"
                             className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
                         >
                             Sobre DOAR
                         </Link>
 
-                        {/* Copyright dentro de la columna Empresa */}
-                        <p className="text-[13px] leading-snug text-white/70">
-                            © DOAR LLC {currentYear} - Todos los derechos
-                            reservados
-                        </p>
+                        <div className=" space-y-1.5 text-center text-[12px] leading-relaxed text-white/80 lg:text-center">
+                            <p>Ponce de Leon Blvd, Suite 904, Coral Gables, Florida, USA</p>
+                            <p>+1 305-7463401</p>
+                            <p>info@doar.tech</p>
+                        </div>
 
                         {/* Redes sociales — íconos con fondo naranja sólido */}
                         <div className="mt-2 flex items-center justify-center gap-3 lg:justify-center">
@@ -170,7 +203,15 @@ export default function Footer() {
                                 </svg>
                             </a>
                         </div>
+
+                        
                     </div>
+                </div>
+
+                <div className="mt-16 border-t border-white/10 pt-6 text-center">
+                    <p className="text-[13px] leading-snug text-white/70">
+                        © DOAR LLC {currentYear} - Todos los derechos reservados
+                    </p>
                 </div>
             </div>
         </footer>

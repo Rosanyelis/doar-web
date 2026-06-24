@@ -15,7 +15,7 @@ export default function Onboarding() {
         {
             num: '03',
             title: 'ENVÍA O RECIBE DINERO',
-            desc: 'Mueve dinero entre países de forma rápida y segura ',
+            desc: 'Trasfiere entre paises de forma rápida y segura.',
             active: true,
         },
         {

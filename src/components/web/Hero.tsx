@@ -29,9 +29,8 @@ export default function Hero() {
                 </h1>
 
                 <p className="mt-4 max-w-2xl text-[16px] font-semibold text-[#7B7B7B] md:mt-6 md:text-[20px]">
-                    Envía, recibe y gestiona tu dinero entre países con rapidez,
-                    eficiencia y total seguridad desde una sola plataforma
-                    digital.
+                    Plataforma de orquestación financiera conectada con infraestructura regulada de pagos, 
+                    stablecoins y liquidación digital.
                 </p>
 
                 <div className="relative z-40 mt-6 w-full md:mt-10 md:w-auto">

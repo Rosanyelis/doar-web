@@ -61,6 +61,12 @@
   }
 }
 
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent;
+  }
+}
+
 /* Custom styles for animations if needed */
 .animate-in {
   animation-duration: 0.3s;

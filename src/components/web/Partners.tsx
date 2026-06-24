@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Partners() {
@@ -6,7 +6,6 @@ export default function Partners() {
         { name: 'Apple Pay', src: '/assets/wallet/apple-pay.png' },
         { name: 'Google Pay', src: '/assets/wallet/gpay.png' },
         { name: 'Stripe', src: '/assets/wallet/stripe.png' },
-        { name: 'PayPal', src: '/assets/wallet/paypal.png' },
         { name: 'Mastercard', src: '/assets/wallet/mastercard.png' },
         { name: 'Visa', src: '/assets/wallet/visa.png' },
         { name: 'd.local', src: '/assets/wallet/dlocal.svg' },
@@ -20,6 +19,18 @@ export default function Partners() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(5);
+
+    const nextSlide = useCallback(() => {
+        setCurrentIndex((prev) =>
+            prev >= logos.length - itemsToShow ? 0 : prev + 1,
+        );
+    }, [logos.length, itemsToShow]);
+
+    const prevSlide = useCallback(() => {
+        setCurrentIndex((prev) =>
+            prev === 0 ? logos.length - itemsToShow : prev - 1,
+        );
+    }, [logos.length, itemsToShow]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,19 +49,7 @@ export default function Partners() {
             nextSlide();
         }, 3000);
         return () => clearInterval(timer);
-    }, [currentIndex, itemsToShow]);
-
-    const nextSlide = () => {
-        setCurrentIndex((prev) =>
-            prev >= logos.length - itemsToShow ? 0 : prev + 1,
-        );
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prev) =>
-            prev === 0 ? logos.length - itemsToShow : prev - 1,
-        );
-    };
+    }, [currentIndex, itemsToShow, nextSlide]);
 
     return (
         <section className="border-y border-gray-100 bg-white py-18 md:py-24">

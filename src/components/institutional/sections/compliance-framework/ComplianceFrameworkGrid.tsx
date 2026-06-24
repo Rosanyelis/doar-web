@@ -1,7 +1,7 @@
 import {
     Brain,
     Building2,
-    Infinity,
+    Infinity as InfinityIcon,
     RefreshCw,
     Search,
     User,
@@ -16,7 +16,7 @@ const CARD_ICONS: Record<(typeof COMPLIANCE_FRAMEWORK_CARDS)[number]['id'], Luci
     screening: Search,
     aml: RefreshCw,
     behavior: Brain,
-    ongoing: Infinity,
+    ongoing: InfinityIcon,
 };
 
 export default function ComplianceFrameworkGrid() {
