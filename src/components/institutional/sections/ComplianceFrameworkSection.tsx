@@ -5,7 +5,7 @@ import ComplianceShieldGraphic from './compliance-framework/ComplianceShieldGrap
 
 export default function ComplianceFrameworkSection() {
     return (
-        <SectionWrapper className="min-h-screen">
+        <SectionWrapper id="cumplimiento" className="min-h-screen">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 <div className="lg:col-span-6">
                     <h1 className="mb-6 max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-text-primary sm:text-5xl lg:text-6xl">

@@ -1,11 +1,11 @@
 export const INSTITUTIONAL_NAV_LINKS = [
-    { label: '¿Qué es DOAR?', href: '/doar#que-es' },
-    { label: 'Modelo Operativo', href: '/doar/modelo-operativo' },
-    { label: 'Infraestructura', href: '/doar#infraestructura' },
-    { label: 'Cumplimiento', href: '/doar/cumplimiento' },
-    { label: 'Tesorería', href: '/doar/modelo-operativo#tesoreria' },
-    { label: 'Posición Regulatoria', href: '/doar#posicion' },
-    { label: 'Transparencia', href: '/doar#transparencia' },
+    { label: '¿Qué es DOAR?', href: '/sobre-nosotros#que-es' },
+    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo' },
+    { label: 'Infraestructura', href: '/sobre-nosotros#infraestructura' },
+    { label: 'Cumplimiento', href: '/sobre-nosotros#cumplimiento' },
+    { label: 'Tesorería', href: '/sobre-nosotros#tesoreria' },
+    { label: 'Posición Regulatoria', href: '/sobre-nosotros#posicion' },
+    { label: 'Transparencia', href: '/sobre-nosotros#transparencia' },
 ] as const;
 
 export const INTEGRATED_CAPABILITIES = [

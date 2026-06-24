@@ -152,7 +152,7 @@ export default function Footer() {
                             Empresa
                         </h4>
                         <Link
-                            to="/doar"
+                            to="/sobre-nosotros"
                             className="text-[14px] font-normal text-white/80 transition-colors hover:text-[#FCCA01]"
                         >
                             Sobre DOAR

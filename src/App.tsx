@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import DownloadModal from './components/web/DownloadModal';
@@ -10,9 +10,10 @@ const AffiliatePage = lazy(() => import('./pages/AffiliatePage'));
 const SupportPage = lazy(() => import('./pages/SupportPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
+const RiskPage = lazy(() => import('./pages/RiskPage'));
+const CompliancePolicyPage = lazy(() => import('./pages/CompliancePolicyPage'));
+const BiometricConsentPage = lazy(() => import('./pages/BiometricConsentPage'));
 const DoarPage = lazy(() => import('./pages/fintech/DoarPage'));
-const ModeloOperativoPage = lazy(() => import('./pages/fintech/ModeloOperativoPage'));
-const CumplimientoPage = lazy(() => import('./pages/fintech/CumplimientoPage'));
 
 function App() {
   return (
@@ -28,9 +29,13 @@ function App() {
             <Route path="/soporte" element={<SupportPage />} />
             <Route path="/terminos" element={<TermsPage />} />
             <Route path="/privacidad" element={<PrivacyPage />} />
-            <Route path="/doar" element={<DoarPage />} />
-            <Route path="/doar/modelo-operativo" element={<ModeloOperativoPage />} />
-            <Route path="/doar/cumplimiento" element={<CumplimientoPage />} />
+            <Route path="/declaracion-riesgo" element={<RiskPage />} />
+            <Route path="/politica-cumplimiento" element={<CompliancePolicyPage />} />
+            <Route path="/consentimiento-biometrico" element={<BiometricConsentPage />} />
+            <Route path="/sobre-nosotros" element={<DoarPage />} />
+            <Route path="/doar" element={<Navigate to="/sobre-nosotros" replace />} />
+            <Route path="/doar/modelo-operativo" element={<Navigate to="/sobre-nosotros" replace />} />
+            <Route path="/doar/cumplimiento" element={<Navigate to="/sobre-nosotros" replace />} />
           </Routes>
         </Suspense>
       </Router>

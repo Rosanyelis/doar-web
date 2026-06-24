@@ -5,7 +5,8 @@ export const ROUTES = {
   SOPORTE: '/soporte',
   TERMINOS: '/terminos',
   PRIVACIDAD: '/privacidad',
-  DOAR: '/doar',
-  DOAR_MODELO_OPERATIVO: '/doar/modelo-operativo',
-  DOAR_CUMPLIMIENTO: '/doar/cumplimiento',
+  DECLARACION_RIESGO: '/declaracion-riesgo',
+  POLITICA_CUMPLIMIENTO: '/politica-cumplimiento',
+  CONSENTIMIENTO_BIOMETRICO: '/consentimiento-biometrico',
+  SOBRE_NOSOTROS: '/sobre-nosotros',
 } as const;

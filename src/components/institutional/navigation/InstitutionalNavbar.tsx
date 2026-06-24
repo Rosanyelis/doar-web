@@ -4,7 +4,7 @@ import { cn } from '../../../lib/utils';
 
 function DoarLogo() {
     return (
-        <Link to="/doar" className="flex shrink-0 items-center gap-3 transition-opacity duration-200 hover:opacity-90">
+        <Link to="/sobre-nosotros" className="flex shrink-0 items-center gap-3 transition-opacity duration-200 hover:opacity-90">
             <img
                 src="/assets/hero/imagotipo-doar.png"
                 alt="DOAR"
