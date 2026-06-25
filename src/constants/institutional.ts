@@ -497,6 +497,59 @@ export const MONITORING_CAPABILITY_CARDS = [
     },
 ] as const;
 
+export const LIQUIDITY_CAPABILITIES = [
+    { id: 'disponibilidad', title: 'Disponibilidad Operativa', description: 'DOAR asegura liquidez disponible en todo momento para operaciones de salida.' },
+    { id: 'controles', title: 'Controles Operativos', description: 'Mantenimiento operativo y controles durante procesos de liquidación.' },
+    { id: 'preparacion', title: 'Preparación para Liquidación', description: 'Preparación de activos para procesos de liquidación y transferencias.' },
+    { id: 'coordinacion-liquidez', title: 'Coordinación de Liquidez', description: 'Coordinación de la liquidez entre los distintos componentes del ecosistema.' },
+    { id: 'monitoreo-operativo', title: 'Monitoreo Operativo', description: 'Seguimiento continuo de la actividad operativa y eventos relevantes.' },
+    { id: 'continuidad', title: 'Continuidad Operativa', description: 'Capacidad de mantener la operación estable y estable en todo momento.' },
+] as const;
+
+export const ECOSYSTEM_CAPABILITIES = [
+    { id: 'orquestacion', title: 'Orquestación', description: 'DOAR coordina procesos, reglas operativas y experiencia de usuario.' },
+    { id: 'infraestructura', title: 'Infraestructura Especializada', description: 'Las funciones reguladas son ejecutadas por proveedores especializados.' },
+    { id: 'separacion', title: 'Separación de Responsabilidades', description: 'Cada participante conserva responsabilidades independientes dentro del modelo.' },
+] as const;
+
+export const WHAT_IS_NOT_DOAR_TABLE = [
+    { capability: 'Technology Platform', is: true, isNot: false },
+    { capability: 'Bank', is: false, isNot: true },
+    { capability: 'Financial Orchestration Layer', is: true, isNot: false },
+    { capability: 'Custodio', is: false, isNot: true },
+    { capability: 'Infrastructure Coordinator', is: true, isNot: false },
+    { capability: 'Stablecoin Issuer', is: false, isNot: true },
+    { capability: 'Experience Layer', is: true, isNot: false },
+    { capability: 'Payment Network', is: false, isNot: true },
+    { capability: 'Operational Ledger', is: true, isNot: false },
+    { capability: 'Deposit Institution', is: false, isNot: true },
+    { capability: 'Compliance Coordinator', is: true, isNot: false },
+    { capability: 'Financial Institution', is: false, isNot: true },
+] as const;
+
+export const NOT_DOAR_CAPABILITIES = [
+    { id: 'coordinacion', title: 'Coordinación', description: 'DOAR coordina experiencia, reglas operativas e infraestructura integrada.' },
+    { id: 'separacion', title: 'Separación', description: 'Las funciones reguladas permanecen en manos de proveedores especializados.' },
+    { id: 'responsabilidades', title: 'Responsabilidades Definidas', description: 'Cada participante conserva obligaciones claramente definidas.' },
+] as const;
+
+export const RESPONSIBILITIES_TABLE = [
+    { function: 'Experiencia de Usuario', doar: true, partners: false },
+    { function: 'Reglas Operativas', doar: true, partners: false },
+    { function: 'Coordinación Transaccional', doar: true, partners: false },
+    { function: 'Cumplimiento Regulatorio', doar: false, partners: true },
+    { function: 'Custodia de Activos', doar: false, partners: true },
+    { function: 'Procesamiento de Pagos', doar: false, partners: true },
+    { function: 'Infraestructura Blockchain', doar: false, partners: true },
+    { function: 'Servicios Bancarios', doar: false, partners: true },
+] as const;
+
+export const RESPONSIBILITIES_CAPABILITIES = [
+    { id: 'experiencia', title: 'Experiencia Unificada', description: 'DOAR ofrece una experiencia consistente para usuarios y empresas.' },
+    { id: 'infraestructura', title: 'Infraestructura Especializada', description: 'Las funciones reguladas permanecen en manos de proveedores independientes.' },
+    { id: 'responsabilidades-definidas', title: 'Responsabilidades Definidas', description: 'Cada participante conserva obligaciones claramente definidas.' },
+] as const;
+
 export const AUDIT_TIMELINE_STEPS = [
     {
         id: 'user',
@@ -529,4 +582,215 @@ export const AUDIT_TIMELINE_STEPS = [
         description: 'Registro de auditoría consolidado y verificable.',
         highlight: true,
     },
+] as const;
+
+export const DOAR_IS_DEFINITION_ITEMS = [
+    {
+        id: 'technology-platform',
+        title: 'Technology Platform',
+        description: 'Plataforma tecnológica diseñada para orquestar servicios financieros digitales.',
+        icon: 'Network',
+    },
+    {
+        id: 'financial-orchestration',
+        title: 'Financial Orchestration Layer',
+        description: 'Capa de orquestación financiera que conecta usuarios, reglas e infraestructura.',
+        icon: 'Layers',
+    },
+    {
+        id: 'infrastructure-coordinator',
+        title: 'Infrastructure Coordinator',
+        description: 'Coordina proveedores especializados e infraestructura integrada.',
+        icon: 'GitBranch',
+    },
+    {
+        id: 'experience-layer',
+        title: 'Experience Layer',
+        description: 'Interfaz unificada para usuarios y empresas.',
+        icon: 'User',
+    },
+    {
+        id: 'operational-ledger',
+        title: 'Operational Ledger',
+        description: 'Modelo operacional basado en ledger para registrar actividad y estados.',
+        icon: 'FileCheck',
+    },
+    {
+        id: 'compliance-coordinator',
+        title: 'Compliance Coordinator',
+        description: 'Coordina procesos, reglas y monitoreo de cumplimiento con proveedores.',
+        icon: 'ShieldCheck',
+    },
+] as const;
+
+export const DOAR_IS_NOT_DEFINITION_ITEMS = [
+    {
+        id: 'bank',
+        title: 'Bank',
+        description: 'No toma depósitos, no concede créditos, no ofrece productos bancarios.',
+        icon: 'Landmark',
+    },
+    {
+        id: 'custodian',
+        title: 'Custodian',
+        description: 'No custodia activos de clientes ni mantiene control sobre fondos.',
+        icon: 'Vault',
+    },
+    {
+        id: 'stablecoin-issuer',
+        title: 'Stablecoin Issuer',
+        description: 'No emite stablecoins ni representa obligaciones financieras.',
+        icon: 'CircleDollarSign',
+    },
+    {
+        id: 'payment-network',
+        title: 'Payment Network',
+        description: 'No procesa pagos ni opera una red de pagos.',
+        icon: 'ArrowLeftRight',
+    },
+    {
+        id: 'deposit-institution',
+        title: 'Deposit Institution',
+        description: 'No es una institución de depósito ni ofrece cuentas bancarias.',
+        icon: 'Wallet',
+    },
+    {
+        id: 'financial-institution',
+        title: 'Financial Institution',
+        description: 'No es una institución financiera regulada.',
+        icon: 'Users',
+    },
+] as const;
+
+export const DOAR_IS_NOT_SUMMARY_PILLARS = [
+    {
+        id: 'coordinacion',
+        title: 'Coordinación',
+        description: 'DOAR coordina experiencia, reglas operativas e infraestructura integrada.',
+        accent: 'blue',
+        icon: 'Network',
+    },
+    {
+        id: 'separacion',
+        title: 'Separación',
+        description: 'Las funciones reguladas permanecen segregadas entre proveedores especializados.',
+        accent: 'gold',
+        icon: 'ShieldCheck',
+    },
+    {
+        id: 'responsabilidades',
+        title: 'Responsabilidades Definidas',
+        description: 'Cada participante conserva obligaciones independientes dentro del modelo operativo.',
+        accent: 'green',
+        icon: 'ShieldCheck',
+    },
+] as const;
+
+export const RESPONSIBILITY_MODEL_FUNCTIONS = [
+    {
+        id: 'experiencia-usuario',
+        function: 'Experiencia de Usuario',
+        icon: 'User',
+        doar: true,
+        partners: false,
+    },
+    {
+        id: 'reglas-operativas',
+        function: 'Reglas Operativas',
+        icon: 'Settings',
+        doar: true,
+        partners: false,
+    },
+    {
+        id: 'coordinacion-transaccional',
+        function: 'Coordinación Transaccional',
+        icon: 'ArrowLeftRight',
+        doar: true,
+        partners: false,
+    },
+    {
+        id: 'cumplimiento-regulatorio',
+        function: 'Cumplimiento Regulatorio',
+        icon: 'ShieldCheck',
+        doar: false,
+        partners: true,
+    },
+    {
+        id: 'custodia-activos',
+        function: 'Custodia de Activos',
+        icon: 'Lock',
+        doar: false,
+        partners: true,
+    },
+    {
+        id: 'procesamiento-pagos',
+        function: 'Procesamiento de Pagos',
+        icon: 'Wallet',
+        doar: false,
+        partners: true,
+    },
+    {
+        id: 'infraestructura-blockchain',
+        function: 'Infraestructura Blockchain',
+        icon: 'Box',
+        doar: false,
+        partners: true,
+    },
+    {
+        id: 'servicios-bancarios',
+        function: 'Servicios Bancarios',
+        icon: 'Landmark',
+        doar: false,
+        partners: true,
+    },
+] as const;
+
+export const RESPONSIBILITY_MODEL_PILLARS = [
+    {
+        id: 'experiencia',
+        title: 'Experiencia Unificada',
+        description: 'DOAR ofrece una experiencia consistente para usuarios y empresas.',
+        accent: 'blue',
+        icon: 'User',
+    },
+    {
+        id: 'infraestructura',
+        title: 'Infraestructura Especializada',
+        description: 'Las funciones reguladas permanecen en manos de proveedores independientes.',
+        accent: 'gold',
+        icon: 'Users',
+    },
+    {
+        id: 'responsabilidades',
+        title: 'Responsabilidades Definidas',
+        description: 'Cada participante conserva obligaciones claramente delimitadas.',
+        accent: 'green',
+        icon: 'ShieldCheck',
+    },
+] as const;
+
+export const FOOTER_PLATFORM_LINKS = [
+    { label: 'Qué es DOAR', href: '/sobre-nosotros#que-es' },
+    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo' },
+    { label: 'Cumplimiento y Riesgo', href: '/sobre-nosotros#cumplimiento' },
+    { label: 'Liquidez y Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
+    { label: 'Posicionamiento Regulatorio', href: '/sobre-nosotros#posicion' },
+    { label: 'Modelo de Responsabilidades', href: '/sobre-nosotros#responsabilidades' },
+] as const;
+
+export const FOOTER_LEGAL_LINKS = [
+    { label: 'Términos y Condiciones', href: '/terminos' },
+    { label: 'Política de Privacidad', href: '/privacidad' },
+    { label: 'Política de Cookies', href: '/privacidad#cookies' },
+    { label: 'Consentimiento Biométrico', href: '/consentimiento-biometrico' },
+    { label: 'Declaración de Riesgos', href: '/declaracion-riesgo' },
+    { label: 'Política AML / KYC / KYB', href: '/politica-cumplimiento' },
+    { label: 'Declaración AML', href: '/politica-cumplimiento#monitoreo-operativo' },
+    { label: 'Divulgación Regulatoria', href: '/sobre-nosotros#posicion' },
+    { label: 'Política de Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
+] as const;
+
+export const FOOTER_CONTACT_EMAILS = [
+    { id: 'info', email: 'info@doar.tech' },
+    { id: 'manager', email: 'manager@doar.tech' },
 ] as const;

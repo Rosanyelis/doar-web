@@ -9,7 +9,13 @@ import SegregatedOperationalInfrastructureSection from '../../components/institu
 import TreasuryLiquiditySection from '../../components/institutional/sections/TreasuryLiquiditySection';
 import UnifiedFinancialOperationsSection from '../../components/institutional/sections/UnifiedFinancialOperationsSection';
 import WhatIsDoarSection from '../../components/institutional/sections/WhatIsDoarSection';
+import DoarIsNotComparisonSection from '../../components/institutional/sections/DoarIsNotComparisonSection';
+import DoarResponsibilityModelSection from '../../components/institutional/sections/DoarResponsibilityModelSection';
+import DoarPageFooter from '../../components/institutional/layout/DoarPageFooter';
 import AuditTrailSection from '../../components/institutional/sections/AuditTrailSection';
+import OperationalLiquiditySection from '../../components/institutional/sections/OperationalLiquiditySection';
+import RegulatoryPositioningSection from '../../components/institutional/sections/RegulatoryPositioningSection';
+import DoarFoundationDefinitionSection from '../../components/institutional/sections/DoarFoundationDefinitionSection';
 import ComplianceFrameworkSection from '../../components/institutional/sections/ComplianceFrameworkSection';
 import ContinuousMonitoringSection from '../../components/institutional/sections/ContinuousMonitoringSection';
 import RiskManagementSection from '../../components/institutional/sections/RiskManagementSection';
@@ -31,20 +37,44 @@ export default function DoarPage() {
             <InstitutionalNavbar />
 
             <main>
-                <InstitutionalHero />
+                {/* Hero Section - seccion hero */}
+                <InstitutionalHero /> 
+                {/* Partner Strip Section - seccion socio-comerciales */}
                 <PartnerStrip />
+                {/* What Is Doar Section - seccion que-es */}
                 <WhatIsDoarSection />
+                {/* Ledger First Architecture Section - seccion arquitectura-ledger-first */}
                 <LedgerFirstArchitectureSection />
+                {/* Integrated Infrastructure Section - seccion infraestructura-integrada */}
                 <IntegratedInfrastructureSection />
+                {/* Unified Financial Operations Section - seccion operaciones-financieras-unificadas */}
                 <UnifiedFinancialOperationsSection />
+                {/* Segregated Operational Infrastructure Section - seccion infraestructura-operacional-segregada */}
                 <SegregatedOperationalInfrastructureSection />
+                {/* Treasury Liquidity Section - seccion tesoreria-liquidez */}
                 <TreasuryLiquiditySection />
+                {/* Operational Reconciliation Section - seccion conciliacion-operativa */}
                 <OperationalReconciliationSection />
+                {/* Compliance Framework Section - seccion framework-de-cumplimiento */}
                 <ComplianceFrameworkSection />
+                {/* Risk Management Section - seccion gestion-y-monitoreo-de-riesgo */}
                 <RiskManagementSection />
+                {/* Continuous Monitoring Section - seccion monitoreo-continuo */}
                 <ContinuousMonitoringSection />
+                {/* Audit Trail Section - seccion registro-de-auditoria */}
                 <AuditTrailSection />
+                {/* Operational Liquidity Section - seccion liquidez-operativa */}
+                <OperationalLiquiditySection />
+                {/* Regulatory Positioning Section - seccion posicion-regulatorio */}
+                <RegulatoryPositioningSection />
+                {/* DOAR Foundation Definition Section - seccion fundacion-doar */}
+                <DoarFoundationDefinitionSection />
+                {/* Doar Is Not Comparison Section - seccion que-no-es */}
+                <DoarIsNotComparisonSection />
+                {/* Doar Responsibility Model Section - seccion responsabilidades */}
+                <DoarResponsibilityModelSection />
             </main>
+            <DoarPageFooter />
         </div>
     );
 }
