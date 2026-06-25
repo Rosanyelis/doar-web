@@ -1,0 +1,33 @@
+name: Deploy to CloudPanel
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.CP_HOST }}
+          username: ${{ secrets.CP_USER }}
+          key: ${{ secrets.CP_SSH_KEY }}
+          script: |
+            PROJECT_DIR="${{ secrets.CP_PROJECT_DIR }}"
+            DOMAIN_DIR="${{ secrets.CP_DOMAIN_DIR }}"
+
+            if [ ! -d "$PROJECT_DIR" ]; then
+              git clone https://github.com/Rosanyelis/doar-web.git "$PROJECT_DIR"
+            fi
+
+            cd "$PROJECT_DIR"
+            git fetch origin main
+            git reset --hard origin/main
+
+            npm install
+            npm run build
+
+            cp -r dist/* "$DOMAIN_DIR"/  2>/dev/null || cp -r dist/. "$DOMAIN_DIR"/
