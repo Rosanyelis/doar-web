@@ -1,50 +1,64 @@
-import { Activity, AlertTriangle, CheckCircle, Eye, Layers, Shield } from 'lucide-react';
+import {
+    Activity,
+    ArrowRight,
+    CheckCircle2,
+    ClipboardList,
+    Eye,
+    RefreshCw,
+    Shield,
+    ShieldCheck,
+    Target,
+    Users,
+} from 'lucide-react';
+import { cn } from '../../../../lib/utils';
 
 function SupervisionCenter() {
     const indicators = [
-        { label: 'Disponibilidad de Liquidez', status: 'Activa', icon: CheckCircle },
-        { label: 'Cobertura Operativa', status: 'Dentro de parámetros', icon: Shield },
+        { label: 'Disponibilidad de Liquidez', status: 'Activa', icon: CheckCircle2 },
+        { label: 'Cobertura Operativa', status: 'Dentro de parámetros', icon: ShieldCheck },
         { label: 'Proveedores Operativos', status: 'Disponibles', icon: Activity },
         { label: 'Estado General', status: 'Operativo', icon: Eye },
     ];
 
     return (
-        <article className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-            <div className="mb-4">
+        <article className="rounded-2xl border border-white/8 bg-deep-space/80 p-6">
+            <div className="mb-5">
                 <h3 className="text-sm font-semibold text-text-primary">
                     Centro de Supervisión Operativa
                 </h3>
-                <p className="mt-1 text-xs italic text-doar-gold">
-                    ¿Cómo supervisa DOAR la liquidez?
-                </p>
+                <p className="mt-1 text-xs text-doar-blue">¿Cómo supervisa DOAR la liquidez?</p>
             </div>
 
-            <div className="mb-5 grid grid-cols-2 gap-3">
-                {indicators.map((ind) => (
+            <div className="mb-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                {indicators.map(({ label, status, icon: Icon }) => (
                     <div
-                        key={ind.label}
-                        className="flex flex-col items-center gap-2 rounded-2xl border border-white/8 bg-white/[0.03] p-4 text-center"
+                        key={label}
+                        className="flex flex-col items-center gap-2 rounded-xl border border-white/8 bg-white/[0.03] px-2 py-4 text-center"
                     >
-                        <ind.icon className="h-6 w-6 text-doar-gold" strokeWidth={1.75} />
-                        <span className="text-[10px] font-medium text-text-primary leading-tight">
-                            {ind.label}
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full border border-doar-gold/30 bg-doar-gold/5">
+                            <Icon className="h-8 w-8 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                        </div>
+                        <span className="text-[12px] font-medium leading-tight text-text-primary">
+                            {label}
                         </span>
-                        <span className="text-[9px] font-semibold text-doar-gold">
-                            {ind.status}
-                        </span>
+                        <span className="text-[10px] font-semibold text-doar-green">{status}</span>
                     </div>
                 ))}
             </div>
 
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
                 {[
                     'Liquidez disponible para operaciones activas.',
                     'Cobertura de operaciones dentro de parámetros definidos.',
                     'Preparación para liquidación y conciliación.',
                     'Disponibilidad de proveedores e infraestructura.',
                 ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[11px] font-light text-soft-gray">
-                        <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-doar-gold" />
+                    <li key={item} className="flex items-start gap-2 text-[12px] font-light text-white">
+                        <CheckCircle2
+                            className="mt-0.5 h-4 w-4 shrink-0 text-doar-green"
+                            strokeWidth={2}
+                            aria-hidden="true"
+                        />
                         {item}
                     </li>
                 ))}
@@ -53,57 +67,56 @@ function SupervisionCenter() {
     );
 }
 
+const SETTLEMENT_STEPS = [
+    { label: 'Operaciones Activas', icon: ClipboardList },
+    { label: 'Cobertura Operativa', icon: ShieldCheck },
+    { label: 'Ciclo de Liquidación', icon: RefreshCw },
+    { label: 'Continuidad Garantizada', icon: CheckCircle2 },
+] as const;
+
 function SettlementContinuity() {
     return (
-        <article className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-            <div className="mb-4">
+        <article className="rounded-2xl border border-white/8 bg-deep-space/80 p-6">
+            <div className="mb-8">
                 <h3 className="text-sm font-semibold text-text-primary">
                     Continuidad Operativa durante Liquidaciones
                 </h3>
-                <p className="mt-1 text-xs italic text-doar-gold">
+                <p className="mt-1 text-xs text-doar-blue">
                     ¿Cómo mantiene continuidad durante los ciclos de liquidación?
                 </p>
             </div>
 
-            {/* SVG Slot — diagrama provisto externamente */}
-            <div className="mb-5 flex items-center justify-center rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-                <div className="w-full text-center">
-                    <div className="flex items-center justify-between gap-2">
-                        {['Operaciones Activas', 'Cobertura Operativa', 'Ciclo de Liquidación', 'Continuidad Garantizada'].map(
-                            (step, index) => (
-                                <div key={step} className="flex items-center gap-2">
-                                    <div className="flex flex-col items-center gap-2">
-                                        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-doar-gold/30 bg-doar-gold/5">
-                                            {index === 0 ? (
-                                                <Activity className="h-5 w-5 text-doar-gold" />
-                                            ) : index === 1 ? (
-                                                <Shield className="h-5 w-5 text-doar-gold" />
-                                            ) : index === 2 ? (
-                                                <Layers className="h-5 w-5 text-doar-gold" />
-                                            ) : (
-                                                <CheckCircle className="h-5 w-5 text-doar-gold" />
-                                            )}
-                                        </div>
-                                        <span className="max-w-[70px] text-center text-[9px] font-light text-soft-gray leading-tight">
-                                            {step}
-                                        </span>
-                                    </div>
-                                    {index < 3 && (
-                                        <div className="mb-6 h-px w-3 bg-doar-gold/30" />
-                                    )}
+            <div className="mt-4 flex flex-col gap-4">
+                <div className="flex items-start justify-between gap-1">
+                    {SETTLEMENT_STEPS.map(({ label, icon: Icon }, index) => (
+                        <div key={label} className="flex flex-1 items-start">
+                            <div className="flex min-w-0 flex-1 flex-col items-center gap-2">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-doar-gold/30 bg-doar-gold/5">
+                                    <Icon className="h-10 w-10 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
                                 </div>
-                            )
-                        )}
-                    </div>
+                                <span className="max-w-[72px] text-center text-[12px] font-light leading-tight text-white">
+                                    {label}
+                                </span>
+                            </div>
+                            {index < SETTLEMENT_STEPS.length - 1 && (
+                                <div className="mt-5 flex shrink-0 items-center px-0.5" aria-hidden="true">
+                                    <div className="h-px w-2 border-t border-doar-gold/40" />
+                                    <ArrowRight className="h-4 w-4 text-doar-gold/60" strokeWidth={2} />
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
-            </div>
 
-            <div className="flex items-start gap-3 rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-doar-gold" />
-                <p className="text-[11px] font-light leading-relaxed text-soft-gray">
-                    DOAR desacopla la ejecución operativa de los ciclos de liquidación para mantener{' '}
-                    <span className="font-semibold text-text-primary">continuidad en la experiencia del usuario.</span>
-                </p>
+                <div className="mt-5 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                    <ShieldCheck className="mt-0.5 h-10 w-10 shrink-0 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                    <p className="text-[12px] font-light leading-relaxed text-white">
+                        DOAR desacopla la ejecución operativa de los ciclos de liquidación para mantener{' '}
+                        <span className="font-semibold text-doar-gold">
+                            continuidad en la experiencia del usuario.
+                        </span>
+                    </p>
+                </div>
             </div>
         </article>
     );
@@ -113,44 +126,46 @@ function OperationalResilience() {
     const cards = [
         {
             title: 'Estabilidad Operativa',
-            description: 'Capacidad para sostener operaciones activas dentro de los parámetros definidos.',
-            icon: AlertTriangle,
+            description:
+                'Capacidad para sostener operaciones activas dentro de los parámetros definidos.',
+            icon: ShieldCheck,
         },
         {
             title: 'Riesgo Operativo Controlado',
             description: 'Seguimiento continuo del riesgo operativo y sus variaciones.',
-            icon: Shield,
+            icon: Target,
         },
         {
             title: 'Respuesta Coordinada',
             description: 'Mecanismos para gestionar y responder a eventos operativos relevantes.',
-            icon: Activity,
+            icon: Users,
         },
     ];
 
     return (
-        <article className="rounded-[24px] border border-white/8 bg-white/[0.02] p-6">
-            <div className="mb-4">
-                <h3 className="text-sm font-semibold text-text-primary">
-                    Resiliencia Operativa
-                </h3>
-                <p className="mt-1 text-xs italic text-doar-gold">
+        <article className="rounded-2xl border border-white/8 bg-deep-space/80 p-6">
+            <div className="mb-5">
+                <h3 className="text-sm font-semibold text-text-primary">Resiliencia Operacional</h3>
+                <p className="mt-1 text-xs text-doar-blue">
                     ¿Cómo mantiene continuidad ante eventos operativos?
                 </p>
             </div>
 
             <ul className="space-y-4">
-                {cards.map((card) => (
-                    <li key={card.title} className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-doar-blue/30 bg-doar-blue/5">
-                            <card.icon className="h-5 w-5 text-doar-blue" strokeWidth={1.75} />
+                {cards.map(({ title, description, icon: Icon }) => (
+                    <li key={title} className="flex items-start gap-3">
+                        <div
+                            className={cn(
+                                'flex h-14 w-14 shrink-0 items-center justify-center rounded-full',
+                                'border border-doar-blue/40 bg-doar-blue/5'
+                            )}
+                        >
+                            <Icon className="h-10 w-10 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
                         </div>
                         <div>
-                            <span className="text-xs font-semibold text-text-primary">
-                                {card.title}
-                            </span>
-                            <p className="mt-0.5 text-[11px] font-light text-soft-gray">
-                                {card.description}
+                            <span className="text-sm font-semibold text-text-primary">{title}</span>
+                            <p className="mt-0.5 text-[12px] font-light leading-relaxed text-white">
+                                {description}
                             </p>
                         </div>
                     </li>
@@ -162,7 +177,7 @@ function OperationalResilience() {
 
 export default function OperationalSubsections() {
     return (
-        <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:mt-16 lg:grid-cols-3">
             <SupervisionCenter />
             <SettlementContinuity />
             <OperationalResilience />

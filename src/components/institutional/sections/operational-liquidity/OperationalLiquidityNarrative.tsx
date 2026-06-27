@@ -1,23 +1,45 @@
 export default function OperationalLiquidityNarrative() {
     return (
-        <div className="flex flex-col">
-            <span className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-doar-gold">
-                Tesorería y Continuidad Operativa
-            </span>
+        <div className="relative flex flex-col">
+            <div
+                className="pointer-events-none absolute -left-4 top-0 h-full w-[120%] opacity-30"
+                aria-hidden="true"
+            >
+                <svg className="h-full w-full" viewBox="0 0 400 200" preserveAspectRatio="none" fill="none">
+                    <path
+                        d="M0 60 Q100 20 200 60 T400 60"
+                        stroke="rgba(47,107,255,0.3)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                    <path
+                        d="M0 100 Q100 60 200 100 T400 100"
+                        stroke="rgba(47,107,255,0.2)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                    <path
+                        d="M0 140 Q100 100 200 140 T400 140"
+                        stroke="rgba(47,107,255,0.15)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                </svg>
+            </div>
 
-            <h2 className="mb-8 max-w-xl text-[40px] font-bold leading-[1.05] tracking-[-0.04em] text-text-primary sm:text-5xl lg:text-[56px] xl:text-[64px]">
-                Liquidez y
-                <br />
-                <span className="text-doar-gold">Continuidad</span>
-                <br />
-                Operativa
-            </h2>
+            <div className="relative z-10">
+                <h2 className="max-w-sm text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-text-primary sm:text-4xl lg:text-[42px]">
+                    Liquidez y Continuidad Operativa
+                </h2>
 
-            <div className="mb-8 h-[2px] w-16 bg-doar-gold" aria-hidden="true" />
+                <div className="mt-6 h-0.5 w-12 bg-doar-gold" aria-hidden="true" />
 
-            <p className="max-w-[620px] text-[18px] font-light leading-relaxed text-soft-gray">
-                DOAR supervisa liquidez, cobertura operativa y ciclos de ejecución para garantizar continuidad del servicio y estabilidad operativa en todo momento.
-            </p>
+                <p className="mt-8  text-base font-light leading-relaxed text-white sm:text-lg">
+                    DOAR mantiene un compromiso continuo con la disponibilidad operativa y la estabilidad
+                    del servicio, garantizando que las operaciones activas se ejecuten con continuidad y
+                    dentro de parámetros definidos.
+                </p>
+            </div>
         </div>
     );
 }

@@ -1,43 +1,42 @@
-import { PARTNER_LOGOS } from '../../shared/partnerLogos';
+import { Handshake } from 'lucide-react';
+import { PartnerLogo } from '../../shared/partnerLogos';
 import { cn } from '../../../../lib/utils';
+
+const BANNER_PARTNERS = ['stripe', 'dlocal', 'circle', 'fireblocks'] as const;
 
 export default function ExecutiveInfrastructureBanner() {
     return (
         <article
             className={cn(
-                'mt-10 flex flex-col gap-6 rounded-[24px] border border-doar-gold/25',
-                'bg-white/[0.02] p-8',
+                'mt-12 flex flex-col gap-6 rounded-2xl border border-doar-gold/30 md:mt-16',
+                'bg-deep-space/80 p-6 md:p-8',
                 'shadow-[0_0_60px_rgba(245,196,0,0.06)]',
-                'md:flex-row md:items-center md:gap-10',
-                'transition-all duration-200'
+                'lg:flex-row lg:items-center lg:justify-between lg:gap-10'
             )}
         >
-            <div className="flex items-start gap-4 md:max-w-md">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-doar-gold/30 bg-doar-gold/5">
-                    <svg
-                        className="h-6 w-6 text-doar-gold"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.75}
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
-                        />
-                    </svg>
+            <div className="flex items-start gap-4 lg:max-w-md lg:shrink-0">
+                <div
+                    className={cn(
+                        'flex h-18 w-18 shrink-0 items-center justify-center rounded-full',
+                        'border border-doar-gold/40 bg-doar-gold/5'
+                    )}
+                >
+                    <Handshake className="h-12 w-12 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
                 </div>
-                <p className="text-sm font-light leading-relaxed text-soft-gray">
-                    La capacidad operativa de DOAR se apoya en proveedores especializados para custodia, pagos, infraestructura blockchain y servicios financieros.
+                <p className="text-sm font-light leading-relaxed text-white">
+                    La capacidad operativa de DOAR se apoya en proveedores especializados para custodia,
+                    pagos, infraestructura blockchain y servicios financieros.
                 </p>
             </div>
 
-            <div className="flex items-center gap-8 overflow-x-auto scrollbar-none">
-                {(['stripe', 'dlocal', 'circle', 'fireblocks'] as const).map((key) => (
-                    <span key={key} className="shrink-0 text-text-primary/60">
-                        {PARTNER_LOGOS[key]}
-                    </span>
+            <div className="flex flex-wrap items-center gap-6 overflow-x-auto lg:justify-end">
+                {BANNER_PARTNERS.map((id, index) => (
+                    <div key={id} className="flex items-center gap-6">
+                        {index > 0 && (
+                            <div className="hidden h-6 w-px shrink-0 bg-white/15 sm:block" aria-hidden="true" />
+                        )}
+                        <PartnerLogo id={id} className="h-7 brightness-0 invert opacity-80" />
+                    </div>
                 ))}
             </div>
         </article>

@@ -7,12 +7,11 @@ import OperationalSubsections from './operational-liquidity/OperationalSubsectio
 export default function OperationalLiquiditySection() {
     return (
         <SectionWrapper id="liquidez" className="border-t border-white/6">
-            <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-12 lg:gap-12">
+            <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-8">
                 <div className="lg:col-span-5">
                     <OperationalLiquidityNarrative />
                 </div>
-
-                <div className="flex items-start justify-center lg:col-span-7">
+                <div className="lg:col-span-7">
                     <OperationalLiquidityCapabilities />
                 </div>
             </div>
