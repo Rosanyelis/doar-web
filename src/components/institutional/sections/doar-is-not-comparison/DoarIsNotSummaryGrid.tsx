@@ -27,37 +27,36 @@ export default function DoarIsNotSummaryGrid() {
     return (
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {DOAR_IS_NOT_SUMMARY_PILLARS.map(({ id, title, description, accent }) => {
-                const { icon: iconClass, border, bg, Icon } = ACCENT_STYLES[accent as keyof typeof ACCENT_STYLES];
+                const { icon: iconClass, border, bg, Icon } =
+                    ACCENT_STYLES[accent as keyof typeof ACCENT_STYLES];
+
                 return (
                     <article
                         key={id}
                         className={cn(
                             'rounded-2xl border border-white/8 bg-deep-space/80 p-6 md:p-8',
-                            'transition-all duration-200',
-                            'hover:-translate-y-1 hover:border-white/12'
+                            'transition-all duration-200 hover:border-white/12'
                         )}
                     >
-                        <div className="mb-4 flex items-start gap-3">
+                        <div className="flex items-start gap-4">
                             <div
                                 className={cn(
-                                    'flex h-10 w-10 shrink-0 items-center justify-center rounded-full border',
+                                    'flex h-15 w-15 shrink-0 items-center justify-center rounded-full border',
                                     border,
                                     bg
                                 )}
                                 aria-hidden="true"
                             >
-                                <Icon
-                                    className={cn('h-5 w-5', iconClass)}
-                                    strokeWidth={1.75}
-                                />
+                                <Icon className={cn('h-10 w-10', iconClass)} strokeWidth={2} />
                             </div>
-                            <h3 className="text-xs font-semibold uppercase tracking-[0.1em] text-text-primary">
-                                {title}
-                            </h3>
+
+                            <div className="min-w-0 flex-1">
+                                <h3 className="text-base font-semibold text-white">{title}</h3>
+                                <p className="mt-2 text-sm font-light leading-relaxed text-white">
+                                    {description}
+                                </p>
+                            </div>
                         </div>
-                        <p className="text-[12px] font-light leading-relaxed text-soft-gray">
-                            {description}
-                        </p>
                     </article>
                 );
             })}

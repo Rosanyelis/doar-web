@@ -30,34 +30,33 @@ export default function ResponsibilityModelPillars() {
     return (
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {RESPONSIBILITY_MODEL_PILLARS.map(({ id, title, description, accent }) => {
-                const { icon: iconClass, border, bg, line, Icon } = ACCENT_STYLES[accent as keyof typeof ACCENT_STYLES];
+                const { icon: iconClass, border, bg, line, Icon } =
+                    ACCENT_STYLES[accent as keyof typeof ACCENT_STYLES];
+
                 return (
                     <article
                         key={id}
                         className={cn(
                             'rounded-2xl border border-white/8 bg-deep-space/80 p-6 md:p-8',
-                            'transition-all duration-200',
-                            'hover:-translate-y-1 hover:border-white/12'
+                            'transition-all duration-200 hover:border-white/12'
                         )}
                     >
                         <div className="flex items-start gap-4">
                             <div
                                 className={cn(
-                                    'flex h-10 w-10 shrink-0 items-center justify-center rounded-full border',
+                                    'flex h-16 w-16 shrink-0 items-center justify-center rounded-full border',
                                     border,
                                     bg
                                 )}
                                 aria-hidden="true"
                             >
-                                <Icon
-                                    className={cn('h-5 w-5', iconClass)}
-                                    strokeWidth={1.75}
-                                />
+                                <Icon className={cn('h-10 w-10', iconClass)} strokeWidth={2} />
                             </div>
-                            <div>
-                                <h3 className="text-sm font-medium text-text-primary">{title}</h3>
+
+                            <div className="min-w-0">
+                                <h3 className="text-sm font-medium text-white">{title}</h3>
                                 <div className={cn('mt-2 h-px w-10', line)} aria-hidden="true" />
-                                <p className="mt-3 text-xs font-light leading-relaxed text-soft-gray">
+                                <p className="mt-3 text-sm font-light leading-relaxed text-white">
                                     {description}
                                 </p>
                             </div>

@@ -1,64 +1,101 @@
+import { ArrowDown, Landmark, Users } from 'lucide-react';
 import { cn } from '../../../../lib/utils';
+
+function FlowArrow() {
+    return (
+        <div className="flex justify-center py-1" aria-hidden="true">
+            <ArrowDown className="h-5 w-5 text-doar-blue" strokeWidth={2} />
+        </div>
+    );
+}
 
 export default function RegulatoryDiagram() {
     return (
-        <div className="relative flex w-full flex-col items-center gap-6">
-            <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-                <div className="h-[300px] w-[300px] rounded-full bg-doar-gold/[0.03] blur-[80px]" />
+        <div
+            className="relative flex w-full max-w-md flex-col"
+            role="img"
+            aria-label="Diagrama de posicionamiento de DOAR en el ecosistema financiero"
+        >
+            <div className="pointer-events-none absolute -right-8 top-0 h-full w-1/2 opacity-40" aria-hidden="true">
+                <svg className="h-full w-full" viewBox="0 0 200 400" preserveAspectRatio="none" fill="none">
+                    <path
+                        d="M0 80 Q60 40 120 80 T200 80"
+                        stroke="rgba(47,107,255,0.25)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                    <path
+                        d="M0 200 Q60 160 120 200 T200 200"
+                        stroke="rgba(168,85,247,0.2)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                    <path
+                        d="M0 320 Q60 280 120 320 T200 320"
+                        stroke="rgba(47,107,255,0.15)"
+                        strokeWidth="1"
+                        strokeDasharray="2 4"
+                    />
+                </svg>
             </div>
 
-            <div className="relative z-10 flex w-full max-w-[420px] flex-col items-center gap-6">
+            <article
+                className={cn(
+                    'relative z-10 flex flex-col items-center gap-3 rounded-xl border border-doar-blue/30',
+                    'bg-deep-space/80 px-5 py-4 text-center'
+                )}
+            >
                 <div
-                    className={cn(
-                        'w-full rounded-[24px] border border-white/10 bg-white/[0.02] p-6',
-                        'text-center'
-                    )}
+                    className="flex shrink-0 items-center justify-center rounded-full"
+                    aria-hidden="true"
                 >
-                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-soft-gray/70">
-                        Users &amp; Businesses
-                    </span>
+                    <Users className="h-12 w-12 text-doar-blue" strokeWidth={1.75} />
                 </div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-text-primary">
+                    Users &amp; Businesses
+                </h3>
+            </article>
 
-                <div className="flex flex-col items-center gap-1">
-                    <div className="h-8 w-px bg-doar-gold/40" />
-                    <div className="h-2 w-2 rounded-full bg-doar-gold" />
-                    <div className="h-8 w-px bg-doar-gold/40" />
-                </div>
+            <FlowArrow />
 
-                <div
-                    className={cn(
-                        'w-full rounded-[24px] border border-doar-gold/30',
-                        'bg-doar-gold/5 p-8',
-                        'shadow-[0_0_40px_rgba(245,196,0,0.06)]',
-                        'text-center'
-                    )}
-                >
-                    <span className="text-sm font-bold uppercase tracking-[0.14em] text-doar-gold">
-                        DOAR
-                    </span>
-                    <div className="mx-auto mt-2 h-px w-12 bg-doar-gold/40" />
-                    <span className="mt-2 block text-xs font-medium text-soft-gray/80">
+            <article
+                className={cn(
+                    'relative z-10 flex flex-col items-center gap-3 rounded-xl border border-doar-gold/50',
+                    'bg-deep-space/80 px-5 py-5 text-center',
+                    'shadow-[0_0_40px_rgba(245,196,0,0.1)]'
+                )}
+            >
+                <img
+                    src="/assets/institucional/logo.svg"
+                    alt=""
+                    className=" w-50 shrink-0"
+                    aria-hidden="true"
+                />
+                <div className="min-w-0">
+                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.14em] text-doar-gold">
                         Financial Orchestration Layer
-                    </span>
+                    </p>
                 </div>
+            </article>
 
-                <div className="flex flex-col items-center gap-1">
-                    <div className="h-8 w-px bg-doar-gold/40" />
-                    <div className="h-2 w-2 rounded-full bg-doar-gold" />
-                    <div className="h-8 w-px bg-doar-gold/40" />
-                </div>
+            <FlowArrow />
 
+            <article
+                className={cn(
+                    'relative z-10 flex flex-col items-center gap-3 rounded-xl border border-doar-blue/30',
+                    'bg-deep-space/80 px-5 py-4 text-center'
+                )}
+            >
                 <div
-                    className={cn(
-                        'w-full rounded-[24px] border border-white/10 bg-white/[0.02] p-6',
-                        'text-center'
-                    )}
+                    className="flex shrink-0 items-center justify-center "
+                    aria-hidden="true"
                 >
-                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-soft-gray/70">
-                        Specialized Partners
-                    </span>
+                    <Landmark className="h-12 w-12 text-doar-green" strokeWidth={1.75} />
                 </div>
-            </div>
+                <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-text-primary">
+                    Specialized Partners
+                </h3>
+            </article>
         </div>
     );
 }
