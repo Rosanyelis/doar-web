@@ -13,7 +13,7 @@ export default function ExecutiveOperationalBanner() {
             )}
         >
             <div className="flex shrink-0 items-start gap-4 md:w-64">
-                <Shield className="mt-0.5 h-8 w-8 shrink-0 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                <Shield className="mt-0.5 h-14 w-14 shrink-0 text-doar-gold" strokeWidth={2} aria-hidden="true" />
                 <div className="flex flex-col gap-1">
                     <span className="text-sm font-semibold uppercase tracking-[0.14em] text-doar-gold">
                         Unificado.
