@@ -1,4 +1,4 @@
-import { FileText, Package, Settings, ShieldCheck, User } from 'lucide-react';
+import { Boxes, FileSearch, Settings, ShieldCheck, User } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { AUDIT_TIMELINE_STEPS } from '../../../../constants/institutional';
 import { cn } from '../../../../lib/utils';
@@ -6,58 +6,70 @@ import { cn } from '../../../../lib/utils';
 const STEP_ICONS: Record<(typeof AUDIT_TIMELINE_STEPS)[number]['id'], LucideIcon> = {
     user: User,
     system: Settings,
-    provider: Package,
+    provider: Boxes,
     compliance: ShieldCheck,
-    audit: FileText,
+    audit: FileSearch,
 };
 
 export default function AuditTimelineDiagram() {
     return (
         <div
-            className="relative mt-12 w-full overflow-x-auto pb-4"
+            className="relative mt-12 w-full overflow-x-auto pb-2 md:mt-16"
             role="img"
             aria-label="Línea de tiempo de trazabilidad y auditoría DOAR"
         >
-            <div className="relative mx-auto flex min-w-[640px] items-start justify-between px-4">
+            <div className="relative mx-auto flex min-w-[1200px] max-w-7xl items-start justify-between px-2">
                 <div
-                    className="absolute left-8 right-8 top-6 h-px bg-doar-blue/30"
+                    className="absolute left-[10%] right-[10%] top-10 h-px bg-doar-blue/35"
                     aria-hidden="true"
                 />
 
-                {AUDIT_TIMELINE_STEPS.map((step) => {
+                {AUDIT_TIMELINE_STEPS.map((step, index) => {
                     const Icon = STEP_ICONS[step.id];
                     const isHighlight = 'highlight' in step && step.highlight;
+                    const isLast = index === AUDIT_TIMELINE_STEPS.length - 1;
 
                     return (
-                        <div
-                            key={step.id}
-                            className="relative z-10 flex w-[110px] flex-col items-center"
-                        >
+                        <div key={step.id} className="relative flex flex-1 flex-col items-center">
+                            {!isLast && (
+                                <div
+                                    className="absolute left-[calc(50%+28px)] top-10 z-0 h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-doar-blue/50"
+                                    aria-hidden="true"
+                                />
+                            )}
+
                             <div
                                 className={cn(
-                                    'mb-3 flex h-12 w-12 items-center justify-center rounded-full border-2',
-                                    'bg-deep-space/90 text-xs font-bold',
+                                    'relative z-10 mb-3 flex h-22 w-22 items-center justify-center rounded-full border-2',
+                                    'bg-deep-space/90',
                                     isHighlight
-                                        ? 'border-doar-gold text-doar-gold shadow-[0_0_20px_rgba(245,196,0,0.2)]'
-                                        : 'border-doar-blue/40 text-doar-blue'
+                                        ? 'border-doar-gold shadow-[0_0_20px_rgba(245,196,0,0.2)]'
+                                        : 'border-doar-blue/40'
+                                )}
+                            >
+                                <Icon
+                                    className={cn(
+                                        'h-16 w-16',
+                                        isHighlight ? 'text-doar-gold' : 'text-doar-blue'
+                                    )}
+                                    strokeWidth={1.75}
+                                    aria-hidden="true"
+                                />
+                            </div>
+
+                            <span
+                                className={cn(
+                                    'text-[16px] font-bold tracking-wider',
+                                    isHighlight ? 'text-doar-gold' : 'text-doar-blue'
                                 )}
                             >
                                 {step.step}
-                            </div>
-
-                            <Icon
-                                className={cn(
-                                    'mb-2 h-6 w-6',
-                                    isHighlight ? 'text-doar-gold' : 'text-doar-blue'
-                                )}
-                                strokeWidth={1.75}
-                                aria-hidden="true"
-                            />
+                            </span>
 
                             <p
                                 className={cn(
-                                    'text-center text-[9px] font-semibold uppercase tracking-wider',
-                                    isHighlight ? 'text-doar-gold' : 'text-text-primary'
+                                    'mt-1 max-w-[140px] text-center text-[14px] font-light uppercase leading-tight tracking-wider',
+                                    isHighlight ? 'text-doar-gold' : 'text-white'
                                 )}
                             >
                                 {step.title}

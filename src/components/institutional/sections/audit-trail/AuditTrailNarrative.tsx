@@ -1,31 +1,31 @@
 export default function AuditTrailNarrative() {
     return (
-        <>
-            <div className="flex flex-col">
-                <h2 className="mb-8 max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-text-primary sm:text-5xl">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:gap-16">
+            <div>
+                <h2 className="max-w-xl text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-text-primary sm:text-4xl lg:text-[42px]">
                     Trazabilidad y Registro de Auditoría
                 </h2>
 
-                <div className="mb-8 h-0.5 w-16 bg-doar-gold" aria-hidden="true" />
+                <div className="mt-6 h-0.5 w-12 bg-doar-gold" aria-hidden="true" />
+
+                <p className="mt-8 max-w-md text-base font-light leading-relaxed text-white">
+                    DOAR mantiene un enfoque estructurado para registrar cada acción, evento y
+                    decisión dentro del ciclo operativo de la plataforma.
+                </p>
             </div>
 
-            <div className="flex max-w-[560px] flex-col gap-4 text-base font-light leading-relaxed text-soft-gray lg:ml-auto">
+            <div className="flex flex-col gap-5 text-base font-light leading-relaxed text-white lg:pt-2">
                 <p>
-                    DOAR mantiene un registro completo y verificable de cada acción, evento y
-                    decisión a lo largo del ciclo de vida operacional — desde la acción del usuario
-                    hasta el registro de auditoría final.
+                    Cada operación en la plataforma genera eventos de sistema, proveedor y
+                    cumplimiento que quedan vinculados de forma secuencial dentro del modelo
+                    operativo.
                 </p>
                 <p>
-                    Cada paso del flujo es capturado de forma inmutable, creando una cadena de
-                    evidencia que soporta cumplimiento regulatorio, investigaciones y revisiones
-                    internas.
-                </p>
-                <p>
-                    Este enfoque garantiza trazabilidad end-to-end, integridad de datos y
-                    disponibilidad de evidencia verificable para auditores, reguladores y equipos
-                    de control interno.
+                    Estos registros permiten reconstruir la actividad, validar decisiones y
+                    proporcionar evidencia verificable para auditoría, cumplimiento y control
+                    interno.
                 </p>
             </div>
-        </>
+        </div>
     );
 }

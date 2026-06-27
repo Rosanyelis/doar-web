@@ -1,4 +1,4 @@
-import { Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { cn } from '../../../lib/utils';
 
 interface ComplianceSummaryBannerProps {
@@ -48,11 +48,15 @@ export default function ComplianceSummaryBanner({
                 </svg>
             </div>
 
-            <Shield
-                className="relative z-10 mb-4 h-10 w-10 shrink-0 text-doar-gold md:mb-0"
-                strokeWidth={1.75}
-                aria-hidden="true"
-            />
+            <div className="relative z-10 flex shrink-0 items-start gap-4 md:items-center">
+                <div
+                    className={cn(
+                        'flex  shrink-0 items-center justify-center rounded-full'
+                    )}
+                >
+                    <ShieldCheck className="h-20 w-20 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                </div>
+            </div>
 
             <div className="relative z-10 min-w-0 flex-1">
                 <h3

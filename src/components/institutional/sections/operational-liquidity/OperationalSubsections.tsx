@@ -5,7 +5,6 @@ import {
     ClipboardList,
     Eye,
     RefreshCw,
-    Shield,
     ShieldCheck,
     Target,
     Users,

@@ -1,4 +1,4 @@
-import { Activity, Landmark, Layers, RefreshCw, Shield, ShieldCheck, Users } from 'lucide-react';
+import { Activity, Landmark, Layers, RefreshCw, ShieldCheck, Users } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { cn } from '../../../../lib/utils';
 
