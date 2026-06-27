@@ -13,7 +13,7 @@ export default function ExecutiveResponsibilityBanner() {
             )}
         >
             <div className="flex shrink-0 items-center gap-4 md:w-72">
-                <ShieldCheck className="h-8 w-8 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                <ShieldCheck className="h-20 w-20 text-doar-gold" strokeWidth={2} aria-hidden="true" />
                 <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-doar-gold">
                     Responsabilidades Distribuidas
                 </h3>

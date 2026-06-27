@@ -1,5 +1,5 @@
 import { INFRASTRUCTURE_PROVIDERS } from '../../../../constants/institutional';
-import { PARTNER_LOGOS } from '../../shared/partnerLogos';
+import { PartnerLogo, type PartnerLogoId } from '../../shared/partnerLogos';
 import { cn } from '../../../../lib/utils';
 
 export default function ProviderCapabilityGrid() {
@@ -14,7 +14,9 @@ export default function ProviderCapabilityGrid() {
                         'hover:-translate-y-1 hover:border-white/12'
                     )}
                 >
-                    <div className="mb-4">{PARTNER_LOGOS[id]}</div>
+                    <div className="mb-4">
+                        <PartnerLogo id={id as PartnerLogoId} className="h-8 max-w-[140px]" />
+                    </div>
 
                     <span className="mb-3 text-xs font-semibold text-doar-gold">{category}</span>
 

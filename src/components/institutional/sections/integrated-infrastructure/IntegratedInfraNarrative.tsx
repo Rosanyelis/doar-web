@@ -8,7 +8,7 @@ export default function IntegratedInfraNarrative() {
             </h2>
 
             <div className="flex max-w-[620px] flex-col gap-4 text-base font-light leading-relaxed text-white">
-                <p>
+                <p className="text-blue-300">
                 DOAR coordina proveedores especializados para ejecutar funciones clave relacionadas con pagos, cumplimiento, tesorería, custodia digital e infraestructura bancaria.
                 </p>
                 <p>

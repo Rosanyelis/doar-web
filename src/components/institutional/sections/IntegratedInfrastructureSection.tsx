@@ -1,8 +1,8 @@
 import SectionWrapper from '../shared/SectionWrapper';
 import ExecutiveResponsibilityBanner from './integrated-infrastructure/ExecutiveResponsibilityBanner';
 import IntegratedInfraNarrative from './integrated-infrastructure/IntegratedInfraNarrative';
-import IntegratedOrchestrationDiagram from './integrated-infrastructure/IntegratedOrchestrationDiagram';
 import ProviderCapabilityGrid from './integrated-infrastructure/ProviderCapabilityGrid';
+import { cn } from '../../../lib/utils';
 
 export default function IntegratedInfrastructureSection() {
     return (
@@ -13,7 +13,11 @@ export default function IntegratedInfrastructureSection() {
                 </div>
 
                 <div className="flex items-center justify-center lg:col-span-7 lg:justify-center">
-                    <IntegratedOrchestrationDiagram />
+                    <img
+                        src="/assets/institucional/diagram_03.png"
+                        alt="Diagrama de infraestructura especializada integrada DOAR"
+                        className={cn('h-auto w-full max-w-2xl object-contain')}
+                    />
                 </div>
             </div>
 
