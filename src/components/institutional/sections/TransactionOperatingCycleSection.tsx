@@ -5,7 +5,7 @@ import TransactionCycleSummaryBar from './transaction-operating-cycle/Transactio
 
 export default function TransactionOperatingCycleSection() {
     return (
-        <SectionWrapper id="ciclo-transaccion" className="border-t border-white/6">
+        <SectionWrapper id="modelo-operativo" className="border-t border-white/6">
             <TransactionCycleNarrative />
             <TransactionCycleFlowDiagram />
             <TransactionCycleSummaryBar />

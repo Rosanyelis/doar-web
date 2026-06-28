@@ -1,12 +1,16 @@
-export const INSTITUTIONAL_NAV_LINKS = [
-    { label: '¿Qué es DOAR?', href: '/sobre-nosotros#que-es' },
-    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo' },
-    { label: 'Infraestructura', href: '/sobre-nosotros#infraestructura' },
-    { label: 'Cumplimiento', href: '/sobre-nosotros#cumplimiento' },
-    { label: 'Tesorería', href: '/sobre-nosotros#tesoreria' },
-    { label: 'Posición Regulatoria', href: '/sobre-nosotros#posicion' },
-    { label: 'Transparencia', href: '/sobre-nosotros#transparencia' },
+export const DOAR_PAGE_PLATFORM_LINKS = [
+    { label: 'Qué es DOAR', href: '/sobre-nosotros#que-es', navGroup: 'que-es' },
+    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo', navGroup: 'modelo-operativo' },
+    { label: 'Cumplimiento y Riesgo', href: '/sobre-nosotros#cumplimiento', navGroup: 'cumplimiento' },
+    { label: 'Liquidez y Continuidad Operativa', href: '/sobre-nosotros#tesoreria', navGroup: 'tesoreria' },
+    { label: 'Posicionamiento Regulatorio', href: '/sobre-nosotros#posicion', navGroup: 'posicion' },
+    { label: 'Modelo de Responsabilidades', href: '/sobre-nosotros#responsabilidades', navGroup: 'responsabilidades' },
 ] as const;
+
+/** @deprecated Usar DOAR_PAGE_PLATFORM_LINKS */
+export const INSTITUTIONAL_NAV_LINKS = DOAR_PAGE_PLATFORM_LINKS;
+
+export const FOOTER_PLATFORM_LINKS = DOAR_PAGE_PLATFORM_LINKS;
 
 export const INTEGRATED_CAPABILITIES = [
     { id: 'pagos', label: 'Pagos' },
@@ -873,15 +877,6 @@ export const RESPONSIBILITY_MODEL_PILLARS = [
     },
 ] as const;
 
-export const FOOTER_PLATFORM_LINKS = [
-    { label: 'Qué es DOAR', href: '/sobre-nosotros#que-es' },
-    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo' },
-    { label: 'Cumplimiento y Riesgo', href: '/sobre-nosotros#cumplimiento' },
-    { label: 'Liquidez y Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
-    { label: 'Posicionamiento Regulatorio', href: '/sobre-nosotros#posicion' },
-    { label: 'Modelo de Responsabilidades', href: '/sobre-nosotros#responsabilidades' },
-] as const;
-
 export const FOOTER_LEGAL_LINKS = [
     { label: 'Términos y Condiciones', href: '/terminos' },
     { label: 'Política de Privacidad', href: '/privacidad' },
@@ -890,8 +885,8 @@ export const FOOTER_LEGAL_LINKS = [
     { label: 'Declaración de Riesgos', href: '/declaracion-riesgo' },
     { label: 'Política AML / KYC / KYB', href: '/politica-cumplimiento' },
     { label: 'Declaración AML', href: '/politica-cumplimiento#monitoreo-operativo' },
-    { label: 'Divulgación Regulatoria', href: '/sobre-nosotros#posicion' },
-    { label: 'Política de Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
+    { label: 'Divulgación Regulatoria', href: '/sobre-nosotros#posicion', navGroup: 'posicion' },
+    { label: 'Política de Continuidad Operativa', href: '/sobre-nosotros#tesoreria', navGroup: 'tesoreria' },
 ] as const;
 
 export const FOOTER_CONTACT_EMAILS = [

@@ -6,7 +6,7 @@ import MonitoringCenterDiagram from './continuous-monitoring/MonitoringCenterDia
 
 export default function ContinuousMonitoringSection() {
     return (
-        <SectionWrapper className="border-t border-white/6">
+        <SectionWrapper id="monitoreo-continuo" className="border-t border-white/6">
             <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-12 lg:gap-12">
                 <div className="lg:col-span-5">
                     <ContinuousMonitoringNarrative />

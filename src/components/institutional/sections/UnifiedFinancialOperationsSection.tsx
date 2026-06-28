@@ -5,7 +5,7 @@ import UnifiedOperationsNarrative from './unified-operations/UnifiedOperationsNa
 
 export default function UnifiedFinancialOperationsSection() {
     return (
-        <SectionWrapper id="modelo-operativo" className="min-h-screen">
+        <SectionWrapper id="operaciones-unificadas" className="min-h-screen">
             <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12 lg:gap-12">
                 <div className="lg:col-span-4">
                     <UnifiedOperationsNarrative />

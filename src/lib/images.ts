@@ -1,6 +1,8 @@
 export const images = {
     logo: '/assets/hero/imagotipo-doar.png',
-    logoWhite: '/assets/hero/imagotipo-doar.png', // Fallback
+    logoInstitutional: '/assets/institucional/logo.svg',
+    logoWhite: '/assets/hero/imagotipo-doar.png',
+    logoVertical: '/assets/institucional/logo-vertical.png',
     heroMockup: '/assets/hero/hero-mockup.png',
     heroBg: '/assets/hero/background.png',
     avatars: {

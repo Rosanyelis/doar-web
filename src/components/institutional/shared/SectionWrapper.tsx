@@ -15,6 +15,7 @@ export default function SectionWrapper({ id, children, className }: SectionWrapp
             className={cn(
                 'relative overflow-hidden bg-midnight-navy font-institutional',
                 'py-15 md:py-25',
+                id && 'scroll-mt-[88px]',
                 className
             )}
         >

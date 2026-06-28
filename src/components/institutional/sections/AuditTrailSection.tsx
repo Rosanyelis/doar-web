@@ -6,7 +6,7 @@ import AuditTrailNarrative from './audit-trail/AuditTrailNarrative';
 
 export default function AuditTrailSection() {
     return (
-        <SectionWrapper className="border-t border-white/6">
+        <SectionWrapper id="auditoria" className="border-t border-white/6">
             <AuditTrailNarrative />
 
             <AuditTimelineDiagram />

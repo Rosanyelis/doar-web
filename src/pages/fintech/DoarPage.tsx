@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { DoarPageNavigationProvider } from '../../context/DoarPageNavigationProvider';
 import InstitutionalHero from '../../components/institutional/hero/InstitutionalHero';
 import InstitutionalNavbar from '../../components/institutional/navigation/InstitutionalNavbar';
 import IntegratedInfrastructureSection from '../../components/institutional/sections/IntegratedInfrastructureSection';
@@ -24,6 +25,7 @@ import { cn } from '../../lib/utils';
 
 export default function DoarPage() {
     return (
+        <DoarPageNavigationProvider>
         <div
             className={cn(
                 'min-h-screen bg-midnight-navy text-text-primary',
@@ -79,5 +81,6 @@ export default function DoarPage() {
             </main>
             <DoarPageFooter />
         </div>
+        </DoarPageNavigationProvider>
     );
 }
