@@ -319,20 +319,35 @@ export const TREASURY_FEATURE_CARDS = [
 ] as const;
 
 export const RECONCILIATION_LEDGER_ITEMS = [
-    'Balances',
-    'Activity',
-    'History',
-    'Transactions',
-    'Operational States',
+    'Saldos',
+    'Actividad',
+    'Historial',
+    'Transacciones',
+    'Estados Operativos',
 ] as const;
 
 export const RECONCILIATION_INFRA_ITEMS = [
-    'Payments',
-    'Payouts',
-    'Settlement Events',
-    'Provider Events',
-    'Banking Events',
+    'Pagos',
+    'Desembolsos',
+    'Eventos de Liquidación',
+    'Eventos de Proveedores',
+    'Eventos Bancarios',
 ] as const;
+
+export const RECONCILIATION_ENGINE = {
+    title: 'Motor de Conciliación',
+    description: 'Empareja, valida y reconcilia registros entre sistemas',
+} as const;
+
+export const RECONCILIATION_VALIDATED = {
+    title: 'Estado Operativo Validado',
+    description: 'Vista operativa consistente, precisa y confiable en todos los sistemas',
+} as const;
+
+export const RECONCILIATION_SOURCES = {
+    ledger: 'Ledger DOAR',
+    infra: 'Eventos de Infraestructura',
+} as const;
 
 export const RECONCILIATION_FEATURE_CARDS = [
     {

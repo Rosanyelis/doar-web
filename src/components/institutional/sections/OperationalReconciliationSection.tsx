@@ -12,7 +12,7 @@ export default function OperationalReconciliationSection() {
                     <ReconciliationNarrative />
                 </div>
 
-                <div className="flex items-start justify-center lg:col-span-7">
+                <div className="w-full lg:col-span-7">
                     <ReconciliationFlowDiagram />
                 </div>
             </div>
