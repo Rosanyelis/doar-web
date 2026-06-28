@@ -24,6 +24,11 @@ async function generate() {
             continue;
         }
 
+        if (svg === out) {
+            console.log(`[ok] ${out} (kept as SVG)`);
+            continue;
+        }
+
         let pipeline = sharp(svgPath);
 
         if (sizes) {
