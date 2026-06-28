@@ -26,7 +26,7 @@ export default function MonitoringCenterDiagram() {
         <div
             className="relative mx-auto h-80 w-full max-w-lg"
             role="img"
-            aria-label="Diagrama del Monitoring Center DOAR"
+            aria-label="Diagrama del Centro de Monitoreo DOAR"
         >
             <svg
                 className="pointer-events-none absolute inset-0 h-full w-full"
@@ -64,10 +64,10 @@ export default function MonitoringCenterDiagram() {
             >
                 <DoarLogoIcon />
                 <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.12em] text-doar-gold">
-                    Monitoring
+                    Centro de
                 </p>
                 <p className="text-[7px] font-semibold uppercase tracking-[0.12em] text-doar-gold">
-                    Center
+                    Monitoreo
                 </p>
             </div>
 

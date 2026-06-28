@@ -12,11 +12,11 @@ const CARD_ICONS: Record<(typeof AUDIT_TIMELINE_STEPS)[number]['id'], LucideIcon
 };
 
 const CARD_TITLES: Record<(typeof AUDIT_TIMELINE_STEPS)[number]['id'], string> = {
-    user: 'User Events',
-    system: 'System Events',
-    provider: 'Provider Events',
-    compliance: 'Compliance Events',
-    audit: 'Audit Records',
+    user: 'Eventos de Usuario',
+    system: 'Eventos del Sistema',
+    provider: 'Eventos de Proveedores',
+    compliance: 'Eventos de Cumplimiento',
+    audit: 'Registros de Auditoría',
 };
 
 export default function AuditTrailCards() {

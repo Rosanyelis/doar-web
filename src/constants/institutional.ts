@@ -396,33 +396,51 @@ export const SEGREGATED_LAYER_CARDS = [
 export const COMPLIANCE_FRAMEWORK_CARDS = [
     {
         id: 'kyc',
-        title: 'KYC Verification',
-        items: ['Documental', 'Biométrica', 'Vida', 'Identidad'],
+        title: 'Verificación KYC',
+        description: 'Verificación de identidad de personas con altos estándares de seguridad.',
+        items: ['Verificación documental', 'Verificación biométrica', 'Prueba de vida', 'Validación de identidad'],
+        accent: 'blue',
+        icon: 'User',
     },
     {
         id: 'kyb',
-        title: 'KYB Verification',
-        items: ['Empresarial', 'UBO', 'Corporativa', 'Screening'],
+        title: 'Verificación KYB',
+        description: 'Validación empresarial y de estructuras corporativas.',
+        items: ['Validación empresarial', 'Identificación UBO', 'Documentación corporativa', 'Screening empresarial'],
+        accent: 'purple',
+        icon: 'Building2',
     },
     {
         id: 'screening',
-        title: 'Transaction Screening',
-        items: ['PEP', 'Sanctions', 'Watchlists', 'Adverse Media'],
+        title: 'Screening Transaccional',
+        description: 'Screening transaccional contra listas y fuentes globales.',
+        items: ['Screening PEP', 'Screening de Sanciones', 'Listas de Vigilancia', 'Medios Adversos'],
+        accent: 'cyan',
+        icon: 'Search',
     },
     {
         id: 'aml',
-        title: 'AML Monitoring',
-        items: ['AML Rules', 'Transaction Rules', 'Reviews', 'Thresholds'],
+        title: 'Monitoreo AML',
+        description: 'Monitoreo basado en reglas internas y señales de partners.',
+        items: ['Reglas AML', 'Reglas Transaccionales', 'Revisiones de Cumplimiento', 'Umbrales y Alertas de Riesgo'],
+        accent: 'orange',
+        icon: 'RefreshCw',
     },
     {
         id: 'behavior',
-        title: 'Behavior Monitoring',
-        items: ['Risk Engine', 'Runtime Alerts', 'Signals', 'Velocity'],
+        title: 'Monitoreo de Comportamiento',
+        description: 'Monitoreo de comportamiento para la detección de patrones inusuales.',
+        items: ['Motor de Riesgo', 'Alertas en Tiempo Real', 'Señales de Comportamiento', 'Controles de Velocidad'],
+        accent: 'sky',
+        icon: 'Activity',
     },
     {
         id: 'ongoing',
-        title: 'Ongoing Monitoring',
-        items: ['Re-screening', 'Reviews', 'Profile Updates', 'Assessment'],
+        title: 'Monitoreo Continuo',
+        description: 'Supervisión continua durante todo el ciclo de vida del usuario.',
+        items: ['Re-screening', 'Revisiones de Cumplimiento', 'Actualización de Perfiles', 'Evaluación Continua'],
+        accent: 'green',
+        icon: 'Infinity',
     },
 ] as const;
 
@@ -432,67 +450,137 @@ export const COMPLIANCE_METHODOLOGY = [
     { id: 'respuesta', label: 'Respuesta' },
 ] as const;
 
+export const TRANSACTION_CYCLE_STEPS = [
+    { id: 'user', type: 'circle', label: 'User', subtitle: null, accent: 'blue' },
+    {
+        id: 'pay-in',
+        type: 'box',
+        label: 'Pay In',
+        subtitle: 'Funding Request',
+        accent: 'gold',
+    },
+    {
+        id: 'ledger',
+        type: 'ledger',
+        label: 'DOAR Ledger',
+        subtitle: 'Transaction & Accounting Record',
+        accent: 'gold',
+        highlight: true,
+    },
+    {
+        id: 'treasury',
+        type: 'box',
+        label: 'Treasury & Liquidity Coverage',
+        subtitle: 'Liquidity Coverage',
+        accent: 'blue',
+    },
+    {
+        id: 'settlement',
+        type: 'box',
+        label: 'Settlement & Reconciliation',
+        subtitle: 'Settlement Validation',
+        accent: 'blue',
+    },
+    {
+        id: 'pay-out',
+        type: 'box',
+        label: 'Pay Out',
+        subtitle: 'Funds Delivery',
+        accent: 'gold',
+    },
+    {
+        id: 'recipient',
+        type: 'recipient',
+        label: 'Recipient',
+        subtitle: 'Final Reception',
+        accent: 'blue',
+    },
+] as const;
+
+export const TRANSACTION_CYCLE_SUMMARY = [
+    {
+        id: 'trazabilidad',
+        label: 'Trazabilidad completa en cada operación',
+        icon: 'Shield',
+    },
+    {
+        id: 'visibilidad',
+        label: 'Visibilidad y control en tiempo real',
+        icon: 'BarChart3',
+    },
+    {
+        id: 'conciliacion',
+        label: 'Conciliación y validación robustas',
+        icon: 'Lock',
+    },
+    {
+        id: 'eficiencia',
+        label: 'Eficiencia operativa a escala',
+        icon: 'Zap',
+    },
+] as const;
+
 export const RISK_ENGINE_NODES = [
     {
         id: 'velocity',
-        title: 'Velocity Controls',
+        title: 'Controles de Velocidad',
         description: 'Limita frecuencia y volumen de operaciones según perfiles de riesgo.',
     },
     {
         id: 'exposure',
-        title: 'Exposure Controls',
+        title: 'Controles de Exposición',
         description: 'Monitorea exposición acumulada y límites operacionales por entidad.',
     },
     {
         id: 'scoring',
-        title: 'Risk Scoring',
+        title: 'Puntuación de Riesgo',
         description: 'Asigna puntuaciones dinámicas basadas en señales y comportamiento.',
     },
     {
         id: 'alerts',
-        title: 'Runtime Alerts',
+        title: 'Alertas en Tiempo Real',
         description: 'Genera alertas en tiempo real ante patrones anómalos o umbrales.',
     },
     {
         id: 'behavioral',
-        title: 'Behavioral Monitoring',
+        title: 'Monitoreo de Comportamiento',
         description: 'Analiza patrones de uso y actividad para detectar riesgos emergentes.',
     },
 ] as const;
 
 export const MONITORING_CENTER_NODES = [
-    { id: 'operations', title: 'Operations Monitored' },
-    { id: 'compliance', title: 'Compliance Events' },
-    { id: 'risk', title: 'Risk Alerts' },
-    { id: 'cases', title: 'Cases Under Review' },
-    { id: 'provider', title: 'Provider Events' },
-    { id: 'status', title: 'Operational Status' },
+    { id: 'operations', title: 'Operaciones Monitoreadas' },
+    { id: 'compliance', title: 'Eventos de Cumplimiento' },
+    { id: 'risk', title: 'Alertas de Riesgo' },
+    { id: 'cases', title: 'Casos en Revisión' },
+    { id: 'provider', title: 'Eventos de Proveedores' },
+    { id: 'status', title: 'Estado Operacional' },
 ] as const;
 
 export const MONITORING_CAPABILITY_CARDS = [
     {
         id: 'events',
-        title: 'Event Monitoring',
+        title: 'Monitoreo de Eventos',
         description: 'Supervisión continua de eventos operacionales en tiempo real.',
     },
     {
         id: 'compliance',
-        title: 'Compliance Events',
+        title: 'Eventos de Cumplimiento',
         description: 'Registro y seguimiento de eventos de cumplimiento regulatorio.',
     },
     {
         id: 'alerts',
-        title: 'Risk Alerts',
+        title: 'Alertas de Riesgo',
         description: 'Alertas de riesgo generadas por el motor de evaluación.',
     },
     {
         id: 'provider',
-        title: 'Provider Events',
+        title: 'Eventos de Proveedores',
         description: 'Eventos recibidos de proveedores de infraestructura integrada.',
     },
     {
         id: 'cases',
-        title: 'Case Review',
+        title: 'Revisión de Casos',
         description: 'Gestión y revisión de casos bajo investigación o escalamiento.',
     },
 ] as const;
@@ -554,31 +642,31 @@ export const AUDIT_TIMELINE_STEPS = [
     {
         id: 'user',
         step: '01',
-        title: 'User Action',
+        title: 'Acción de Usuario',
         description: 'Acción iniciada por usuario o empresa en la plataforma.',
     },
     {
         id: 'system',
         step: '02',
-        title: 'System Event',
+        title: 'Evento del Sistema',
         description: 'Evento registrado por el sistema operacional de DOAR.',
     },
     {
         id: 'provider',
         step: '03',
-        title: 'Provider Event',
+        title: 'Evento de Proveedor',
         description: 'Evento recibido de infraestructura financiera integrada.',
     },
     {
         id: 'compliance',
         step: '04',
-        title: 'Compliance Event',
+        title: 'Evento de Cumplimiento',
         description: 'Evaluación y registro de controles de cumplimiento aplicados.',
     },
     {
         id: 'audit',
         step: '05',
-        title: 'Audit Record',
+        title: 'Registro de Auditoría',
         description: 'Registro de auditoría consolidado y verificable.',
         highlight: true,
     },
@@ -587,37 +675,37 @@ export const AUDIT_TIMELINE_STEPS = [
 export const DOAR_IS_DEFINITION_ITEMS = [
     {
         id: 'technology-platform',
-        title: 'Technology Platform',
+        title: 'Plataforma Tecnológica',
         description: 'Plataforma tecnológica diseñada para orquestar servicios financieros digitales.',
         icon: 'Network',
     },
     {
         id: 'financial-orchestration',
-        title: 'Financial Orchestration Layer',
+        title: 'Capa de Orquestación Financiera',
         description: 'Capa de orquestación financiera que conecta usuarios, reglas e infraestructura.',
         icon: 'Layers',
     },
     {
         id: 'infrastructure-coordinator',
-        title: 'Infrastructure Coordinator',
+        title: 'Coordinador de Infraestructura',
         description: 'Coordina proveedores especializados e infraestructura integrada.',
         icon: 'GitBranch',
     },
     {
         id: 'experience-layer',
-        title: 'Experience Layer',
+        title: 'Capa de Experiencia',
         description: 'Interfaz unificada para usuarios y empresas.',
         icon: 'User',
     },
     {
         id: 'operational-ledger',
-        title: 'Operational Ledger',
+        title: 'Ledger Operacional',
         description: 'Modelo operacional basado en ledger para registrar actividad y estados.',
         icon: 'FileCheck',
     },
     {
         id: 'compliance-coordinator',
-        title: 'Compliance Coordinator',
+        title: 'Coordinador de Cumplimiento',
         description: 'Coordina procesos, reglas y monitoreo de cumplimiento con proveedores.',
         icon: 'ShieldCheck',
     },
@@ -626,37 +714,37 @@ export const DOAR_IS_DEFINITION_ITEMS = [
 export const DOAR_IS_NOT_DEFINITION_ITEMS = [
     {
         id: 'bank',
-        title: 'Bank',
+        title: 'Banco',
         description: 'No toma depósitos, no concede créditos, no ofrece productos bancarios.',
         icon: 'Landmark',
     },
     {
         id: 'custodian',
-        title: 'Custodian',
+        title: 'Custodio',
         description: 'No custodia activos de clientes ni mantiene control sobre fondos.',
         icon: 'Vault',
     },
     {
         id: 'stablecoin-issuer',
-        title: 'Stablecoin Issuer',
+        title: 'Emisor de Stablecoins',
         description: 'No emite stablecoins ni representa obligaciones financieras.',
         icon: 'CircleDollarSign',
     },
     {
         id: 'payment-network',
-        title: 'Payment Network',
+        title: 'Red de Pagos',
         description: 'No procesa pagos ni opera una red de pagos.',
         icon: 'ArrowLeftRight',
     },
     {
         id: 'deposit-institution',
-        title: 'Deposit Institution',
+        title: 'Institución de Depósito',
         description: 'No es una institución de depósito ni ofrece cuentas bancarias.',
         icon: 'Wallet',
     },
     {
         id: 'financial-institution',
-        title: 'Financial Institution',
+        title: 'Institución Financiera',
         description: 'No es una institución financiera regulada.',
         icon: 'Users',
     },

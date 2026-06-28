@@ -52,7 +52,7 @@ export default function RegulatoryDiagram() {
                     <Users className="h-12 w-12 text-doar-blue" strokeWidth={1.75} />
                 </div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-text-primary">
-                    Users &amp; Businesses
+                    Usuarios y Empresas
                 </h3>
             </article>
 
@@ -73,7 +73,7 @@ export default function RegulatoryDiagram() {
                 />
                 <div className="min-w-0">
                     <p className="mt-1 text-sm font-semibold uppercase tracking-[0.14em] text-doar-gold">
-                        Financial Orchestration Layer
+                        Capa de Orquestación Financiera
                     </p>
                 </div>
             </article>
@@ -93,7 +93,7 @@ export default function RegulatoryDiagram() {
                     <Landmark className="h-12 w-12 text-doar-green" strokeWidth={1.75} />
                 </div>
                 <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-text-primary">
-                    Specialized Partners
+                    Socios Especializados
                 </h3>
             </article>
         </div>

@@ -13,9 +13,9 @@ const PILLARS: {
 }[] = [
     {
         id: 'financial-orchestration',
-        title: 'Financial Orchestration Layer',
+        title: 'Capa de Orquestación Financiera',
         description:
-            'Coordination layer that connects users, businesses, operational rules and specialized infrastructure.',
+            'Capa de coordinación que conecta usuarios, empresas, reglas operativas e infraestructura especializada.',
         icon: Network,
         accent: 'text-doar-blue',
         accentBorder: 'border-doar-blue/40',
@@ -23,9 +23,9 @@ const PILLARS: {
     },
     {
         id: 'technology-platform',
-        title: 'Technology Platform',
+        title: 'Plataforma Tecnológica',
         description:
-            'Technology platform designed to operate digital financial experiences through proprietary components and integrated infrastructure.',
+            'Plataforma tecnológica diseñada para operar experiencias financieras digitales mediante componentes propios e infraestructura integrada.',
         icon: Globe,
         accent: 'text-doar-green',
         accentBorder: 'border-doar-green/40',
@@ -33,9 +33,9 @@ const PILLARS: {
     },
     {
         id: 'unified-experience',
-        title: 'Unified Experience Layer',
+        title: 'Capa de Experiencia Unificada',
         description:
-            'Unified interface that enables users and businesses to interact with financial services through a consistent operational model.',
+            'Interfaz unificada que permite a usuarios y empresas interactuar con servicios financieros a través de un modelo operativo consistente.',
         icon: Users,
         accent: 'text-[#a855f7]',
         accentBorder: 'border-[#a855f7]/40',
@@ -43,9 +43,9 @@ const PILLARS: {
     },
     {
         id: 'operational-coordination',
-        title: 'Operational Coordination Layer',
+        title: 'Capa de Coordinación Operativa',
         description:
-            'Operational layer coordinating events, rules, monitoring and execution between internal systems and integrated providers.',
+            'Capa operativa que coordina eventos, reglas, monitoreo y ejecución entre sistemas internos y proveedores integrados.',
         icon: Settings,
         accent: 'text-[#f97316]',
         accentBorder: 'border-[#f97316]/40',
@@ -53,9 +53,9 @@ const PILLARS: {
     },
     {
         id: 'ledger-based',
-        title: 'Ledger-Based Operating Model',
+        title: 'Modelo Operativo Basado en Ledger',
         description:
-            'Ledger-centric operational model that records activity, balances, states and transactional traceability.',
+            'Modelo operativo centrado en ledger que registra actividad, saldos, estados y trazabilidad transaccional.',
         icon: FileText,
         accent: 'text-[#06b6d4]',
         accentBorder: 'border-[#06b6d4]/40',
@@ -63,9 +63,9 @@ const PILLARS: {
     },
     {
         id: 'infrastructure-coordinator',
-        title: 'Infrastructure Coordinator',
+        title: 'Coordinador de Infraestructura',
         description:
-            'Coordinator of specialized providers responsible for payments, compliance, custody, banking and blockchain infrastructure.',
+            'Coordinador de proveedores especializados responsables de pagos, cumplimiento, custodia, banca e infraestructura blockchain.',
         icon: Landmark,
         accent: 'text-doar-gold',
         accentBorder: 'border-doar-gold/40',

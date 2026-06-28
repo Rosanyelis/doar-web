@@ -26,10 +26,10 @@ function RiskEngineHexagon() {
         >
             <div className="text-center">
                 <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-doar-gold">
-                    Risk
+                    Motor de
                 </p>
                 <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-doar-gold">
-                    Engine
+                    Riesgo
                 </p>
             </div>
         </div>
@@ -41,7 +41,7 @@ export default function RiskEngineDiagram() {
         <div
             className="relative mx-auto aspect-square w-full max-w-md"
             role="img"
-            aria-label="Diagrama del Risk Engine DOAR"
+            aria-label="Diagrama del Motor de Riesgo DOAR"
         >
             <svg
                 className="pointer-events-none absolute inset-0 h-full w-full"

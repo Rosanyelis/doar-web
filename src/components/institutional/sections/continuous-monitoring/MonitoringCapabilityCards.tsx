@@ -26,14 +26,14 @@ export default function MonitoringCapabilityCards() {
                         )}
                     >
                         <Icon
-                            className="mb-3 h-6 w-6 text-doar-blue"
+                            className="mb-3 h-10 w-10 text-doar-blue"
                             strokeWidth={1.75}
                             aria-hidden="true"
                         />
-                        <h3 className="mb-2 text-xs font-semibold leading-tight text-text-primary">
+                        <h3 className="mb-2 text-md font-semibold leading-tight text-white">
                             {title}
                         </h3>
-                        <p className="text-[11px] font-light leading-relaxed text-soft-gray">
+                        <p className="text-[14px] font-light leading-relaxed text-white">
                             {description}
                         </p>
                     </article>

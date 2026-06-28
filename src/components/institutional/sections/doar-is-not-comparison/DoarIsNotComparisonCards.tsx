@@ -99,7 +99,7 @@ export default function DoarIsNotComparisonCards() {
     const isNotItems = DOAR_IS_NOT_DEFINITION_ITEMS;
 
     return (
-        <div role="region" aria-label="Comparación DOAR IS vs DOAR IS NOT">
+        <div role="region" aria-label="Comparación DOAR ES vs DOAR NO ES">
             <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:gap-8">
                 <article
                     className={cn(
@@ -108,7 +108,7 @@ export default function DoarIsNotComparisonCards() {
                     )}
                 >
                     <header className="mb-6 border-b border-white/8 pb-6 text-center">
-                        <span className={CARD_HEADER_TITLE.blue}>DOAR IS</span>
+                        <span className={CARD_HEADER_TITLE.blue}>DOAR ES</span>
                     </header>
                     <ul className="flex-1" role="list">
                         {isItems.map(({ id, title, description, icon }, index) => {
@@ -136,7 +136,7 @@ export default function DoarIsNotComparisonCards() {
                     )}
                 >
                     <header className="mb-6 border-b border-white/8 pb-6 text-center">
-                        <span className={CARD_HEADER_TITLE.gold}>DOAR IS NOT</span>
+                        <span className={CARD_HEADER_TITLE.gold}>DOAR NO ES</span>
                     </header>
                     <ul className="flex-1" role="list">
                         {isNotItems.map(({ id, title, description, icon }, index) => {
@@ -163,7 +163,7 @@ export default function DoarIsNotComparisonCards() {
                     )}
                 >
                     <header className="mb-6 border-b border-white/8 pb-6 text-center">
-                        <span className={CARD_HEADER_TITLE.blue}>DOAR IS</span>
+                        <span className={CARD_HEADER_TITLE.blue}>DOAR ES</span>
                     </header>
                     <ul role="list">
                         {isItems.map(({ id, title, description, icon }, index) => {
@@ -190,7 +190,7 @@ export default function DoarIsNotComparisonCards() {
                     )}
                 >
                     <header className="mb-6 border-b border-white/8 pb-6 text-center">
-                        <span className={CARD_HEADER_TITLE.gold}>DOAR IS NOT</span>
+                        <span className={CARD_HEADER_TITLE.gold}>DOAR NO ES</span>
                     </header>
                     <ul role="list">
                         {isNotItems.map(({ id, title, description, icon }, index) => {

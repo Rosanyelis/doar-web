@@ -1,57 +1,75 @@
-import { Eye, Lock, Shield } from 'lucide-react';
+import { Eye, Lock, ShieldCheck } from 'lucide-react';
 import { COMPLIANCE_METHODOLOGY } from '../../../../constants/institutional';
 import { cn } from '../../../../lib/utils';
 
 const METHODOLOGY_ICONS = {
     prevencion: Lock,
     deteccion: Eye,
-    respuesta: Shield,
+    respuesta: ShieldCheck,
 } as const;
 
 export default function ComplianceMethodologyBanner() {
     return (
         <article
             className={cn(
-                'mt-10 flex flex-col gap-8 rounded-xl border border-white/8',
-                'bg-deep-space/80 p-8 lg:flex-row lg:items-center lg:justify-between'
+                'relative mt-12 overflow-hidden rounded-2xl border border-doar-gold/30 md:mt-16',
+                'bg-deep-space/80 p-6 md:p-8',
+                'shadow-[0_0_60px_rgba(245,196,0,0.06)]',
+                'flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-10'
             )}
         >
-            <div className="flex items-start gap-4 lg:max-w-md">
-                <Shield
-                    className="mt-0.5 h-8 w-8 shrink-0 text-doar-gold"
-                    strokeWidth={1.75}
-                    aria-hidden="true"
-                />
+            <div
+                className="pointer-events-none absolute inset-y-0 right-0 w-1/3 opacity-30"
+                aria-hidden="true"
+            >
+                <svg className="h-full w-full" viewBox="0 0 200 80" preserveAspectRatio="none" fill="none">
+                    <path
+                        d="M0 40 Q50 20 100 40 T200 40"
+                        stroke="rgba(245,196,0,0.15)"
+                        strokeWidth="1"
+                    />
+                    <path
+                        d="M0 55 Q50 35 100 55 T200 55"
+                        stroke="rgba(47,107,255,0.12)"
+                        strokeWidth="0.8"
+                    />
+                </svg>
+            </div>
+
+            <div className="relative z-10 flex shrink-0 items-start gap-4 lg:max-w-md">
+                <div
+                    className={cn(
+                        'flex h-12 w-12 shrink-0 items-center justify-center rounded-full',
+                        'border border-doar-gold/40 bg-doar-gold/5'
+                    )}
+                >
+                    <ShieldCheck className="h-6 w-6 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                </div>
                 <p className="text-sm font-light leading-relaxed text-soft-gray">
-                    DOAR implementa un marco de cumplimiento integral que combina verificación,
-                    monitoreo y respuesta — garantizando controles preventivos, detección temprana
-                    y acción coordinada ante eventos de riesgo.
+                    DOAR combina procesos de verificación de identidad, monitoreo transaccional, controles
+                    internos de cumplimiento y supervisión continua para fortalecer la integridad operativa
+                    de la plataforma.
                 </p>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="relative z-10 hidden h-16 w-px shrink-0 bg-white/15 lg:block" aria-hidden="true" />
+
+            <div className="relative z-10 flex shrink-0 flex-col gap-4">
                 <span className="text-xs font-semibold uppercase tracking-[0.14em] text-doar-gold">
-                    Nuestra Metodología
+                    Nuestro Enfoque
                 </span>
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap items-center gap-6">
                     {COMPLIANCE_METHODOLOGY.map(({ id, label }) => {
                         const Icon = METHODOLOGY_ICONS[id];
 
                         return (
-                            <div key={id} className="flex flex-col items-center gap-2">
-                                <div
-                                    className={cn(
-                                        'flex h-12 w-12 items-center justify-center rounded-full',
-                                        'border border-doar-blue/30 bg-doar-blue/5'
-                                    )}
-                                >
-                                    <Icon
-                                        className="h-5 w-5 text-doar-blue"
-                                        strokeWidth={1.75}
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <span className="text-xs font-medium text-soft-gray">{label}</span>
+                            <div key={id} className="flex items-center gap-2">
+                                <Icon
+                                    className="h-5 w-5 shrink-0 text-doar-gold"
+                                    strokeWidth={1.75}
+                                    aria-hidden="true"
+                                />
+                                <span className="text-sm font-medium text-text-primary">{label}</span>
                             </div>
                         );
                     })}

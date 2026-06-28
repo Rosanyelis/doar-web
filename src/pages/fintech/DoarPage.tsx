@@ -8,6 +8,7 @@ import PartnerStrip from '../../components/institutional/sections/PartnerStrip';
 import SegregatedOperationalInfrastructureSection from '../../components/institutional/sections/SegregatedOperationalInfrastructureSection';
 import TreasuryLiquiditySection from '../../components/institutional/sections/TreasuryLiquiditySection';
 import UnifiedFinancialOperationsSection from '../../components/institutional/sections/UnifiedFinancialOperationsSection';
+import TransactionOperatingCycleSection from '../../components/institutional/sections/TransactionOperatingCycleSection';
 import WhatIsDoarSection from '../../components/institutional/sections/WhatIsDoarSection';
 import DoarIsNotComparisonSection from '../../components/institutional/sections/DoarIsNotComparisonSection';
 import DoarResponsibilityModelSection from '../../components/institutional/sections/DoarResponsibilityModelSection';
@@ -49,6 +50,8 @@ export default function DoarPage() {
                 <IntegratedInfrastructureSection />
                 {/* Unified Financial Operations Section - seccion operaciones-financieras-unificadas */}
                 <UnifiedFinancialOperationsSection />
+                {/* Transaction Operating Cycle Section - seccion ciclo-operativo-transaccion */}
+                <TransactionOperatingCycleSection />
                 {/* Segregated Operational Infrastructure Section - seccion infraestructura-operacional-segregada */}
                 <SegregatedOperationalInfrastructureSection />
                 {/* Treasury Liquidity Section - seccion tesoreria-liquidez */}

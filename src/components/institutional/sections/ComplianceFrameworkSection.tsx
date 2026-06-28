@@ -5,20 +5,23 @@ import ComplianceShieldGraphic from './compliance-framework/ComplianceShieldGrap
 
 export default function ComplianceFrameworkSection() {
     return (
-        <SectionWrapper id="cumplimiento" className="min-h-screen">
-            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-                <div className="lg:col-span-6">
-                    <h1 className="mb-6 max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-text-primary sm:text-5xl lg:text-6xl">
-                        Compliance Framework
-                    </h1>
-                    <p className="max-w-lg text-lg font-light leading-relaxed text-soft-gray">
-                        Un marco integral de cumplimiento diseñado para verificación de
-                        identidad, monitoreo de transacciones y gestión continua de riesgo
-                        operacional.
+        <SectionWrapper id="cumplimiento" className="border-t border-white/6">
+            <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
+                <div className="lg:col-span-8">
+                    <h2 className="max-w-xl text-3xl font-bold leading-[1.1] tracking-[-0.03em] text-text-primary sm:text-4xl lg:text-[42px]">
+                        Marco de Cumplimiento
+                    </h2>
+
+                    <div className="mt-6 h-0.5 w-12 bg-doar-gold" aria-hidden="true" />
+
+                    <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-soft-gray">
+                        Verificación, monitoreo y controles diseñados para respaldar una operación segura y
+                        conforme durante todo el ciclo de vida del usuario y de las transacciones procesadas
+                        en la plataforma.
                     </p>
                 </div>
 
-                <div className="flex justify-center lg:col-span-6">
+                <div className="flex justify-center lg:col-span-4 lg:justify-end">
                     <ComplianceShieldGraphic />
                 </div>
             </div>
