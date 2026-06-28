@@ -1,8 +1,8 @@
 import SectionWrapper from '../shared/SectionWrapper';
 import ComplianceSummaryBanner from '../compliance/ComplianceSummaryBanner';
 import RiskControlCards from './risk-management/RiskControlCards';
-import RiskEngineDiagram from './risk-management/RiskEngineDiagram';
 import RiskManagementNarrative from './risk-management/RiskManagementNarrative';
+import { cn } from '../../../lib/utils';
 
 export default function RiskManagementSection() {
     return (
@@ -12,8 +12,12 @@ export default function RiskManagementSection() {
                     <RiskManagementNarrative />
                 </div>
 
-                <div className="flex items-center justify-center lg:col-span-7">
-                    <RiskEngineDiagram />
+                <div className="flex items-center justify-center lg:col-span-7 lg:justify-center">
+                    <img
+                        src="/assets/institucional/diagram_05.png"
+                        alt="Diagrama del motor de gestión de riesgos DOAR"
+                        className={cn('h-auto w-full max-w-2xl object-contain')}
+                    />
                 </div>
             </div>
 

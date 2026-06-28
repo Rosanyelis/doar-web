@@ -2,7 +2,7 @@ import SectionWrapper from '../shared/SectionWrapper';
 import ComplianceSummaryBanner from '../compliance/ComplianceSummaryBanner';
 import ContinuousMonitoringNarrative from './continuous-monitoring/ContinuousMonitoringNarrative';
 import MonitoringCapabilityCards from './continuous-monitoring/MonitoringCapabilityCards';
-import MonitoringCenterDiagram from './continuous-monitoring/MonitoringCenterDiagram';
+import { cn } from '../../../lib/utils';
 
 export default function ContinuousMonitoringSection() {
     return (
@@ -12,8 +12,12 @@ export default function ContinuousMonitoringSection() {
                     <ContinuousMonitoringNarrative />
                 </div>
 
-                <div className="flex items-center justify-center lg:col-span-7">
-                    <MonitoringCenterDiagram />
+                <div className="flex items-center justify-center lg:col-span-7 lg:justify-center">
+                    <img
+                        src="/assets/institucional/diagram_08.png"
+                        alt="Diagrama del centro de monitoreo continuo DOAR"
+                        className={cn('h-auto w-full max-w-2xl object-contain')}
+                    />
                 </div>
             </div>
 
