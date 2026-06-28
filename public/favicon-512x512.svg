@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081120"/>
+      <stop offset="100%" stop-color="#050B16"/>
+    </linearGradient>
+    <linearGradient id="logo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F29501"/>
+      <stop offset="100%" stop-color="#FCCF0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="80" fill="url(#bg)"/>
+  <g transform="translate(85, 100) scale(10.67)">
+    <path d="M4 22 L14 8 L16 8 L12 16 L28 14 L28 18 L16 20 L20 28 L16 28 L8 18 L4 22Z" fill="url(#logo)"/>
+  </g>
+  <text x="256" y="420" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="80" font-weight="700" fill="#ffffff" letter-spacing="8">DOAR</text>
+</svg>
