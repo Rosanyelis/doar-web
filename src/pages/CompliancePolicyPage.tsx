@@ -497,11 +497,17 @@ export default function CompliancePolicyPage() {
             <Helmet>
                 <title>Política de Cumplimiento AML / KYC / KYB | DOAR</title>
                 <meta name="description" content="Política de cumplimiento AML, KYC y KYB de DOAR. Lineamientos de verificación, monitoreo, control y evaluación de riesgo." />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://doar.tech/politica-cumplimiento" />
                 <meta property="og:title" content="Política de Cumplimiento AML / KYC / KYB | DOAR" />
-                <meta property="og:description" content="Lineamientos generales de verificación, monitoreo, control y evaluación de riesgo aplicables a usuarios, empresas y operaciones." />
-                <meta name="twitter:title" content="Política de Cumplimiento AML / KYC / KYB | DOAR" />
-                <meta name="twitter:description" content="Lineamientos de verificación, monitoreo, control y evaluación de riesgo." />
+                <meta property="og:description" content="Política de cumplimiento AML, KYC y KYB de DOAR: verificación, monitoreo y evaluación de riesgo." />
+                <meta property="og:url" content="https://doar.tech/politica-cumplimiento" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Política de Cumplimiento | DOAR" />
+                <meta name="twitter:description" content="Política de cumplimiento AML, KYC y KYB de DOAR." />
             </Helmet>
 
             <Navbar />

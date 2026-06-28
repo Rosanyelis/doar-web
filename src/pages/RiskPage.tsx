@@ -402,11 +402,17 @@ export default function RiskPage() {
             <Helmet>
                 <title>Declaración de Riesgos | DOAR</title>
                 <meta name="description" content="Conozca los riesgos asociados al uso de la plataforma DOAR, incluyendo riesgos operativos, tecnológicos, regulatorios y de terceros especializados." />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://doar.tech/declaracion-riesgo" />
                 <meta property="og:title" content="Declaración de Riesgos | DOAR" />
-                <meta property="og:description" content="Información sobre los riesgos asociados al uso de la plataforma DOAR y su infraestructura tecnológica, financiera y operativa." />
+                <meta property="og:description" content="Declaración de riesgos de la plataforma DOAR: riesgos operativos, tecnológicos, regulatorios y de terceros." />
+                <meta property="og:url" content="https://doar.tech/declaracion-riesgo" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+                <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content="Declaración de Riesgos | DOAR" />
-                <meta name="twitter:description" content="Información sobre los riesgos asociados al uso de la plataforma DOAR." />
+                <meta name="twitter:description" content="Declaración de riesgos de la plataforma DOAR." />
             </Helmet>
 
             <Navbar />

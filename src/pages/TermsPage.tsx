@@ -518,6 +518,19 @@ export default function TermsPage() {
         <div className="min-h-screen bg-white font-sans selection:bg-[#F29501] selection:text-white">
             <Helmet>
                 <title>Términos y Condiciones | DOAR</title>
+                <meta name="description" content="Términos y Condiciones de uso de la plataforma DOAR. Regulaciones de acceso, servicios, responsabilidades del usuario y política de uso aceptable." />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://doar.tech/terminos" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Términos y Condiciones | DOAR" />
+                <meta property="og:description" content="Términos y Condiciones de la plataforma DOAR: acceso, servicios y responsabilidades." />
+                <meta property="og:url" content="https://doar.tech/terminos" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Términos y Condiciones | DOAR" />
+                <meta name="twitter:description" content="Términos y Condiciones de la plataforma DOAR." />
             </Helmet>
 
             <Navbar />

@@ -350,11 +350,17 @@ export default function BiometricConsentPage() {
             <Helmet>
                 <title>Consentimiento Biométrico | DOAR</title>
                 <meta name="description" content="Consentimiento para el tratamiento de datos biométricos y tecnologías de validación de identidad utilizadas por DOAR." />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://doar.tech/consentimiento-biometrico" />
                 <meta property="og:title" content="Consentimiento Biométrico | DOAR" />
-                <meta property="og:description" content="Autorización para el tratamiento de datos biométricos en procesos de seguridad, cumplimiento y prevención de fraude." />
+                <meta property="og:description" content="Consentimiento para el tratamiento de datos biométricos de DOAR." />
+                <meta property="og:url" content="https://doar.tech/consentimiento-biometrico" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+                <meta name="twitter:card" content="summary" />
                 <meta name="twitter:title" content="Consentimiento Biométrico | DOAR" />
-                <meta name="twitter:description" content="Autorización para el tratamiento de datos biométricos." />
+                <meta name="twitter:description" content="Consentimiento para el tratamiento de datos biométricos." />
             </Helmet>
 
             <Navbar />

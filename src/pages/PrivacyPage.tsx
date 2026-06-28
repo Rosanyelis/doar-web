@@ -546,6 +546,19 @@ export default function PrivacyPage() {
         <div className="min-h-screen bg-white font-sans selection:bg-[#F29501] selection:text-white">
             <Helmet>
                 <title>Política de Privacidad | DOAR</title>
+                <meta name="description" content="Política de Privacidad de DOAR. Conozca cómo recopilamos, usamos, almacenamos y protegemos sus datos personales en nuestra plataforma de orquestación financiera." />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://doar.tech/privacidad" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Política de Privacidad | DOAR" />
+                <meta property="og:description" content="Política de Privacidad: cómo protegemos sus datos personales en DOAR." />
+                <meta property="og:url" content="https://doar.tech/privacidad" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content="Política de Privacidad | DOAR" />
+                <meta name="twitter:description" content="Política de Privacidad: cómo protegemos sus datos personales." />
             </Helmet>
 
             <Navbar />
