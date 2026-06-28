@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import DownloadModal from './components/web/DownloadModal';
+import ScrollToTop from './components/layout/ScrollToTop';
 import { WebSvgDefs } from './components/web/Icons';
 
 const SecurityPage = lazy(() => import('./pages/SecurityPage'));
@@ -19,6 +20,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <WebSvgDefs />
         <DownloadModal />
         <Suspense fallback={null}>
