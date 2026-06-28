@@ -63,10 +63,10 @@ export default function MonitoringCenterDiagram() {
                 )}
             >
                 <DoarLogoIcon />
-                <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.12em] text-doar-gold">
+                <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-doar-gold sm:text-[10px]">
                     Centro de
                 </p>
-                <p className="text-[7px] font-semibold uppercase tracking-[0.12em] text-doar-gold">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.12em] text-doar-gold sm:text-[10px]">
                     Monitoreo
                 </p>
             </div>
@@ -84,7 +84,7 @@ export default function MonitoringCenterDiagram() {
                         )}
                         style={{ top: pos.top, left: pos.left }}
                     >
-                        <p className="text-[7px] font-semibold uppercase tracking-wider text-text-primary">
+                        <p className="text-[9px] font-semibold uppercase tracking-wider text-text-primary sm:text-[10px]">
                             {title}
                         </p>
                     </div>

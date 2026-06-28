@@ -25,10 +25,10 @@ function RiskEngineHexagon() {
             style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
         >
             <div className="text-center">
-                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-doar-gold">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-doar-gold sm:text-xs">
                     Motor de
                 </p>
-                <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-doar-gold">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-doar-gold sm:text-xs">
                     Riesgo
                 </p>
             </div>
@@ -86,7 +86,7 @@ export default function RiskEngineDiagram() {
                         )}
                         style={{ top: pos.top, left: pos.left }}
                     >
-                        <p className="text-[8px] font-semibold uppercase tracking-wider text-text-primary">
+                        <p className="text-[10px] font-semibold uppercase tracking-wider text-text-primary sm:text-xs">
                             {title}
                         </p>
                     </div>

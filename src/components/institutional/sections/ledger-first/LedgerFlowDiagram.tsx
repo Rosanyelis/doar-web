@@ -75,7 +75,7 @@ function FlowStep({ id, title, description, highlighted }: FlowStepProps) {
 
 export default function LedgerFlowDiagram() {
     return (
-        <div className="flex w-[400px] max-w-md flex-col lg:max-w-lg">
+        <div className="flex w-full max-w-[400px] flex-col lg:max-w-lg">
             {LEDGER_FLOW_STEPS.map((step, index) => (
                 <div key={step.id}>
                     <FlowStep {...step} />

@@ -31,7 +31,7 @@ function ModuleBox({ icon: Icon, label }: { icon: LucideIcon; label: string }) {
             )}
         >
             <Icon className="h-6 w-6 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
-            <span className="text-center text-[9px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-[10px]">
+            <span className="text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-xs">
                 {label}
             </span>
         </article>
@@ -43,7 +43,7 @@ function ModuleConnectorLines() {
         <svg
             className="pointer-events-none absolute inset-x-0 top-0 h-14 w-full overflow-visible"
             viewBox="0 0 400 56"
-            preserveAspectRatio="none"
+                preserveAspectRatio="xMidYMid meet"
             aria-hidden="true"
         >
             {/* DOAR → línea horizontal (entre Compliance y Treasury) */}
@@ -101,7 +101,7 @@ export default function UnifiedOperationsDiagram() {
                 <img
                     src="/assets/institucional/logo.svg"
                     alt=""
-                    className="w-40 shrink-0"
+                    className="w-24 shrink-0 sm:w-40"
                     aria-hidden="true"
                 />
             </article>
@@ -115,7 +115,7 @@ export default function UnifiedOperationsDiagram() {
                 <div className="relative w-full pt-1">
                     <ModuleConnectorLines />
 
-                    <div className="grid grid-cols-4 gap-2 pt-14 sm:gap-3">
+                    <div className="grid grid-cols-2 gap-2 pt-14 sm:grid-cols-4 sm:gap-3">
                         {MODULES.map(({ id, label, icon }) => (
                             <ModuleBox key={id} icon={icon} label={label} />
                         ))}

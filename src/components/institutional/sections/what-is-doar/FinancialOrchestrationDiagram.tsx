@@ -7,7 +7,7 @@ export default function FinancialOrchestrationDiagram() {
         <img
             src="/assets/institucional/diagram_02.png"
             alt="Diagrama de arquitectura de orquestación financiera DOAR"
-            className="h-auto w-[1000px]"
+            className="h-auto w-full max-w-[1000px]"
             width={1000}
             height={1000}
         />

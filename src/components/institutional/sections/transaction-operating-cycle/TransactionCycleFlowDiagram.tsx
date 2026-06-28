@@ -1,4 +1,5 @@
 import {
+    ArrowDown,
     ArrowDownToLine,
     ArrowRight,
     ArrowUpFromLine,
@@ -22,9 +23,16 @@ const BOX_ICONS: Partial<Record<Step['id'], LucideIcon>> = {
 
 function FlowArrow() {
     return (
-        <div className="flex shrink-0 items-start px-1 pt-10 sm:px-2 sm:pt-12" aria-hidden="true">
-            <ArrowRight className="h-5 w-5 text-doar-gold sm:h-6 sm:w-6" strokeWidth={2} />
-        </div>
+        <>
+            {/* Mobile: down arrow */}
+            <div className="flex justify-center py-1 lg:hidden" aria-hidden="true">
+                <ArrowDown className="h-5 w-5 text-doar-gold" strokeWidth={2} />
+            </div>
+            {/* Desktop: right arrow */}
+            <div className="hidden items-start px-1 pt-10 sm:px-2 sm:pt-12 lg:flex" aria-hidden="true">
+                <ArrowRight className="h-5 w-5 text-doar-gold sm:h-6 sm:w-6" strokeWidth={2} />
+            </div>
+        </>
     );
 }
 
@@ -83,8 +91,8 @@ function ProcessBox({ step }: { step: Step }) {
         <div className="flex w-full flex-col items-center">
             <article
                 className={cn(
-                    'flex min-h-[112px] w-full max-w-[148px] flex-col items-center justify-center gap-2',
-                    'rounded-xl border px-2 py-4 sm:min-h-[128px] sm:max-w-[168px] sm:px-3',
+                    'flex min-h-[100px] w-full max-w-[160px] flex-col items-center justify-center gap-2',
+                    'rounded-xl border px-3 py-4 sm:min-h-[128px] sm:max-w-[168px]',
                     'bg-deep-space/90',
                     isGold ? 'border-doar-gold/50' : 'border-doar-blue/40',
                     isLedger && 'shadow-[0_0_30px_rgba(245,196,0,0.18)]'
@@ -144,7 +152,18 @@ export default function TransactionCycleFlowDiagram() {
             role="img"
             aria-label="Diagrama del ciclo operativo de una transacción DOAR"
         >
-            <div className="flex w-full items-start">
+            {/* Mobile: vertical stack */}
+            <div className="flex flex-col items-center gap-1 lg:hidden">
+                {TRANSACTION_CYCLE_STEPS.map((step, index) => (
+                    <div key={step.id} className="flex flex-col items-center">
+                        <FlowNode step={step} />
+                        {index < TRANSACTION_CYCLE_STEPS.length - 1 && <FlowArrow />}
+                    </div>
+                ))}
+            </div>
+
+            {/* Desktop: horizontal flow */}
+            <div className="hidden w-full items-start lg:flex">
                 {TRANSACTION_CYCLE_STEPS.map((step, index) => (
                     <div key={step.id} className="contents">
                         <div className="flex min-w-0 flex-1 justify-center">

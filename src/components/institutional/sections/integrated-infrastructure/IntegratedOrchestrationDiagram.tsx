@@ -10,10 +10,10 @@ function ProviderNode({ name, label }: { name: string; label: string }) {
                 'text-center backdrop-blur-sm'
             )}
         >
-            <p className="text-[10px] font-semibold uppercase tracking-wide text-text-primary">
+            <p className="text-[10px] font-semibold uppercase tracking-wide text-text-primary sm:text-xs">
                 {name}
             </p>
-            <p className="mt-0.5 text-[8px] font-medium uppercase tracking-wider text-soft-gray">
+            <p className="mt-0.5 text-[9px] font-medium uppercase tracking-wider text-soft-gray sm:text-[10px]">
                 {label}
             </p>
         </div>
@@ -49,7 +49,7 @@ export default function IntegratedOrchestrationDiagram() {
                 className="pointer-events-none absolute inset-0 h-full w-full"
                 viewBox="0 0 400 420"
                 fill="none"
-                preserveAspectRatio="none"
+                preserveAspectRatio="xMidYMid meet"
                 aria-hidden="true"
             >
                 <line x1="200" y1="52" x2="200" y2="88" stroke="#F5C400" strokeWidth="1.2" />

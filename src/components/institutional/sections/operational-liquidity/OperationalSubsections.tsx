@@ -1,5 +1,6 @@
 import {
     Activity,
+    ArrowDown,
     ArrowRight,
     CheckCircle2,
     ClipboardList,
@@ -86,7 +87,30 @@ function SettlementContinuity() {
             </div>
 
             <div className="mt-4 flex flex-col gap-4">
-                <div className="flex items-start justify-between gap-1">
+                {/* Mobile: vertical stack */}
+                <div className="flex flex-col items-center gap-2 lg:hidden">
+                    {SETTLEMENT_STEPS.map(({ label, icon: Icon }, index) => (
+                        <div key={label} className="flex flex-col items-center">
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="flex h-14 w-14 items-center justify-center rounded-full border border-doar-gold/30 bg-doar-gold/5">
+                                    <Icon className="h-10 w-10 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                                </div>
+                                <span className="max-w-[120px] text-center text-[12px] font-light leading-tight text-white">
+                                    {label}
+                                </span>
+                            </div>
+                            {index < SETTLEMENT_STEPS.length - 1 && (
+                                <div className="flex flex-col items-center py-1" aria-hidden="true">
+                                    <div className="h-2 w-px border-l border-doar-gold/40" />
+                                    <ArrowDown className="h-4 w-4 text-doar-gold/60" strokeWidth={2} />
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop: horizontal flow */}
+                <div className="hidden items-start justify-between gap-1 lg:flex">
                     {SETTLEMENT_STEPS.map(({ label, icon: Icon }, index) => (
                         <div key={label} className="flex flex-1 items-start">
                             <div className="flex min-w-0 flex-1 flex-col items-center gap-2">
