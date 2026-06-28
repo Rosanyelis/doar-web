@@ -41,9 +41,16 @@ const PARTNER_CAPABILITY_ICONS: Record<
 
 function DoarLogoIcon() {
     return (
-        <svg className="h-8 w-8 shrink-0 fill-doar-gold" viewBox="0 0 32 24" aria-hidden="true">
-            <path d="M4 4 L28 4 L20 12 L28 12 L12 20 L16 12 L4 12 Z" />
+        <svg width="261" height="125" viewBox="0 0 261 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M250.182 27.1242C235.695 5.68819 212.191 0.948 206.881 0H0C0.972769 3.50242 2.70793 8.05826 6.02055 12.6404C14.5913 24.5699 27.3947 27.9669 31.575 28.9149H175.621C174.728 29.6525 172.598 31.601 171.572 34.8927C170.337 38.7639 171.362 42.0294 171.73 43.0827H43.0116C45.6931 47.7969 50.0573 54.1696 56.8405 60.2529C66.9361 69.2855 77.4521 73.2357 83.6043 75.0001H117.887V86.4552H91.4125C98.3005 96.4096 111.367 111.525 132.478 119.294C169.943 133.067 215.609 117.345 236.037 85.5601C243.977 73.2091 246.527 60.8847 247.473 53.327C249.025 52.853 251.312 52.3261 254.099 52.379C256.596 52.4052 258.647 52.8792 260.119 53.327C259.225 47.033 256.912 37.1049 250.182 27.1242ZM232.199 42.9774C227.677 44.3206 224.574 46.6644 222.918 48.0864C222.971 50.9566 222.945 80.2932 198.468 98.2794C178.014 113.29 155.43 109.445 151.565 108.708C168.181 108.971 183.219 100.939 190.449 87.614C196.522 76.3959 195.024 65.2036 194.261 61.1217C192.658 58.1199 190.186 54.275 186.532 50.4301C182.01 45.6635 177.383 42.6616 174.018 40.8444C179.933 25.0437 195.523 15.2739 211.403 16.9593C225.205 18.4076 237.089 28.3092 241.585 42.056C239.481 41.8715 236.116 41.819 232.199 42.9774Z" fill="url(#paint0_linear_11_45)"/>
+        <defs>
+        <linearGradient id="paint0_linear_11_45" x1="0" y1="62.1451" x2="260.102" y2="62.1451" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#F29401"/>
+        <stop offset="1" stop-color="#FCCC01"/>
+        </linearGradient>
+        </defs>
         </svg>
+
     );
 }
 
@@ -95,11 +102,11 @@ function StandardLayerNode({ title, subtitle, variant, highlight, icon }: Standa
             </div>
 
             <div className="min-w-0 flex-1">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary">
+                <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
                     {title}
                 </h3>
                 {subtitle && (
-                    <p className="mt-1 text-[10px] font-medium leading-snug text-soft-gray">
+                    <p className="mt-1 text-[12px] font-medium leading-snug text-white">
                         {subtitle}
                     </p>
                 )}
