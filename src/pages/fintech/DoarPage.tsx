@@ -34,7 +34,70 @@ export default function DoarPage() {
             )}
         >
             <Helmet>
-                <title>DOAR | Infraestructura Financiera Moderna</title>
+                <title>DOAR | Infraestructura Financiera Moderna — Plataforma de Orquestación Financiera</title>
+                <meta name="description" content="DOAR coordina operaciones financieras digitales a través de infraestructura financiera especializada, integrando pagos, cumplimiento, tesorería y liquidación bajo una arquitectura ledger-first." />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+                <link rel="canonical" href="https://doar.tech/sobre-nosotros" />
+
+                {/* Open Graph */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="DOAR | Infraestructura Financiera Moderna" />
+                <meta property="og:description" content="Plataforma de orquestación financiera que integra pagos, cumplimiento, tesorería y liquidación bajo una arquitectura ledger-first." />
+                <meta property="og:url" content="https://doar.tech/sobre-nosotros" />
+                <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+                <meta property="og:locale" content="es_LA" />
+                <meta property="og:site_name" content="DOAR" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="DOAR | Infraestructura Financiera Moderna" />
+                <meta name="twitter:description" content="Plataforma de orquestación financiera que integra pagos, cumplimiento, tesorería y liquidación." />
+                <meta name="twitter:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
+
+                {/* Structured Data: Organization */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'Organization',
+                        name: 'DOAR LLC',
+                        url: 'https://doar.tech',
+                        logo: 'https://doar.tech/assets/institucional/logo.svg',
+                        description: 'Plataforma de orquestación financiera que coordina pagos, cumplimiento, tesorería y liquidación.',
+                        address: {
+                            '@type': 'PostalAddress',
+                            streetAddress: '2020 Ponce de Leon Blvd',
+                            addressLocality: 'Coral Gables',
+                            addressRegion: 'Florida',
+                            addressCountry: 'US',
+                        },
+                        contactPoint: [
+                            { '@type': 'ContactPoint', email: 'info@doar.tech', contactType: 'customer service' },
+                            { '@type': 'ContactPoint', email: 'manager@doar.tech', contactType: 'sales' },
+                        ],
+                    })}
+                </script>
+
+                {/* Structured Data: WebSite */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'WebSite',
+                        name: 'DOAR',
+                        url: 'https://doar.tech',
+                    })}
+                </script>
+
+                {/* Structured Data: BreadcrumbList */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'BreadcrumbList',
+                        itemListElement: [
+                            { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doar.tech' },
+                            { '@type': 'ListItem', position: 2, name: 'Sobre Nosotros', item: 'https://doar.tech/sobre-nosotros' },
+                        ],
+                    })}
+                </script>
             </Helmet>
 
             <InstitutionalNavbar />
