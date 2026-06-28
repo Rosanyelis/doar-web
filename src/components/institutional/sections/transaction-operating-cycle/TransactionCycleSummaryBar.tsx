@@ -22,11 +22,11 @@ export default function TransactionCycleSummaryBar() {
             <div className="flex items-center gap-4 lg:pr-8">
                 <div
                     className={cn(
-                        'flex h-14 w-14 shrink-0 items-center justify-center rounded-full',
+                        'flex h-20 w-20 shrink-0 items-center justify-center rounded-full',
                         'border border-doar-gold/40 bg-doar-gold/5'
                     )}
                 >
-                    <ShieldCheck className="h-7 w-7 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
+                    <ShieldCheck className="h-10 w-10 text-doar-gold" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <p className="text-sm font-bold uppercase leading-snug tracking-[0.1em] text-doar-gold">
                     Unificado. Transparente. Resiliente.
@@ -44,8 +44,8 @@ export default function TransactionCycleSummaryBar() {
                             index > 0 && 'lg:border-l lg:border-white/10 lg:pl-6'
                         )}
                     >
-                        <Icon className="h-6 w-6 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
-                        <span className="max-w-[160px] text-xs font-light leading-relaxed text-soft-gray">
+                        <Icon className="h-10 w-10 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
+                        <span className="max-w-[160px] text-sm font-light leading-relaxed text-soft-gray">
                             {label}
                         </span>
                     </div>

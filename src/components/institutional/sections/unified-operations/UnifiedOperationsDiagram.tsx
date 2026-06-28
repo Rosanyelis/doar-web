@@ -30,8 +30,8 @@ function ModuleBox({ icon: Icon, label }: { icon: LucideIcon; label: string }) {
                 'bg-deep-space/90 px-2 py-4 sm:px-3'
             )}
         >
-            <Icon className="h-10 w-10 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
-            <span className="text-center text-[11px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-[12px]">
+            <Icon className="h-6 w-6 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
+            <span className="text-center text-[9px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-[10px]">
                 {label}
             </span>
         </article>
@@ -78,11 +78,11 @@ export default function UnifiedOperationsDiagram() {
             <div className="flex flex-col items-center">
                 <div
                     className={cn(
-                        'flex h-16 w-16 items-center justify-center rounded-full',
+                        'flex h-12 w-12 items-center justify-center rounded-full',
                         'border border-doar-blue/40 bg-doar-blue/5'
                     )}
                 >
-                    <User className="h-8 w-8 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
+                    <User className="h-6 w-6 text-doar-blue" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <span className="mt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-primary">
                     Usuario
@@ -144,11 +144,11 @@ export default function UnifiedOperationsDiagram() {
                         )}
                     >
                         <Landmark
-                            className="h-10 w-10 shrink-0 text-doar-blue"
+                            className="h-6 w-6 shrink-0 text-doar-blue"
                             strokeWidth={1.75}
                             aria-hidden="true"
                         />
-                        <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-xs">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-text-primary sm:text-xs">
                             Infraestructura Financiera
                         </span>
                     </article>
