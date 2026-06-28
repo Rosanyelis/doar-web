@@ -7,7 +7,7 @@ export default function TreasuryLiquidityNarrative() {
 
             <div className="mb-8 h-0.5 w-16 bg-doar-gold" aria-hidden="true" />
 
-            <div className="flex max-w-[560px] flex-col gap-4 text-base font-light leading-relaxed text-soft-gray">
+            <div className="flex max-w-[560px] flex-col gap-4 text-base font-light leading-relaxed text-white">
                 <p>
                     La arquitectura de tesorería de DOAR gestiona la liquidez operacional como una
                     capa de coordinación independiente, diseñada para garantizar continuidad

@@ -3,13 +3,13 @@ import {
     ArrowDownToLine,
     ArrowLeftRight,
     ArrowUpFromLine,
-    BarChart3,
     Database,
-    Gauge,
     Handshake,
     RefreshCw,
-    Search,
-    Shield,
+    ScanSearch,
+    ShieldCheck,
+    Timer,
+    TrendingUp,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import {
@@ -20,9 +20,9 @@ import {
 import { cn } from '../../../../lib/utils';
 
 const STEP_ICONS: Record<(typeof TREASURY_FLOW_STEPS)[number]['id'], LucideIcon> = {
-    demand: BarChart3,
+    demand: TrendingUp,
     engine: Database,
-    liquidity: Gauge,
+    liquidity: Timer,
     operations: Handshake,
 };
 
@@ -30,10 +30,10 @@ const ENGINE_CAPABILITY_ICONS: Record<
     (typeof TREASURY_ENGINE_CAPABILITIES)[number]['id'],
     LucideIcon
 > = {
-    coverage: Shield,
+    coverage: ShieldCheck,
     prefunding: Database,
     rebalancing: RefreshCw,
-    monitoring: Search,
+    monitoring: ScanSearch,
 };
 
 const OPERATION_TYPE_ICONS: Record<
@@ -45,18 +45,13 @@ const OPERATION_TYPE_ICONS: Record<
     transfers: ArrowLeftRight,
 };
 
-function DoarLogoIcon() {
+function FlowArrow({ color }: { color: 'blue' | 'gold' }) {
     return (
-        <svg className="h-8 w-8 shrink-0 fill-doar-gold" viewBox="0 0 32 24" aria-hidden="true">
-            <path d="M4 4 L28 4 L20 12 L28 12 L12 20 L16 12 L4 12 Z" />
-        </svg>
-    );
-}
-
-function FlowArrow() {
-    return (
-        <div className="flex justify-center py-1" aria-hidden="true">
-            <ArrowDown className="h-5 w-5 text-doar-blue" strokeWidth={2} />
+        <div className="flex justify-center py-2" aria-hidden="true">
+            <ArrowDown
+                className={cn('h-5 w-5', color === 'gold' ? 'text-doar-gold' : 'text-doar-blue')}
+                strokeWidth={2}
+            />
         </div>
     );
 }
@@ -65,32 +60,40 @@ function TreasuryEngineNode({ title }: { title: string }) {
     return (
         <article
             className={cn(
-                'rounded-xl border border-doar-gold/50 bg-deep-space/80 px-5 py-4',
-                'shadow-[0_0_40px_rgba(245,196,0,0.15)] ledger-glow-pulse backdrop-blur-sm'
+                ' rounded-xl border border-doar-gold/50 bg-deep-space/80 px-5 py-5 sm:px-6',
+                'shadow-[0_0_40px_rgba(245,196,0,0.15)]'
             )}
         >
-            <div className="flex items-center gap-3">
-                <DoarLogoIcon />
-                <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-doar-gold">
+            <div className="flex items-center justify-center gap-3">
+                <img
+                    src="/assets/institucional/logo.svg"
+                    alt=""
+                    className="w-30 shrink-0"
+                    aria-hidden="true"
+                />
+                <h3 className="text-sm font-bold uppercase tracking-[0.12em] text-doar-gold sm:text-base">
                     {title}
                 </h3>
             </div>
 
-            <div className="mt-4 grid grid-cols-2 gap-3 border-t border-doar-gold/20 pt-4 sm:grid-cols-4">
+            <div className="mt-5 grid grid-cols-2 gap-4 border-t border-doar-gold/20 pt-5 sm:grid-cols-4 sm:gap-0 sm:divide-x sm:divide-white/10">
                 {TREASURY_ENGINE_CAPABILITIES.map(({ id, title: capTitle, description }) => {
                     const Icon = ENGINE_CAPABILITY_ICONS[id];
 
                     return (
-                        <div key={id} className="flex flex-col items-center gap-1.5 text-center">
+                        <div
+                            key={id}
+                            className="flex flex-col items-center gap-2 px-2 text-center sm:px-4"
+                        >
                             <Icon
-                                className="h-5 w-5 text-doar-gold"
+                                className="h-7 w-7 text-doar-gold sm:h-8 sm:w-8"
                                 strokeWidth={1.75}
                                 aria-hidden="true"
                             />
-                            <span className="text-[8px] font-semibold uppercase tracking-wider text-text-primary">
+                            <span className="text-[11px] font-semibold leading-snug text-text-primary sm:text-xs">
                                 {capTitle}
                             </span>
-                            <p className="text-[8px] font-medium leading-snug text-soft-gray">
+                            <p className="text-[10px] font-light leading-snug text-soft-gray sm:text-[11px]">
                                 {description}
                             </p>
                         </div>
@@ -112,52 +115,60 @@ function StandardFlowNode({
 }) {
     const Icon = STEP_ICONS[id];
     const isOperations = id === 'operations';
+    const isLiquidity = id === 'liquidity';
 
     return (
-        <article className="flex items-center gap-4 rounded-xl border border-doar-blue/30 bg-deep-space/80 px-5 py-4 backdrop-blur-sm">
-            <Icon
-                className="h-10 w-10 shrink-0 text-doar-blue"
-                strokeWidth={1.75}
-                aria-hidden="true"
-            />
+        <article className="flex w-full flex-col rounded-xl border border-doar-blue/35 bg-deep-space/80 px-5 py-5 sm:px-6 sm:py-6">
+            <div className="flex items-center justify-center gap-4 sm:gap-5">
+                <Icon
+                    className="h-11 w-11 shrink-0 text-doar-blue sm:h-12 sm:w-12"
+                    strokeWidth={1.75}
+                    aria-hidden="true"
+                />
 
-            <div className="min-w-0 flex-1">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary">
-                    {title}
-                </h3>
+                <div className="min-w-0 text-left">
+                    <h3 className="text-sm font-bold uppercase tracking-[0.1em] text-text-primary sm:text-base">
+                        {title}
+                    </h3>
 
-                {description && (
-                    <p
-                        className={cn(
-                            'mt-1 text-[10px] font-medium uppercase leading-snug',
-                            id === 'liquidity' ? 'text-doar-blue' : 'text-soft-gray'
-                        )}
-                    >
-                        {description}
-                    </p>
-                )}
+                    {description && (
+                        <p
+                            className={cn(
+                                'mt-1.5 text-[11px] font-medium uppercase leading-snug sm:text-xs',
+                                isLiquidity || isOperations ? 'text-doar-blue' : 'text-soft-gray'
+                            )}
+                        >
+                            {description}
+                        </p>
+                    )}
+                </div>
+            </div>
 
-                {isOperations && (
-                    <div className="mt-3 flex flex-wrap gap-4">
-                        {TREASURY_OPERATION_TYPES.map(({ id: opId, label }) => {
-                            const OpIcon = OPERATION_TYPE_ICONS[opId];
+            {isOperations && (
+                <div className="mt-4 flex items-stretch justify-center divide-x divide-white/15 border-t border-white/10 pt-4">
+                    {TREASURY_OPERATION_TYPES.map(({ id: opId, label }) => {
+                        const OpIcon = OPERATION_TYPE_ICONS[opId];
 
-                            return (
-                                <div key={opId} className="flex items-center gap-1.5">
+                        return (
+                            <div
+                                key={opId}
+                                className="flex flex-1 items-center justify-center gap-2 px-3 sm:px-4"
+                            >
+                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-doar-blue/40 bg-doar-blue/5">
                                     <OpIcon
-                                        className="h-3.5 w-3.5 text-doar-blue"
+                                        className="h-4 w-4 text-doar-blue sm:h-5 sm:w-5"
                                         strokeWidth={1.75}
                                         aria-hidden="true"
                                     />
-                                    <span className="text-[9px] font-semibold uppercase tracking-wider text-doar-blue">
-                                        {label}
-                                    </span>
                                 </div>
-                            );
-                        })}
-                    </div>
-                )}
-            </div>
+                                <span className="text-[10px] font-semibold uppercase tracking-wider text-doar-blue sm:text-xs">
+                                    {label}
+                                </span>
+                            </div>
+                        );
+                    })}
+                </div>
+            )}
         </article>
     );
 }
@@ -165,7 +176,7 @@ function StandardFlowNode({
 export default function TreasuryFlowDiagram() {
     return (
         <div
-            className="mx-auto flex w-full max-w-lg flex-col"
+            className="flex w-full flex-col"
             role="img"
             aria-label="Diagrama de flujo de tesorería y gestión de liquidez DOAR"
         >
@@ -183,7 +194,7 @@ export default function TreasuryFlowDiagram() {
                                 description={'description' in step ? step.description : undefined}
                             />
                         )}
-                        {!isLast && <FlowArrow />}
+                        {!isLast && <FlowArrow color={step.id === 'engine' ? 'gold' : 'blue'} />}
                     </div>
                 );
             })}

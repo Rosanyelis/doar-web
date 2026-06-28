@@ -28,10 +28,10 @@ export default function ExecutiveTreasuryBanner() {
             <TreasuryNetworkIcon />
 
             <div className="min-w-0 flex-1">
-                <h3 className="mb-3 text-lg font-semibold text-text-primary">
+                <h3 className="mb-3 text-lg font-semibold text-white">
                     Liquidez coordinada para operaciones continuas
                 </h3>
-                <p className="text-base font-light leading-relaxed text-soft-gray">
+                <p className="text-base font-light leading-relaxed text-white">
                     La tesorería actúa como capa de coordinación operacional, separando la
                     experiencia transaccional de los procesos independientes de conciliación y
                     liquidación. DOAR garantiza que la liquidez esté disponible cuando las

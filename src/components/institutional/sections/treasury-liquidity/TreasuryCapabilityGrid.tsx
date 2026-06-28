@@ -33,14 +33,14 @@ export default function TreasuryCapabilityGrid() {
                             />
 
                             <div className="min-w-0 flex-1">
-                                <h3 className="text-sm font-semibold leading-tight text-text-primary">
+                                <h3 className="text-sm font-semibold leading-tight text-white">
                                     {title}
                                 </h3>
                                 <div className="mt-2 h-px w-10 bg-doar-gold" aria-hidden="true" />
                             </div>
                         </div>
 
-                        <p className="text-xs font-light leading-relaxed text-soft-gray sm:text-sm">
+                        <p className="text-xs font-light leading-relaxed text-white sm:text-sm">
                             {description}
                         </p>
                     </article>

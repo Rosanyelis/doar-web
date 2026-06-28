@@ -41,7 +41,7 @@ const PARTNER_CAPABILITY_ICONS: Record<
 
 function DoarLogoIcon() {
     return (
-        <svg className="h-10 w-10 shrink-0 fill-doar-gold" viewBox="0 0 32 24" aria-hidden="true">
+        <svg className="h-8 w-8 shrink-0 fill-doar-gold" viewBox="0 0 32 24" aria-hidden="true">
             <path d="M4 4 L28 4 L20 12 L28 12 L12 20 L16 12 L4 12 Z" />
         </svg>
     );
@@ -85,7 +85,14 @@ function StandardLayerNode({ title, subtitle, variant, highlight, icon }: Standa
                 highlight && 'shadow-[0_0_40px_rgba(245,196,0,0.15)] ledger-glow-pulse'
             )}
         >
-            {icon}
+            <div
+                className={cn(
+                    'flex h-12 w-12 shrink-0 items-center justify-center rounded-full border',
+                    isExternal ? 'border-doar-blue/40 bg-doar-blue/5' : 'border-doar-gold/40 bg-doar-gold/5'
+                )}
+            >
+                {icon}
+            </div>
 
             <div className="min-w-0 flex-1">
                 <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary">
@@ -111,11 +118,13 @@ function PartnerLayerNode({
     return (
         <article className="w-full rounded-xl border border-doar-blue/30 bg-deep-space/80 px-5 py-4 backdrop-blur-sm">
             <div className="flex items-center gap-4">
-                <Network
-                    className="h-10 w-10 shrink-0 text-doar-blue"
-                    strokeWidth={1.75}
-                    aria-hidden="true"
-                />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-doar-blue/40 bg-doar-blue/5">
+                    <Network
+                        className="h-6 w-6 text-doar-blue"
+                        strokeWidth={1.75}
+                        aria-hidden="true"
+                    />
+                </div>
                 <div className="min-w-0 flex-1">
                     <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary">
                         {title}
@@ -134,11 +143,13 @@ function PartnerLayerNode({
                     return (
                         <div key={id} className="flex flex-1 items-stretch">
                             <div className="flex flex-1 flex-col items-center justify-center gap-1.5 px-1">
-                                <Icon
-                                    className="h-5 w-5 text-doar-blue"
-                                    strokeWidth={1.75}
-                                    aria-hidden="true"
-                                />
+                                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-doar-blue/40 bg-doar-blue/5">
+                                    <Icon
+                                        className="h-5 w-5 text-doar-blue"
+                                        strokeWidth={1.75}
+                                        aria-hidden="true"
+                                    />
+                                </div>
                                 <span className="text-center text-[8px] font-semibold uppercase tracking-wider text-text-primary">
                                     {label}
                                 </span>
@@ -157,7 +168,7 @@ function PartnerLayerNode({
 export default function SegregatedArchitectureDiagram() {
     return (
         <div
-            className="mx-auto flex w-full max-w-lg flex-col"
+            className="flex w-[400px] max-w-md flex-col lg:max-w-lg"
             role="img"
             aria-label="Diagrama de infraestructura operacional segregada DOAR"
         >
@@ -190,7 +201,7 @@ export default function SegregatedArchitectureDiagram() {
                             icon={
                                 <Icon
                                     className={cn(
-                                        'h-10 w-10 shrink-0',
+                                        'h-6 w-6',
                                         layer.variant === 'external'
                                             ? 'text-doar-blue'
                                             : 'text-doar-gold'

@@ -12,7 +12,7 @@ export default function TreasuryLiquiditySection() {
                     <TreasuryLiquidityNarrative />
                 </div>
 
-                <div className="flex items-start justify-center lg:col-span-7">
+                <div className="flex items-start justify-center lg:col-span-7 ">
                     <TreasuryFlowDiagram />
                 </div>
             </div>

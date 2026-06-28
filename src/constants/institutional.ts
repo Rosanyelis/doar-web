@@ -185,79 +185,80 @@ export const INFRA_ORCHESTRATION_PROVIDERS = [
 export const SEGREGATED_ARCHITECTURE_LAYERS = [
     {
         id: 'users',
-        title: 'Users & Businesses',
+        title: 'Usuarios y Empresas',
         subtitle: null,
         variant: 'external',
     },
     {
         id: 'platform',
-        title: 'DOAR Platform',
-        subtitle: 'Orchestration & unified experience',
+        title: 'Plataforma DOAR',
+        subtitle: 'Orquestación y experiencia unificada',
         variant: 'gold',
         highlight: true,
     },
     {
         id: 'ledger',
-        title: 'Financial Ledger',
-        subtitle: 'Financial & transactional record',
+        title: 'Ledger Financiero',
+        subtitle: 'Registro financiero y transaccional',
         variant: 'gold',
     },
     {
         id: 'compliance',
-        title: 'Compliance Layer',
-        subtitle: 'Controls & monitoring',
+        title: 'Capa de Cumplimiento',
+        subtitle: 'Controles y monitoreo',
         variant: 'gold',
     },
     {
         id: 'treasury',
-        title: 'Treasury Layer',
-        subtitle: 'Liquidity & coverage',
+        title: 'Capa de Tesorería',
+        subtitle: 'Liquidez y cobertura',
         variant: 'gold',
     },
     {
         id: 'settlement',
-        title: 'Settlement Layer',
-        subtitle: 'Settlement & reconciliation',
+        title: 'Capa de Liquidación',
+        subtitle: 'Liquidación y conciliación',
         variant: 'gold',
     },
     {
         id: 'partners',
-        title: 'Infrastructure Partners',
-        subtitle: 'Specialized infrastructure & segregated',
+        title: 'Infraestructura de Socios',
+        subtitle: 'Infraestructura especializada y segregada',
         variant: 'external',
         isPartnerNode: true,
     },
 ] as const;
 
 export const INFRASTRUCTURE_PARTNER_CAPABILITIES = [
-    { id: 'payments', label: 'Payments' },
-    { id: 'compliance', label: 'Compliance' },
-    { id: 'treasury', label: 'Treasury' },
-    { id: 'custody', label: 'Custody' },
+    { id: 'payments', label: 'Pagos' },
+    { id: 'compliance', label: 'Cumplimiento' },
+    { id: 'treasury', label: 'Tesorería' },
+    { id: 'custody', label: 'Custodia' },
 ] as const;
 
 export const TREASURY_FLOW_STEPS = [
     {
         id: 'demand',
-        title: 'Operational Demand',
-        description: 'Pay Ins • Pay Outs • Transfers',
+        title: 'Demanda Operativa',
+        description: 'Entradas • Salidas • Transferencias',
         variant: 'blue',
     },
     {
         id: 'engine',
-        title: 'Treasury Engine',
+        title: 'Motor de Tesorería',
         variant: 'gold',
         highlight: true,
     },
     {
         id: 'liquidity',
-        title: 'Available Liquidity',
-        description: 'Immediate liquidity available for operations',
+        title: 'Liquidez Disponible',
+        description: 'Liquidez inmediata disponible para operaciones',
         variant: 'blue',
     },
     {
         id: 'operations',
-        title: 'Supports Operations',
+        title: 'Soporte de Operaciones',
+        description: 'Permitiendo una ejecución sin interrupciones',
         variant: 'blue',
     },
 ] as const;
@@ -265,30 +266,30 @@ export const TREASURY_FLOW_STEPS = [
 export const TREASURY_ENGINE_CAPABILITIES = [
     {
         id: 'coverage',
-        title: 'Liquidity Coverage',
-        description: 'Ensures liquidity availability across operational flows.',
+        title: 'Cobertura de Liquidez',
+        description: 'Asegura la disponibilidad de liquidez para operaciones activas.',
     },
     {
         id: 'prefunding',
-        title: 'Prefunding',
-        description: 'Maintains funds available before settlement.',
+        title: 'Pre-fondeo',
+        description: 'Mantiene los fondos disponibles antes de la liquidación final.',
     },
     {
         id: 'rebalancing',
-        title: 'Rebalancing',
-        description: 'Redistributes liquidity across funding sources.',
+        title: 'Reequilibrio',
+        description: 'Redistribuye la liquidez entre las posiciones operativas.',
     },
     {
         id: 'monitoring',
-        title: 'Exposure Monitoring',
-        description: 'Monitors risk and coverage in real time.',
+        title: 'Monitoreo de Exposición',
+        description: 'Monitorea los niveles de riesgo y cobertura en tiempo real.',
     },
 ] as const;
 
 export const TREASURY_OPERATION_TYPES = [
-    { id: 'payins', label: 'Pay Ins' },
-    { id: 'payouts', label: 'Pay Outs' },
-    { id: 'transfers', label: 'Transfers' },
+    { id: 'payins', label: 'Entradas' },
+    { id: 'payouts', label: 'Salidas' },
+    { id: 'transfers', label: 'Transferencias' },
 ] as const;
 
 export const TREASURY_FEATURE_CARDS = [
@@ -363,31 +364,31 @@ export const RECONCILIATION_FEATURE_CARDS = [
 export const SEGREGATED_LAYER_CARDS = [
     {
         id: 'ledger',
-        title: 'Financial Ledger',
+        title: 'Ledger Financiero',
         description:
             'Registro financiero y transaccional que incluye balances, ingresos, tarifas, fuentes de fondeo y eventos operativos.',
     },
     {
         id: 'compliance',
-        title: 'Compliance Layer',
+        title: 'Capa de Cumplimiento',
         description:
             'Controles de identidad, monitoreo de riesgo, verificaciones KYC/AML y políticas de cumplimiento regulatorio.',
     },
     {
         id: 'treasury',
-        title: 'Treasury Layer',
+        title: 'Capa de Tesorería',
         description:
             'Gestión de liquidez, cobertura operacional, rebalanceo y coordinación de fuentes de fondeo.',
     },
     {
         id: 'settlement',
-        title: 'Settlement Layer',
+        title: 'Capa de Liquidación',
         description:
             'Coordinación de liquidación, conciliación y validación final con la infraestructura financiera integrada.',
     },
     {
         id: 'partners',
-        title: 'Infrastructure Partners',
+        title: 'Infraestructura de Socios',
         description:
             'Partners especializados en pagos, cumplimiento, tesorería y custodia que proveen la infraestructura financiera segregada.',
     },
