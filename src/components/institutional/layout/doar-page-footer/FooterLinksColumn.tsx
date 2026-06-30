@@ -2,7 +2,9 @@ import type { MouseEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import { useOptionalDoarPageNavigation } from '../../../../context/DoarPageNavigationProvider';
-import { extractHashFromHref, isDoarPageSectionId } from '../../../../lib/doar-page-navigation';
+import {
+    isInstitutionalSectionHref,
+} from '../../../../lib/doar-page-navigation';
 import { cn } from '../../../../lib/utils';
 import type { DoarNavGroupId } from '../../../../lib/doar-page-navigation';
 
@@ -29,8 +31,7 @@ function FooterAnchorLink({
     isActive: boolean;
     onAnchorClick: (event: MouseEvent<HTMLAnchorElement>, href: string) => void;
 }) {
-    const hash = extractHashFromHref(href);
-    const isInPageAnchor = hash !== null && isDoarPageSectionId(hash);
+    const isInPageSection = isInstitutionalSectionHref(href);
 
     const className = cn(
         'flex items-center justify-between gap-4 group',
@@ -39,7 +40,7 @@ function FooterAnchorLink({
         isActive ? 'text-doar-gold' : 'text-white/90 hover:text-doar-gold'
     );
 
-    if (isInPageAnchor) {
+    if (isInPageSection) {
         return (
             <a
                 href={href}
@@ -100,8 +101,7 @@ export default function FooterLinksColumn({ title, links }: FooterLinksColumnPro
                                     onAnchorClick={
                                         navigation?.handleAnchorClick ??
                                         ((event, anchorHref) => {
-                                            const hash = extractHashFromHref(anchorHref);
-                                            if (hash && isDoarPageSectionId(hash)) {
+                                            if (isInstitutionalSectionHref(anchorHref)) {
                                                 event.preventDefault();
                                             }
                                         })

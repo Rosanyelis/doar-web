@@ -2,7 +2,6 @@ import SectionWrapper from '../shared/SectionWrapper';
 import RegulatoryNarrative from './regulatory-positioning/RegulatoryNarrative';
 import RegulatoryDiagram from './regulatory-positioning/RegulatoryDiagram';
 import RegulatoryPrincipleCards from './regulatory-positioning/RegulatoryPrincipleCards';
-import RegulatoryBanner from './regulatory-positioning/RegulatoryBanner';
 
 export default function RegulatoryPositioningSection() {
     return (
@@ -15,7 +14,6 @@ export default function RegulatoryPositioningSection() {
             </div>
 
             <RegulatoryPrincipleCards />
-            <RegulatoryBanner />
         </SectionWrapper>
     );
 }

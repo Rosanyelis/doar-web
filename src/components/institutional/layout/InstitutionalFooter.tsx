@@ -15,7 +15,7 @@ export default function InstitutionalFooter() {
                 <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
                     {/* Logo + Descripción */}
                     <div className="flex flex-col lg:col-span-1">
-                        <Link to="/sobre-nosotros" className="inline-block">
+                        <Link to="/institucional" className="inline-block">
                             <img
                                 src="/assets/hero/imagotipo-doar.png"
                                 alt="DOAR Logo"
@@ -40,12 +40,12 @@ export default function InstitutionalFooter() {
                         </h4>
                         <ul className="flex flex-col gap-3">
                             {[
-                                { label: 'Qué es DOAR', href: '/sobre-nosotros#que-es' },
-                                { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo' },
-                                { label: 'Cumplimiento y Riesgo', href: '/sobre-nosotros#cumplimiento' },
-                                { label: 'Liquidez y Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
-                                { label: 'Posicionamiento Regulatorio', href: '/sobre-nosotros#posicion' },
-                                { label: 'Modelo de Responsabilidades', href: '/sobre-nosotros#responsabilidades' },
+                                { label: 'Qué es DOAR', href: '/institucional/que-es' },
+                                { label: 'Modelo Operativo', href: '/institucional/modelo-operativo' },
+                                { label: 'Cumplimiento y Riesgo', href: '/institucional/cumplimiento' },
+                                { label: 'Liquidez y Continuidad Operativa', href: '/institucional/tesoreria' },
+                                { label: 'Posicionamiento Regulatorio', href: '/institucional/posicion' },
+                                { label: 'Modelo de Responsabilidades', href: '/institucional/responsabilidades' },
                             ].map((link) => (
                                 <li key={link.label}>
                                     <a
@@ -73,8 +73,8 @@ export default function InstitutionalFooter() {
                                 { label: 'Declaración de Riesgos', href: '/declaracion-riesgo' },
                                 { label: 'Política AML / KYC / KYB', href: '/politica-cumplimiento' },
                                 { label: 'Declaración AML', href: '/politica-cumplimiento#monitoreo-operativo' },
-                                { label: 'Divulgación Regulatoria', href: '/sobre-nosotros#posicion' },
-                                { label: 'Política de Continuidad Operativa', href: '/sobre-nosotros#tesoreria' },
+                                { label: 'Divulgación Regulatoria', href: '/institucional/posicion' },
+                                { label: 'Política de Continuidad Operativa', href: '/institucional/tesoreria' },
                             ].map((link) => (
                                 <li key={link.label}>
                                     <Link

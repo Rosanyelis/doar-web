@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import DownloadModal from './components/web/DownloadModal';
 import ScrollToTop from './components/layout/ScrollToTop';
+import LegacyInstitutionalRedirect from './components/routing/LegacyInstitutionalRedirect';
 import { WebSvgDefs } from './components/web/Icons';
 
 const SecurityPage = lazy(() => import('./pages/SecurityPage'));
@@ -34,10 +35,12 @@ function App() {
             <Route path="/declaracion-riesgo" element={<RiskPage />} />
             <Route path="/politica-cumplimiento" element={<CompliancePolicyPage />} />
             <Route path="/consentimiento-biometrico" element={<BiometricConsentPage />} />
-            <Route path="/sobre-nosotros" element={<DoarPage />} />
-            <Route path="/doar" element={<Navigate to="/sobre-nosotros" replace />} />
-            <Route path="/doar/modelo-operativo" element={<Navigate to="/sobre-nosotros" replace />} />
-            <Route path="/doar/cumplimiento" element={<Navigate to="/sobre-nosotros" replace />} />
+            <Route path="/institucional" element={<DoarPage />} />
+            <Route path="/institucional/:sectionId" element={<DoarPage />} />
+            <Route path="/sobre-nosotros" element={<Navigate to="/institucional" replace />} />
+            <Route path="/sobre-nosotros/:sectionId" element={<LegacyInstitutionalRedirect />} />
+            <Route path="/doar" element={<Navigate to="/institucional" replace />} />
+            <Route path="/doar/:sectionId" element={<LegacyInstitutionalRedirect />} />
           </Routes>
         </Suspense>
       </Router>

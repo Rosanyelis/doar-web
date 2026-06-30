@@ -6,7 +6,7 @@ export default function ValueProposition() {
                     <h2 className="mb-6 text-[40px] leading-tight font-extrabold text-[#31374F] md:text-[40px]">
                         Movimientos financieros {' '}
                         <span className="bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent">digitales </span>{' '}
-                            más ágiles mediante infraestructura moderna de pagos y {' '}
+                            más ágiles mediante infraestructura moderna de {' '}
                             <span className="bg-gradient-to-r from-[#F29501] to-[#FCCA01] bg-clip-text text-transparent">pagos y stablecoins.</span>
                     </h2>
                     <p className="mx-auto max-w-3xl text-2xl font-bold text-[#7B7B7B] md:text-lg">

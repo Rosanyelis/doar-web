@@ -37,13 +37,13 @@ export default function DoarPage() {
                 <title>DOAR | Infraestructura Financiera Moderna — Plataforma de Orquestación Financiera</title>
                 <meta name="description" content="DOAR coordina operaciones financieras digitales a través de infraestructura financiera especializada, integrando pagos, cumplimiento, tesorería y liquidación bajo una arquitectura ledger-first." />
                 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
-                <link rel="canonical" href="https://doar.tech/sobre-nosotros" />
+                <link rel="canonical" href="https://doar.tech/institucional" />
 
                 {/* Open Graph */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="DOAR | Infraestructura Financiera Moderna" />
                 <meta property="og:description" content="Plataforma de orquestación financiera que integra pagos, cumplimiento, tesorería y liquidación bajo una arquitectura ledger-first." />
-                <meta property="og:url" content="https://doar.tech/sobre-nosotros" />
+                <meta property="og:url" content="https://doar.tech/institucional" />
                 <meta property="og:image" content="https://doar.tech/assets/institucional/diagram_01.png" />
                 <meta property="og:locale" content="es_LA" />
                 <meta property="og:site_name" content="DOAR" />
@@ -94,7 +94,7 @@ export default function DoarPage() {
                         '@type': 'BreadcrumbList',
                         itemListElement: [
                             { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doar.tech' },
-                            { '@type': 'ListItem', position: 2, name: 'Sobre Nosotros', item: 'https://doar.tech/sobre-nosotros' },
+                            { '@type': 'ListItem', position: 2, name: 'Institucional', item: 'https://doar.tech/institucional' },
                         ],
                     })}
                 </script>

@@ -1,10 +1,19 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { INSTITUTIONAL_BASE_PATH } from '../../constants/routes';
+
+function isInstitutionalSectionPath(pathname: string) {
+    return new RegExp(`^${INSTITUTIONAL_BASE_PATH}/[^/]+$`).test(pathname);
+}
 
 export default function ScrollToTop() {
     const { pathname, hash } = useLocation();
 
     useEffect(() => {
+        if (isInstitutionalSectionPath(pathname)) {
+            return;
+        }
+
         if (hash) {
             const timer = setTimeout(() => {
                 const element = document.getElementById(hash.slice(1));

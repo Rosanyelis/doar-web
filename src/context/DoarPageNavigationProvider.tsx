@@ -7,9 +7,11 @@ import {
     useState,
     type ReactNode,
 } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
     DOAR_PAGE_SECTION_ORDER,
-    extractHashFromHref,
+    extractSectionIdFromHref,
+    institutionalSectionPath,
     isDoarPageSectionId,
     isNavGroupActive,
     resolveActiveSectionFromScroll,
@@ -27,7 +29,25 @@ interface DoarPageNavigationContextValue {
 
 const DoarPageNavigationContext = createContext<DoarPageNavigationContextValue | null>(null);
 
+function scrollToSectionWhenReady(sectionId: DoarPageSectionId, onComplete?: () => void) {
+    const attemptScroll = (retriesLeft: number) => {
+        const didScroll = scrollToDoarSection(sectionId, false);
+        if (didScroll) {
+            onComplete?.();
+            return;
+        }
+
+        if (retriesLeft > 0) {
+            window.setTimeout(() => attemptScroll(retriesLeft - 1), 100);
+        }
+    };
+
+    window.requestAnimationFrame(() => attemptScroll(8));
+}
+
 export function DoarPageNavigationProvider({ children }: { children: ReactNode }) {
+    const navigate = useNavigate();
+    const { sectionId: routeSectionId } = useParams<{ sectionId?: string }>();
     const [activeSectionId, setActiveSectionId] = useState<DoarPageSectionId | null>(null);
 
     const updateActiveSection = useCallback(() => {
@@ -48,29 +68,36 @@ export function DoarPageNavigationProvider({ children }: { children: ReactNode }
 
     useEffect(() => {
         const hash = window.location.hash.slice(1);
-        if (!isDoarPageSectionId(hash)) return;
+        if (hash && isDoarPageSectionId(hash)) {
+            navigate(institutionalSectionPath(hash), { replace: true });
+            return;
+        }
 
-        const frame = window.requestAnimationFrame(() => {
-            scrollToDoarSection(hash, false);
-            updateActiveSection();
-        });
+        if (!routeSectionId || !isDoarPageSectionId(routeSectionId)) return;
 
-        return () => window.cancelAnimationFrame(frame);
-    }, [updateActiveSection]);
+        scrollToSectionWhenReady(routeSectionId, updateActiveSection);
+    }, [navigate, routeSectionId, updateActiveSection]);
 
-    const scrollToSection = useCallback((sectionId: string) => {
-        scrollToDoarSection(sectionId);
-    }, []);
+    const scrollToSection = useCallback(
+        (sectionId: string) => {
+            if (!isDoarPageSectionId(sectionId)) return;
+
+            navigate(institutionalSectionPath(sectionId));
+            scrollToSectionWhenReady(sectionId, updateActiveSection);
+        },
+        [navigate, updateActiveSection]
+    );
 
     const handleAnchorClick = useCallback(
         (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-            const hash = extractHashFromHref(href);
-            if (!hash || !isDoarPageSectionId(hash)) return;
+            const sectionId = extractSectionIdFromHref(href);
+            if (!sectionId || !isDoarPageSectionId(sectionId)) return;
 
             event.preventDefault();
-            scrollToDoarSection(hash);
+            navigate(institutionalSectionPath(sectionId));
+            scrollToSectionWhenReady(sectionId, updateActiveSection);
         },
-        []
+        [navigate, updateActiveSection]
     );
 
     const value = useMemo<DoarPageNavigationContextValue>(

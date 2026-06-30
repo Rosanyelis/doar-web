@@ -1,6 +1,8 @@
 import { useState, type MouseEvent } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { DOAR_PAGE_PLATFORM_LINKS } from '../../../constants/institutional';
+import { ROUTES } from '../../../constants/routes';
 import { useDoarPageNavigation } from '../../../context/DoarPageNavigationProvider';
 import { cn } from '../../../lib/utils';
 import type { DoarNavGroupId } from '../../../lib/doar-page-navigation';
@@ -8,13 +10,8 @@ import { images } from '../../../lib/images';
 
 function DoarLogo() {
     return (
-        <a
-            href="#"
-            onClick={(event) => {
-                event.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                window.history.replaceState(null, '', window.location.pathname);
-            }}
+        <Link
+            to={ROUTES.INSTITUCIONAL}
             className="flex shrink-0 items-center gap-3 transition-opacity duration-200 hover:opacity-90"
         >
             <img
@@ -22,7 +19,7 @@ function DoarLogo() {
                 alt="DOAR"
                 className="w-40 object-contain"
             />
-        </a>
+        </Link>
     );
 }
 

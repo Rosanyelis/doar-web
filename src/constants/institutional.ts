@@ -1,10 +1,10 @@
 export const DOAR_PAGE_PLATFORM_LINKS = [
-    { label: 'Qué es DOAR', href: '/sobre-nosotros#que-es', navGroup: 'que-es' },
-    { label: 'Modelo Operativo', href: '/sobre-nosotros#modelo-operativo', navGroup: 'modelo-operativo' },
-    { label: 'Cumplimiento y Riesgo', href: '/sobre-nosotros#cumplimiento', navGroup: 'cumplimiento' },
-    { label: 'Liquidez y Continuidad Operativa', href: '/sobre-nosotros#tesoreria', navGroup: 'tesoreria' },
-    { label: 'Posicionamiento Regulatorio', href: '/sobre-nosotros#posicion', navGroup: 'posicion' },
-    { label: 'Modelo de Responsabilidades', href: '/sobre-nosotros#responsabilidades', navGroup: 'responsabilidades' },
+    { label: 'Qué es DOAR', href: '/institucional/que-es', navGroup: 'que-es' },
+    { label: 'Modelo Operativo', href: '/institucional/modelo-operativo', navGroup: 'modelo-operativo' },
+    { label: 'Cumplimiento y Riesgo', href: '/institucional/cumplimiento', navGroup: 'cumplimiento' },
+    { label: 'Liquidez y Continuidad Operativa', href: '/institucional/tesoreria', navGroup: 'tesoreria' },
+    { label: 'Posicionamiento Regulatorio', href: '/institucional/posicion', navGroup: 'posicion' },
+    { label: 'Modelo de Responsabilidades', href: '/institucional/responsabilidades', navGroup: 'responsabilidades' },
 ] as const;
 
 /** @deprecated Usar DOAR_PAGE_PLATFORM_LINKS */
@@ -885,8 +885,8 @@ export const FOOTER_LEGAL_LINKS = [
     { label: 'Declaración de Riesgos', href: '/declaracion-riesgo' },
     { label: 'Política AML / KYC / KYB', href: '/politica-cumplimiento' },
     { label: 'Declaración AML', href: '/politica-cumplimiento#monitoreo-operativo' },
-    { label: 'Divulgación Regulatoria', href: '/sobre-nosotros#posicion', navGroup: 'posicion' },
-    { label: 'Política de Continuidad Operativa', href: '/sobre-nosotros#tesoreria', navGroup: 'tesoreria' },
+    { label: 'Divulgación Regulatoria', href: '/institucional/posicion', navGroup: 'posicion' },
+    { label: 'Política de Continuidad Operativa', href: '/institucional/tesoreria', navGroup: 'tesoreria' },
 ] as const;
 
 export const FOOTER_CONTACT_EMAILS = [

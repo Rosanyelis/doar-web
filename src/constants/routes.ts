@@ -8,5 +8,13 @@ export const ROUTES = {
   DECLARACION_RIESGO: '/declaracion-riesgo',
   POLITICA_CUMPLIMIENTO: '/politica-cumplimiento',
   CONSENTIMIENTO_BIOMETRICO: '/consentimiento-biometrico',
-  SOBRE_NOSOTROS: '/sobre-nosotros',
+  INSTITUCIONAL: '/institucional',
+  /** @deprecated Usar ROUTES.INSTITUCIONAL */
+  SOBRE_NOSOTROS: '/institucional',
 } as const;
+
+export const INSTITUTIONAL_BASE_PATH = ROUTES.INSTITUCIONAL;
+
+export function institutionalSectionPath(sectionId: string) {
+  return `${INSTITUTIONAL_BASE_PATH}/${sectionId}`;
+}

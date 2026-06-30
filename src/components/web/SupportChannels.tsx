@@ -19,9 +19,9 @@ export default function SupportChannels() {
                                 escribirnos a nuestra línea de soporte.
                             </p>
                         </div>
-                        <button className="h-[48px] w-fit rounded-full border border-[#31374F] px-8 text-[15px] font-bold transition-all hover:bg-[#31374F] hover:text-white">
+                        <a href="https://wa.link/dc2dyz" className="h-[48px] w-fit rounded-full border border-[#31374F] px-8 text-[15px] font-bold transition-all hover:bg-[#31374F] hover:text-white">
                             Iniciar chat
-                        </button>
+                        </a>
                     </div>
 
                     {/* Tarjeta Email */}
@@ -40,9 +40,9 @@ export default function SupportChannels() {
                                 técnica.
                             </p>
                         </div>
-                        <button className="h-[48px] w-fit rounded-full border border-[#31374F] px-8 text-[15px] font-bold transition-all hover:bg-[#31374F] hover:text-white">
+                        <a href="mailto:info@doar.tech" className="h-[48px] w-fit rounded-full border border-[#31374F] px-8 text-[15px] font-bold transition-all hover:bg-[#31374F] hover:text-white">
                             Enviar mensaje
-                        </button>
+                        </a>
                     </div>
                 </div>
 
