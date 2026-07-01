@@ -96,7 +96,6 @@ const sections = [
                         'Sumsub',
                         'Stripe',
                         'Fireblocks',
-                        'TRM Labs',
                         'Alessa',
                         'Proveedores de device intelligence',
                         'Herramientas antifraude',
@@ -374,7 +373,7 @@ export default function BiometricConsentPage() {
                 <section className="py-20 md:py-32">
                     <div className="container mx-auto px-6">
                         <div className="mx-auto max-w-[850px]">
-                            <div className="prose prose-lg prose-slate max-w-none">
+                            <div className="prose prose-lg prose-slate max-w-none break-words overflow-x-hidden">
                                 <div className="space-y-16">
                                     {sections.map((section, idx) => (
                                         <div key={section.id} id={section.id}>

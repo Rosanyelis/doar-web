@@ -1,6 +1,6 @@
 export default function OperationalLiquidityNarrative() {
     return (
-        <div className="relative flex flex-col">
+        <div className="relative flex min-w-0 max-w-full flex-col overflow-hidden">
             <div
                 className="pointer-events-none absolute -left-4 top-0 h-full w-[120%] opacity-30"
                 aria-hidden="true"

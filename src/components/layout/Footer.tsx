@@ -28,7 +28,7 @@ export default function Footer() {
                                 DESCARGO DE RESPONSABILIDAD
                             </h4>
                             <p className="text-[11px] leading-relaxed text-white">
-                                DOAR no es un banco, exchange ni custodio de activos digitales. Los servicios de conversión fiat/stablecoin, pagos, verificación y liquidación son procesados mediante proveedores externos regulados según disponibilidad jurisdiccional.
+                            DOAR no es un banco, exchange ni custodio de activos digitales. Los servicios de custodia, conversión fiat/stablecoin, pagos, verificación y liquidación son procesados mediante proveedores externos especializados y regulados según disponibilidad jurisdiccional.
                             </p>
                         </div>
                     </div>
@@ -167,7 +167,7 @@ export default function Footer() {
                         {/* Redes sociales — íconos con fondo naranja sólido */}
                         <div className="mt-2 flex items-center justify-center gap-3 lg:justify-center">
                             <a
-                                href="https://facebook.com"
+                                href="https://www.facebook.com/share/17JSzX8uHq/?mibextid=wwXIfr"
                                 target="_blank"
                                 rel="noreferrer"
                                 aria-label="Facebook"

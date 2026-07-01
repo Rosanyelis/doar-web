@@ -2,7 +2,7 @@ import { Download } from 'lucide-react';
 
 export default function SecurityHero() {
     return (
-        <section className="flex min-h-[700px] items-center bg-white py-12 md:min-h-[600px] md:px-6 md:py-0">
+        <section className="flex min-h-[700px] items-center overflow-hidden bg-white py-12 md:min-h-[600px] md:overflow-visible md:px-6 md:py-0">
             <div className="container mx-auto grid grid-cols-1 items-center md:grid-cols-2">
                 {/* ── IZQUIERDA: Texto ── */}
                 <div className="flex flex-col items-center gap-6 px-6 text-center md:items-start md:text-left">

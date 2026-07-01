@@ -58,10 +58,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   body {
     @apply font-sans;
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  #root {
+    overflow-x: clip;
+    max-width: 100%;
   }
 }
 

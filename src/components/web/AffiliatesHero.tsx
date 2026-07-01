@@ -48,7 +48,7 @@ export default function AffiliatesHero() {
                 {/* Mockup Derecha con Monedas */}
                 <div className="relative flex w-full flex-1 items-center justify-center md:justify-end">
                     {/* Contenedor Mockup - Subido de nivel */}
-                    <div className="relative z-10 w-[680px] transition-transform duration-1000 md:w-[450px] lg:w-[600px] lg:-translate-y-12">
+                    <div className="relative z-10 mx-auto w-full max-w-[680px] transition-transform duration-1000 md:w-[450px] lg:w-[600px] lg:-translate-y-12">
                         <img
                             src="/assets/affiliate/phone-money.png"
                             alt="DOAR App"

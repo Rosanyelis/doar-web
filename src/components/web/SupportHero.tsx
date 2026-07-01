@@ -34,7 +34,7 @@ export default function SupportHero() {
                     </div>
 
                     {/* Imagen Derecha con Decoraciónd de círculos */}
-                    <div className="relative flex w-full items-center justify-center md:w-auto">
+                    <div className="relative flex w-full min-w-0 max-w-full items-center justify-center overflow-hidden md:w-auto md:overflow-visible">
                         <div className="relative isolate mt-8 md:mt-0">
                             <img
                                 src="/assets/suport/suport-phone.png"

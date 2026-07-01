@@ -2,7 +2,7 @@ export default function SecurityWithdraw() {
     return (
         <section className="relative isolate flex min-h-[335px] w-full items-center justify-center overflow-hidden bg-[#2A3045] py-[65px]">
             {/* FONDO DECORATIVO (Breakout) */}
-            <div className="pointer-events-none absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 overflow-hidden bg-[#2A3045]">
+            <div className="pointer-events-none absolute inset-0 z-0 w-full overflow-hidden bg-[#2A3045]">
                 {/* --- Group 2 (Derecha/Centro) --- */}
                 {/* Ellipse 4: Gradiente naranja/amarillo con blur fuerte */}
                 <div
@@ -64,7 +64,7 @@ export default function SecurityWithdraw() {
                 </h2>
                 <p className="w-full text-center text-[22px] font-semibold text-[#7B7B7B] md:text-[20px] md:leading-[27px]">
                     Retira tu saldo digital directamente a tu cuenta bancaria
-                    local de manera segura y sin intermediarios.
+                    local de manera segura.
                 </p>
 
                 {/* Icono posicionado en la base */}

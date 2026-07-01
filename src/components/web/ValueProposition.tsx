@@ -12,7 +12,7 @@ export default function ValueProposition() {
                     <p className="mx-auto max-w-3xl text-2xl font-bold text-[#7B7B7B] md:text-lg">
                         DOAR conecta pasarelas de pago, billeteras electrónicas
                         y bancos en un solo lugar para que puedas operar de
-                        forma más ágil, más eficiente y más segura.
+                        forma ágil, eficiente y segura.
                     </p>
                 </div>
 
